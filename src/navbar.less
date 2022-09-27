@@ -7,7 +7,7 @@
     padding-right: 0.75m;
     border-bottom: 1.5px solid var(--seaweed-border);
 
-    @media @desktop {
+    @media @tablet {
         padding: 0 0.5em;
         justify-content: unset;
 
@@ -22,7 +22,7 @@
     }
 
     &-button {
-        @media @desktop {
+        @media @tablet {
             margin-left: 10px;
             margin-right: auto;
         }
@@ -64,14 +64,14 @@
         left: -100vw;
         list-style: none;
         height: 100vh;
-        width: calc(100vw - 128px);
+        width: 75vw;
         display: flex;
         flex-direction: column;
         background-color: var(--seaweed-navbar-color);
         z-index: 10000;
         transition: left 0.25s ease-in;
 
-        @media @desktop {
+        @media @tablet {
             position: static;
             height: fit-content;
             width: fit-content;
@@ -101,7 +101,7 @@
                 vertical-align: top;
             }
 
-            @media @desktop {
+            @media @tablet {
                 margin-right: 10px;
             }
         }

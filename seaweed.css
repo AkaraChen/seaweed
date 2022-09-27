@@ -21,7 +21,7 @@
   padding-right: 0.75m;
   border-bottom: 1.5px solid var(--seaweed-border);
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navbar {
     padding: 0 0.5em;
     justify-content: unset;
@@ -34,7 +34,7 @@
   margin: 0;
   padding: 0;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navbar-button {
     margin-left: 10px;
     margin-right: auto;
@@ -71,14 +71,14 @@
   left: -100vw;
   list-style: none;
   height: 100vh;
-  width: calc(100vw - 128px);
+  width: 75vw;
   display: flex;
   flex-direction: column;
   background-color: var(--seaweed-navbar-color);
   z-index: 10000;
   transition: left 0.25s ease-in;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navbar-list {
     position: static;
     height: fit-content;
@@ -105,7 +105,7 @@
 .navbar-list-item * {
   vertical-align: top;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navbar-list-item {
     margin-right: 10px;
   }
