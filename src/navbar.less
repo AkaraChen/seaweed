@@ -1,0 +1,109 @@
+.navbar {
+    display: flex;
+    height: var(--seaweed-navbar-height);
+    align-items: center;
+    position: relative;
+    padding-left: 0.75em;
+    padding-right: 0.75m;
+    border-bottom: 1.5px solid var(--seaweed-border);
+
+    @media @desktop {
+        padding: 0 0.5em;
+        justify-content: unset;
+
+        &-menu {
+            display: none;
+        }
+    }
+
+    & * {
+        margin: 0;
+        padding: 0;
+    }
+
+    &-button {
+        @media @desktop {
+            margin-left: 10px;
+            margin-right: auto;
+        }
+    }
+
+    & button {
+        position: unset;
+        background-color: transparent !important;
+        width: fit-content;
+        color: var(--fish-primary);
+
+        &:hover {
+            background-color: unset;
+        }
+    }
+
+    &-title {
+        margin-right: auto;
+        margin-left: 4px;
+
+        & * {
+            font-size: 20px;
+            display: inline;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+
+        * img,
+        svg {
+            margin-right: 4px;
+            height: 20px;
+        }
+    }
+
+    &-list {
+        padding: 1em;
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        list-style: none;
+        height: 100vh;
+        width: calc(100vw - 128px);
+        display: flex;
+        flex-direction: column;
+        background-color: var(--seaweed-navbar-color);
+        z-index: 10000;
+        transition: left 0.25s ease-in;
+
+        @media @desktop {
+            position: static;
+            height: fit-content;
+            width: fit-content;
+            padding: 0;
+            flex-direction: unset;
+            background-color: unset;
+
+            &-close {
+                display: none;
+            }
+        }
+
+        & > * {
+            margin-left: 10px;
+        }
+
+        &.active {
+            left: 0;
+        }
+
+        &-item {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: var(--fish-primary);
+
+            & * {
+                vertical-align: top;
+            }
+
+            @media @desktop {
+                margin-right: 10px;
+            }
+        }
+    }
+}
