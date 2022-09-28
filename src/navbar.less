@@ -70,6 +70,7 @@
         background-color: var(--seaweed-navbar-color);
         z-index: 10000;
         transition: left 0.25s ease-in;
+        border-right: 1.5px solid var(--seaweed-border);
 
         @media @tablet {
             position: static;
@@ -78,6 +79,7 @@
             padding: 0;
             flex-direction: unset;
             background-color: unset;
+            border-right: none;
 
             &-close {
                 display: none;
@@ -98,7 +100,7 @@
             color: var(--fish-primary);
 
             & * {
-                vertical-align: top;
+                vertical-align: middle;
             }
 
             @media @tablet {

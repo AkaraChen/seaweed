@@ -1,6 +1,12 @@
 <template>
-    <div class="flex flex-col items-center text-center mt-20">
-        <img src="../assets/seaweed.svg" width="128" height="128" />
+    <div class="flex flex-col items-center text-center mt-10">
+        <div class="notice">🧪 Working in Progress</div>
+        <img
+            src="../assets/seaweed.svg"
+            width="128"
+            height="128"
+            class="mt-10"
+        />
         <h1 class="text-4xl mb-0">Seaweed</h1>
         <p class="mb-4 text-lg opacity-75">
             A CSS library focused on improving the default appearance of HTML.
@@ -14,10 +20,10 @@
                 >Github</a
             >
         </div>
-        <div class="mt-8 card-list flex flex-wrap">
+        <div class="my-8 card-list flex flex-wrap">
             <div>
                 <article class="card">
-                    <h2 class="card-title">Beautiful</h2>
+                    <h2 class="card-title">🎉 Beautiful</h2>
                     <p class="card-para">
                         Simple, bright and consistent design. You and your
                         customers will love it!
@@ -26,7 +32,7 @@
             </div>
             <div>
                 <article class="card">
-                    <h2 class="card-title">Easy to use</h2>
+                    <h2 class="card-title">✨ Easy to use</h2>
                     <p class="card-para">
                         Import, then copy and paste. No Web technology or Design
                         knowledge required.
@@ -35,7 +41,7 @@
             </div>
             <div>
                 <article class="card">
-                    <h2 class="card-title">Customizable</h2>
+                    <h2 class="card-title">⚙️ Customizable</h2>
                     <p class="card-para">
                         A large number of variables are provided and can be
                         customized to suit your needs.
@@ -44,7 +50,7 @@
             </div>
             <div>
                 <article class="card">
-                    <h2 class="card-title">Lightweight</h2>
+                    <h2 class="card-title">🪶 Lightweight</h2>
                     <p class="card-para">
                         Seaweed does not do anything needless, so it can stay
                         lightweight, forever.

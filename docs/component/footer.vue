@@ -1,3 +1,5 @@
 <template>
-    <p class="text-center opacity-60 my-4">2022-PRESENT © Akara Chen</p>
+    <footer class="footer">
+        <p class="copyright">2022-PRESENT © Akara Chen</p>
+    </footer>
 </template>
