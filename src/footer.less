@@ -1,10 +1,45 @@
 .footer {
-    margin-top: 12px;
-    margin-bottom: 12px;
-    border-top: 1.5px solid var(--seaweed-border);
+    margin: 0 auto;
+
+    &-link {
+        margin: 12px auto;
+
+        @media @tablet {
+            width: unset;
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+        }
+
+        @media @desktop {
+            width: unset;
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+        }
+
+        padding-left: 24px;
+        padding-right: 24px;
+        width: 375px;
+
+        &-cell {
+            &-list {
+                list-style: none;
+                margin: 0;
+                margin-bottom: 20px;
+
+                & * {
+                    font-size: calc(var(---fish-font-size-) * 75%);
+                }
+            }
+        }
+    }
 
     & .copyright {
+        display: block;
         text-align: center;
         opacity: 0.6;
+        width: 100vw;
+        border-top: 1.5px solid var(--seaweed-border);
+        margin-top: 32px;
+        padding-top: 16px;
     }
 }

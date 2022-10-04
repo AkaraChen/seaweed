@@ -6,6 +6,7 @@
             width="128"
             height="128"
             class="mt-10"
+            alt="Seaweed Logo"
         />
         <h1 class="text-4xl mb-0">Seaweed</h1>
         <p class="mb-4 text-lg opacity-75">
@@ -20,7 +21,7 @@
                 >Github</a
             >
         </div>
-        <div class="my-8 card-list flex flex-wrap">
+        <div class="mt-8 mb-4 card-list flex flex-wrap">
             <div>
                 <article class="card">
                     <h2 class="card-title">🎉 Beautiful</h2>

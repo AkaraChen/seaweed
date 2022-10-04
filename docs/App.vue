@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import '@akrc/fish/fish.min.css';
+import '@akrc/fish/fish.css';
 import '../src/index.less';
 import Navbar from './component/navbar.vue';
 import Footer from './component/footer.vue';
