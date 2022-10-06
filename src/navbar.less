@@ -4,8 +4,13 @@
     align-items: center;
     position: relative;
     padding-left: 0.75em;
-    padding-right: 0.75m;
+    padding-right: 0.75em;
     border-bottom: 1.5px solid var(--seaweed-border);
+
+    &-menu {
+        position: absolute;
+        right: 20px;
+    }
 
     @media @tablet {
         padding: 0 0.5em;
@@ -29,7 +34,6 @@
     }
 
     & button {
-        position: unset;
         background-color: transparent !important;
         width: fit-content;
         color: var(--fish-primary);

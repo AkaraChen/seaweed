@@ -20,8 +20,12 @@
   align-items: center;
   position: relative;
   padding-left: 0.75em;
-  padding-right: 0.75m;
+  padding-right: 0.75em;
   border-bottom: 1.5px solid var(--seaweed-border);
+}
+.navbar-menu {
+  position: absolute;
+  right: 20px;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -43,7 +47,6 @@
   }
 }
 .navbar button {
-  position: unset;
   background-color: transparent !important;
   width: fit-content;
   color: var(--fish-primary);

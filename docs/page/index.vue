@@ -10,7 +10,7 @@
         />
         <h1 class="text-4xl mb-0">Seaweed</h1>
         <p class="mb-4 text-lg opacity-75">
-            A CSS library focused on improving the default appearance of HTML.
+            The modern CSS component that just works.
         </p>
         <div>
             <a class="btn filled mx-1.5 py-4">Get started</a>

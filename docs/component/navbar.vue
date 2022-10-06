@@ -3,7 +3,7 @@
         <button class="navbar-menu" @click="toggle">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-menu-2"
+                class="icon icon-tabler icon-tabler-category"
                 width="28"
                 height="28"
                 viewBox="0 0 24 24"
@@ -14,9 +14,10 @@
                 stroke-linejoin="round"
             >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <line x1="4" y1="6" x2="20" y2="6"></line>
-                <line x1="4" y1="12" x2="20" y2="12"></line>
-                <line x1="4" y1="18" x2="20" y2="18"></line>
+                <path d="M4 4h6v6h-6z"></path>
+                <path d="M14 4h6v6h-6z"></path>
+                <path d="M4 14h6v6h-6z"></path>
+                <circle cx="17" cy="17" r="3"></circle>
             </svg>
         </button>
         <div class="navbar-title">
@@ -62,39 +63,41 @@
                 </svg>
             </button>
             <li class="navbar-list-item">
-                <span>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-home"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
+                <router-link to="/">
+                    <span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-home"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
                             fill="none"
-                        ></path>
-                        <polyline
-                            points="5 12 3 12 12 3 21 12 19 12"
-                        ></polyline>
-                        <path
-                            d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
-                        ></path>
-                        <path
-                            d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"
-                        ></path>
-                    </svg>
-                    Home
-                </span>
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                            ></path>
+                            <polyline
+                                points="5 12 3 12 12 3 21 12 19 12"
+                            ></polyline>
+                            <path
+                                d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+                            ></path>
+                            <path
+                                d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"
+                            ></path>
+                        </svg>
+                        Home
+                    </span>
+                </router-link>
             </li>
             <li class="navbar-list-item">
-                <span>
+                <span @click="workInProgress">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-building-lighthouse"
@@ -184,7 +187,11 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { message } from '@akrc/ringo';
+import '@akrc/ringo/style/message/default.css';
 
 const active = ref(false);
 const toggle = () => (active.value = !active.value);
+const workInProgress = () =>
+    message({ text: 'Work in Progress', marginTop: 20, duration: 2000 });
 </script>
