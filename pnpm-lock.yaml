@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@akrc/fish': 0.3.2
-  '@akrc/ringo': 0.0.3
+  '@akrc/ringo': 0.0.4
   '@vitejs/plugin-vue': 3.1.2
   clean-css-cli: 5.6.1
   husky: 8.0.1
@@ -15,7 +15,7 @@ specifiers:
 
 devDependencies:
   '@akrc/fish': 0.3.2
-  '@akrc/ringo': 0.0.3
+  '@akrc/ringo': 0.0.4
   '@vitejs/plugin-vue': 3.1.2_vite@3.1.6+vue@3.2.40
   clean-css-cli: 5.6.1
   husky: 8.0.1
@@ -32,8 +32,8 @@ packages:
     resolution: {integrity: sha512-f4xZv5c9dJcC+/FanjIqzrXt1SnPS+Z1JW9OU/T2ExXNR1wAchCtyxmDBsAy9OYAaMyZ+I4pEdKBk3SkG9GdGw==}
     dev: true
 
-  /@akrc/ringo/0.0.3:
-    resolution: {integrity: sha512-2XTqyR90qq92r4ftPgMibw5JNAJVWqBPwwiwrHvrs+Ig8IqfQNBMc0FbMcn4Ly90t0243a3kmguMKXP/I9ogjw==}
+  /@akrc/ringo/0.0.4:
+    resolution: {integrity: sha512-8tY3aSjdVqigu7rHANDOStvplQ9gYqXYmSVkqoT/ApCDURgVRBLQ3Frlyl9zXeav/+JosBtO9oZ9uSGBNouXag==}
     dependencies:
       nanoid: 4.0.0
     dev: true
