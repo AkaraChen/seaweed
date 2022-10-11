@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@akrc/fish': 0.3.2
-  '@akrc/ringo': 0.0.4
+  '@akrc/ringo': 0.0.5
   '@vitejs/plugin-vue': 3.1.2
   clean-css-cli: 5.6.1
   husky: 8.0.1
@@ -15,7 +15,7 @@ specifiers:
 
 devDependencies:
   '@akrc/fish': 0.3.2
-  '@akrc/ringo': 0.0.4
+  '@akrc/ringo': 0.0.5
   '@vitejs/plugin-vue': 3.1.2_vite@3.1.7+vue@3.2.40
   clean-css-cli: 5.6.1
   husky: 8.0.1
@@ -32,10 +32,8 @@ packages:
     resolution: {integrity: sha512-f4xZv5c9dJcC+/FanjIqzrXt1SnPS+Z1JW9OU/T2ExXNR1wAchCtyxmDBsAy9OYAaMyZ+I4pEdKBk3SkG9GdGw==}
     dev: true
 
-  /@akrc/ringo/0.0.4:
-    resolution: {integrity: sha512-8tY3aSjdVqigu7rHANDOStvplQ9gYqXYmSVkqoT/ApCDURgVRBLQ3Frlyl9zXeav/+JosBtO9oZ9uSGBNouXag==}
-    dependencies:
-      nanoid: 4.0.0
+  /@akrc/ringo/0.0.5:
+    resolution: {integrity: sha512-9GpHeMvYI9PC/6OtZeuD0Pdibi5F86wvHIL9FPMT2tDHMPQDPOUVWDbhSqD8Kk+g4uy68+re1pcRw07G4+4rZw==}
     dev: true
 
   /@ampproject/remapping/2.2.0:
@@ -1113,12 +1111,6 @@ packages:
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-    dev: true
-
-  /nanoid/4.0.0:
-    resolution: {integrity: sha512-IgBP8piMxe/gf73RTQx7hmnhwz0aaEXYakvqZyE302IXW3HyVNhdNGC+O2MwMAVhLEnvXlvKtGbtJf6wvHihCg==}
-    engines: {node: ^14 || ^16 || >=18}
     hasBin: true
     dev: true
 
