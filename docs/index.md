@@ -3,7 +3,7 @@ layout: home
 
 hero:
     name: Seaweed
-    text: The modern CSS component that just works.
+    text: The modern Web component that just works.
     image:
         src: './seaweed.svg'
         alt: Seaweed

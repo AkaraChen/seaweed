@@ -34,5 +34,8 @@
                 "@algolia/client-search"
             ]
         }
+    },
+    "dependencies": {
+        "lit": "^2.4.0"
     }
 }
