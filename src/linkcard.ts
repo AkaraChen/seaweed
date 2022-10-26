@@ -48,6 +48,12 @@ export class LinkCard extends LitElement {
             .title {
                 color: #bbb;
             }
+            .image {
+                filter: brightness(0.9);
+            }
+        }
+        .primary {
+            background-color: var(--blue);
         }
     `;
 

@@ -8,7 +8,7 @@ export default {
 
 const Template = () => html`
     <sw-button>Button</sw-button>
-    <sw-button type="blue">Danger</sw-button>
+    <sw-button color="blue" primary="true">Primary</sw-button>
 `;
 
 export const Index = Template;
