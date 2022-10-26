@@ -1,5 +1,8 @@
 {
     "compilerOptions": {
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "target": "ES6",
+        "useDefineForClassFields": false
     }
 }
