@@ -1,13 +1,22 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
+export interface LinkCardProp {
+    title: string;
+    link: string;
+    image?: string;
+    target?: string;
+    alt?: string;
+}
+
 @customElement('sw-link-card')
 export class LinkCard extends LitElement {
     static styles = css`
         .container {
-            display: inline-flex;
+            box-sizing: border-box;
+            display: flex;
             background-color: rgb(247, 247, 247);
-            width: 300px;
+            width: 275px;
             border-radius: 8px;
             padding: 1em;
             text-decoration: none;
@@ -30,6 +39,7 @@ export class LinkCard extends LitElement {
         .image {
             width: 55px;
             height: 55px;
+            border-radius: 4px;
         }
         @media (prefers-color-scheme: dark) {
             .container {
@@ -65,12 +75,13 @@ export class LinkCard extends LitElement {
                 height="55"
                 width="55"
                 alt="${this.alt ? this.alt : this.formatLink()}"
+                class="image"
             />`;
         }
     };
 
     render() {
-        return html` <a
+        return html`<a
             class="container"
             href="${this.link}"
             target="${this.target}"

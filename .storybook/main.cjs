@@ -1,11 +1,12 @@
 module.exports = {
   "stories": [
-    "../src/**/*.story.mdx",
-    "../src/**/*.story.@(js|jsx|ts|tsx)"
+    "../src/**/*.stories.mdx",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
+    "storybook-dark-mode"
   ],
   "framework": "@storybook/web-components",
   "core": {

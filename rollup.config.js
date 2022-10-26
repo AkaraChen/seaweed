@@ -10,6 +10,6 @@ export default defineConfig({
     },
     plugins: [
         typescript(),
-        nodeResolve(),
+        nodeResolve()
     ],
 });
