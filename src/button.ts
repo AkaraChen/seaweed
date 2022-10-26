@@ -27,6 +27,7 @@ export class Button extends LitElement {
             background-color: transparent;
             box-shadow: 0 2px #00000004;
             transition: 0.25s;
+            color: black;
         }
         button:hover,
         button:focus {
