@@ -1,2 +1,3 @@
-export * from './linkcard';
-export * from './button';
+import './alert';
+import './button';
+import './linkcard';
