@@ -1,7 +1,7 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { size, type } from './type';
-import className from 'classnames';
+import className from '@akrc/classnames';
 
 @customElement('sw-button')
 export class Button extends LitElement {

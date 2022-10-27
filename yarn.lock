@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@akrc/classnames@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@akrc/classnames/-/classnames-2.3.3.tgz#4d284e39b53d687918cdb5c4b911490e343b0503"
+  integrity sha512-g9jmAaRCg71ikQ/2fOePo57IGaaBspRXJjpQsO06dVVPNVkh2d67xfey/JJY+nbT+IZfxJJM/06Ry8Xo1NQGDg==
+
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.0.tgz#56c133824780de3174aed5ab6834f3026790154d"
@@ -3565,11 +3570,6 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
-
-classnames@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
-  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
 
 clean-css@^4.2.3:
   version "4.2.4"

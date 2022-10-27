@@ -4,6 +4,7 @@
         "moduleResolution": "node",
         "target": "ES6",
         "useDefineForClassFields": false,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
     }
 }
