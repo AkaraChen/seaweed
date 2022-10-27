@@ -7,6 +7,13 @@
   resolved "https://registry.yarnpkg.com/@akrc/classnames/-/classnames-2.3.3.tgz#4d284e39b53d687918cdb5c4b911490e343b0503"
   integrity sha512-g9jmAaRCg71ikQ/2fOePo57IGaaBspRXJjpQsO06dVVPNVkh2d67xfey/JJY+nbT+IZfxJJM/06Ry8Xo1NQGDg==
 
+"@akrc/esbuild-plugin-clean@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@akrc/esbuild-plugin-clean/-/esbuild-plugin-clean-0.1.0.tgz#88c9c74756723bb58693ca18bbc33727e449ce23"
+  integrity sha512-GEmh/NRICZS8wDqOCsc5+bCjA8PdzIADCFFd4H6TBuxGidbARHY7GslrgMeYu6qaTSG5YEjrrkA/T23cxz0R1g==
+  dependencies:
+    rimraf "^3.0.2"
+
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.0.tgz#56c133824780de3174aed5ab6834f3026790154d"
