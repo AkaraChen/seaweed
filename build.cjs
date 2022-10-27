@@ -1,6 +1,6 @@
 const esbuild = require('esbuild');
 const glob = require('glob');
-const clear = require('esbuild-plugin-clean')
+const clear = require('@akrc/esbuild-plugin-clean');
 
 esbuild.build({
     entryPoints: glob.GlobSync('./src/*.ts').found,
@@ -15,5 +15,5 @@ esbuild.build({
     minifySyntax: true,
     minifyWhitespace: true,
     drop: ['console', 'debugger'],
-    plugins: [clear()]
+    plugins: [clear()],
 });

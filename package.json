@@ -15,7 +15,7 @@
     "license": "MIT",
     "devDependencies": {
         "@akrc/classnames": "2.3.3",
-        "@akrc/esbuild-plugin-clean": "0.1.0",
+        "@akrc/esbuild-plugin-clean": "0.1.2",
         "@babel/core": "7.19.6",
         "@storybook/addon-actions": "6.5.13",
         "@storybook/addon-essentials": "6.5.13",
