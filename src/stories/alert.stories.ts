@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/web-components';
 import { html } from 'lit-html';
-import './alert';
+import '../alert';
 
 export default {
     title: 'Alert',

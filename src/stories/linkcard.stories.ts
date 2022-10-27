@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
-import './linkcard';
-import { LinkCardProp } from './linkcard';
+import '../linkcard';
+import { LinkCardProp } from '../linkcard';
 import { Meta } from '@storybook/web-components';
 
 export default {

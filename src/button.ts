@@ -1,11 +1,13 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { size, type } from './type';
+import { size, type } from './util/type';
 import className from '@akrc/classnames';
+import { fontFallback } from './util/style';
 
 @customElement('sw-button')
 export class Button extends LitElement {
     static styles = css`
+        ${fontFallback}
         button {
             --primary: #1890ff;
             --primary-hover: #40a9ff;
@@ -17,9 +19,6 @@ export class Button extends LitElement {
             }
         }
         button {
-            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-                Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji,
-                segoe ui emoji, Segoe UI Symbol, noto color emoji;
             display: inline-flex;
             height: 32px;
             align-items: center;

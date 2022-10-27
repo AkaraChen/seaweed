@@ -1,12 +1,14 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { type } from './type';
+import { type } from './util/type';
 import className from '@akrc/classnames';
-import { ErrorRound, InfoRound, SuccessRound, WarningRound } from './icon';
+import { ErrorRound, InfoRound, SuccessRound, WarningRound } from './util/icon';
+import { fontFallback } from './util/style';
 
 @customElement('sw-alert')
 export class Alert extends LitElement {
     static styles = css`
+        ${fontFallback}
         .alert {
             --bg: #e6f7ff;
             --icon: #1890ff;

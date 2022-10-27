@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/web-components';
 import { html } from 'lit-html';
-import './button';
+import '../button';
 
 export default {
     title: 'Button',
