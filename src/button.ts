@@ -1,6 +1,7 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { size, type } from './type';
+import className from 'classnames';
 
 @customElement('sw-button')
 export class Button extends LitElement {
@@ -103,8 +104,8 @@ export class Button extends LitElement {
         }
     `;
 
-    @property()
-    primary: string = 'false';
+    @property({ type: Boolean })
+    primary: boolean = false;
 
     @property()
     size: size = 'normal';
@@ -112,11 +113,15 @@ export class Button extends LitElement {
     @property()
     type: type = 'info';
 
+    classNames = () =>
+        className(
+            { primary: this.primary },
+            { [`size-${this.size}`]: true },
+            { [`type-${this.type}`]: true }
+        );
+
     render() {
-        return html`<button
-            class="${this.primary === 'true' ? 'primary' : ''} size-${this
-                .size} type-${this.type}"
-        >
+        return html`<button class="${this.classNames()}">
             <slot></slot>
         </button>`;
     }

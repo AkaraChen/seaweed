@@ -3,6 +3,7 @@
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "target": "ES6",
-        "useDefineForClassFields": false
+        "useDefineForClassFields": false,
+        "allowSyntheticDefaultImports": true
     }
 }
