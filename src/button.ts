@@ -78,6 +78,26 @@ export class Button extends LitElement {
                 --primary-hover: #800f19;
             }
         }
+        button.type-warning {
+            --primary: #faad14;
+            --primary-hover: #ffc53d;
+        }
+        @media (prefers-color-scheme: dark) {
+            button.type-warning {
+                --primary: #d48806;
+                --primary-hover: #ad6800;
+            }
+        }
+        button.type-success {
+            --primary: #52c41a;
+            --primary-hover: #73d13d;
+        }
+        @media (prefers-color-scheme: dark) {
+            button.type-success {
+                --primary: #389e0d;
+                --primary-hover: #237804;
+            }
+        }
     `;
 
     @property()

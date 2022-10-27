@@ -10,7 +10,7 @@ export default {
     argTypes: {
         type: {
             control: 'select',
-            options: ['info', 'error'],
+            options: ['info', 'error', 'warning', 'success'],
         },
     },
 } as Meta;
