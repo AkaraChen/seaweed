@@ -1,5 +1,6 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { size, type } from './type';
 
 @customElement('sw-button')
 export class Button extends LitElement {
@@ -26,8 +27,9 @@ export class Button extends LitElement {
             border: 1px solid #d9d9d9;
             background-color: transparent;
             box-shadow: 0 2px #00000004;
-            transition: 0.25s;
+            transition: 0.25s all;
             color: black;
+            font-size: 15px;
         }
         button:hover,
         button:focus {
@@ -56,17 +58,42 @@ export class Button extends LitElement {
             border-color: var(--primary-hover);
             background-color: var(--primary-hover);
         }
+        button.size-large {
+            height: 40px;
+            font-size: 16px;
+            padding: 6px 15px;
+        }
+        button.size-small {
+            font-size: 14px;
+            padding: 0 7px;
+            height: 24px;
+        }
+        button.type-error {
+            --primary: #ff4d4f;
+            --primary-hover: #ff7875;
+        }
+        @media (prefers-color-scheme: dark) {
+            button.type-error {
+                --primary: #a61d24;
+                --primary-hover: #800f19;
+            }
+        }
     `;
 
     @property()
     primary: string = 'false';
 
     @property()
-    size: string = 'normal';
+    size: size = 'normal';
 
     @property()
+    type: type = 'info';
+
     render() {
-        return html`<button class="${this.primary === 'true' ? 'primary' : ''}">
+        return html`<button
+            class="${this.primary === 'true' ? 'primary' : ''} size-${this
+                .size} type-${this.type}"
+        >
             <slot></slot>
         </button>`;
     }

@@ -4,11 +4,28 @@ import './button';
 
 export default {
     title: 'Button',
+    args: {
+        type: 'info',
+    },
+    argTypes: {
+        type: {
+            control: 'select',
+            options: ['info', 'error'],
+        },
+    },
 } as Meta;
 
-const Template = () => html`
-    <sw-button>Button</sw-button>
-    <sw-button color="blue" primary="true">Primary</sw-button>
+export const Normal = ({ type }) => html`
+    <sw-button type="${type}">Button</sw-button>
+    <sw-button type="${type}" primary="true">Primary</sw-button>
 `;
 
-export const Index = Template;
+export const Large = ({ type }) => html`
+    <sw-button type="${type}" size="large">Large Button</sw-button>
+    <sw-button type="${type}" primary="true" size="large">Primary</sw-button>
+`;
+
+export const Small = ({ type }) => html`
+    <sw-button type="${type}" size="small">Small</sw-button>
+    <sw-button type="${type}" primary="true" size="small">Primary</sw-button>
+`;
