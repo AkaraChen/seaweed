@@ -116,8 +116,8 @@ export class Button extends LitElement {
     classNames = () =>
         className(
             { primary: this.primary },
-            { [`size-${this.size}`]: true },
-            { [`type-${this.type}`]: true }
+            { [`size-${this.size}`]: this.size },
+            { [`type-${this.type}`]: this.type }
         );
 
     render() {
