@@ -26,5 +26,19 @@ import '@akrc/seaweed/button.js';
 ```
 
 ```html
-<sw-button type="success"></sw-button>
+<sw-button type="success">Button</sw-button>
+```
+
+## Development
+
+```bash
+yarn
+yarn storybook
+```
+
+## Build
+
+```bash
+yarn
+yarn build
 ```
