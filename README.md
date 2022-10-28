@@ -1,4 +1,4 @@
-<h1 style="text-align: center">Seaweed</h1>
+<h1 align="center">Seaweed</h1>
 
 <pre align="center">
 🚧 Working in Progress
