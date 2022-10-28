@@ -1,28 +1,34 @@
-# Seaweed
+<h1 style="text-align: center">Seaweed</h1>
 
 <pre align="center">
 🚧 Working in Progress
 </pre>
 
-The modern webcomponent that just works.
+The next generation component library based on web components.
 
-## Usage
+## Features
 
-### Full import
+1. Support Vue, React, Angular, jQuery and vanilla JS project.
+2. High quality components.
+3. Support tree shaking.
+4. Written in TypeScript
+
+## Install
+
+```bash
+npm install @akrc/seaweed
+yarn add @akrc/seaweed
+pnpm add @akrc/seaweed
+```
+
+## Quick start
 
 ```ts
+// import manually
+import '@akrc/seaweed/button.js'
+
+// or you can full import
 import '@akrc/seaweed';
-```
-
-```html
-<sw-alert title="greet" fill>Hello, Seaweed!</sw-alert>
-<sw-button type="success">Button</sw-button>
-```
-
-### Manual import
-
-```ts
-import '@akrc/seaweed/button.js';
 ```
 
 ```html
