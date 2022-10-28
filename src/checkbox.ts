@@ -129,10 +129,10 @@ export class CheckBox extends LitElement {
             <div>
                 <input
                     type="checkbox"
-                    class="${this.classNames()}"
-                    @click="${this.handler}"
-                    ?disabled="${this.disabled}"
-                    ?checked="${this.checked}"
+                    class=${this.classNames()}
+                    @click=${this.handler}
+                    ?disabled=${this.disabled}
+                    ?checked=${this.checked}
                     id="checkbox"
                 />
                 ${this.formatLabel()}

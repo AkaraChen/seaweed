@@ -120,7 +120,7 @@ export class Button extends LitElement {
         );
 
     render() {
-        return html`<button class="${this.classNames()}">
+        return html`<button class=${this.classNames()}>
             <slot></slot>
         </button>`;
     }

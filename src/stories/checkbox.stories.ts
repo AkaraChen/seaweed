@@ -20,13 +20,13 @@ export default {
 export const Normal = ({ size, label, checked }) => html`
     <sw-checkbox
         size=${size}
-        ?checked="${checked}"
+        ?checked=${checked}
         label="${label}"
     ></sw-checkbox>
     <sw-checkbox
         size=${size}
-        ?checked="${checked}"
-        label="${label}"
+        ?checked=${checked}
+        label=${label}
         disabled
     ></sw-checkbox>
 `;

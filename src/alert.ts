@@ -11,6 +11,7 @@ export class Alert extends LitElement {
         ${fontFallback}
         :host {
             margin: 0.5em 0;
+            display: block;
         }
         .alert {
             --bg: #e6f7ff;

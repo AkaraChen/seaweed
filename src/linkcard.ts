@@ -79,10 +79,10 @@ export class LinkCard extends LitElement {
     formatImage = () => {
         if (this.image) {
             return html`<img
-                src="${this.image}"
+                src=${this.image}
                 height="55"
                 width="55"
-                alt="${this.alt ? this.alt : this.formatLink()}"
+                alt=${this.alt ? this.alt : this.formatLink()}
                 class="image"
             />`;
         }
