@@ -9,6 +9,9 @@ import { fontFallback } from './util/style';
 export class Alert extends LitElement {
     static styles = css`
         ${fontFallback}
+        :host {
+            margin: 0.5em 0;
+        }
         .alert {
             --bg: #e6f7ff;
             --icon: #1890ff;
@@ -19,7 +22,6 @@ export class Alert extends LitElement {
             align-items: center;
             color: #2d3748;
             border-radius: 2px;
-            margin: 0.5em 0;
         }
         .icon-container {
             height: inherit;
