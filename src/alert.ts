@@ -19,6 +19,7 @@ export class Alert extends LitElement {
             align-items: center;
             color: #2d3748;
             border-radius: 2px;
+            margin: 0.5em 0;
         }
         .icon-container {
             height: inherit;
@@ -58,6 +59,12 @@ export class Alert extends LitElement {
         .alert.fill .icon {
             color: white;
         }
+        .alert.border-left {
+            border-left: 5px var(--icon) solid;
+        }
+        .alert.border-top {
+            border-top: 5px var(--icon) solid;
+        }
     `;
 
     @property()
@@ -68,6 +75,9 @@ export class Alert extends LitElement {
 
     @property({ type: Boolean })
     fill: boolean = false;
+
+    @property()
+    border: 'top' | 'left' = undefined;
 
     titleHTML() {
         if (this.title) {
@@ -92,7 +102,8 @@ export class Alert extends LitElement {
         className(
             'alert',
             { [`type-${this.type}`]: this.type },
-            { fill: this.fill }
+            { fill: this.fill },
+            { [`border-${this.border}`]: !this.fill && this.border }
         );
 
     render() {
