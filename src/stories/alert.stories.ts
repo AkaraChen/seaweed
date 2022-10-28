@@ -25,6 +25,10 @@ export const Fill = ({ type, text, title }) =>
 
 export const Border = ({ type, text, title }) =>
     html`
-        <sw-alert type="${type}" title="${title}" border="top">${text}</sw-alert>
-        <sw-alert type="${type}" title="${title}" border="left">${text}</sw-alert>
+        <sw-alert type="${type}" title="${title}" border="top"
+            >${text}</sw-alert
+        >
+        <sw-alert type="${type}" title="${title}" border="left"
+            >${text}</sw-alert
+        >
     `;

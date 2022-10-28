@@ -7,3 +7,13 @@ export const fontFallback = css`
             segoe ui emoji, Segoe UI Symbol, noto color emoji;
     }
 `;
+
+export const boxSizing = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+`;
