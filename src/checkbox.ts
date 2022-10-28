@@ -91,7 +91,7 @@ export class CheckBox extends LitElement {
                 background-color: #444;
             }
             input[disabled]::before {
-                background-color: #666;
+                background-color: #848484;
             }
         }
     `;
