@@ -6,7 +6,7 @@
     "main": "index.js",
     "scripts": {
         "build": "node build.cjs",
-        "lint": "eslint --fix .",
+        "lint": "eslint --ext ts,mdx --fix .",
         "prettier": "prettier --write .",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
@@ -30,6 +30,9 @@
         "babel-loader": "9.0.0",
         "esbuild": "0.15.12",
         "eslint": "^8.26.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-mdx": "^2.0.5",
+        "eslint-plugin-mdx": "^2.0.5",
         "eslint-plugin-prettier": "^4.2.1",
         "husky": "8.0.1",
         "lit": "2.4.0",
