@@ -69,7 +69,7 @@ export class LinkCard extends LitElement {
     image: string;
 
     @property()
-    target = '_blank';
+    target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
 
     @property()
     alt: string;

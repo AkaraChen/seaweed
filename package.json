@@ -10,7 +10,8 @@
         "prettier": "prettier --write .",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "lit-analyzer": "lit-analyzer src"
     },
     "keywords": [],
     "author": "",
@@ -38,6 +39,7 @@
         "eslint-plugin-prettier": "^4.2.1",
         "husky": "8.0.1",
         "lit": "2.4.0",
+        "lit-analyzer": "^1.2.1",
         "lit-html": "2.4.0",
         "prettier": "2.7.1",
         "tslib": "2.4.0",
