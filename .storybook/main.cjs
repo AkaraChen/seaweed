@@ -14,7 +14,7 @@ const config = {
     },
     features: {
         storyStoreV7: true,
-        previewMdx2: true
+        previewMdx2: true,
     },
 };
 

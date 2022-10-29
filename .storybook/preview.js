@@ -9,8 +9,8 @@ export const parameters = {
     layout: 'centered',
     options: {
         storySort: {
-            method: "alphabetical",
-            order: ["Introduction"]
-        }
-    }
+            method: 'alphabetical',
+            order: ['Introduction'],
+        },
+    },
 };
