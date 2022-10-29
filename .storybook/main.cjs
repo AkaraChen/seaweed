@@ -6,7 +6,7 @@ const config = {
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
-        'storybook-dark-mode',
+        '@styled/storybook-dark-mode',
     ],
     framework: '@storybook/web-components',
     core: {

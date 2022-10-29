@@ -37,6 +37,7 @@ export class Button extends LitElement {
             color: black;
             font-size: 15px;
             cursor: pointer;
+            user-select: none;
         }
         button:hover,
         button:focus {

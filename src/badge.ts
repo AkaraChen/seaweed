@@ -2,12 +2,14 @@ import { html, css, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import { type } from './util/type';
+import { fontFallback } from './util/style';
 
 @customElement('sw-badge')
 export class Badge extends LitElement {
     static styles = css`
+        ${fontFallback}
         :host {
-            display: inline;
+            display: inline-block;
         }
         .badge {
             --bg: #fafafa;

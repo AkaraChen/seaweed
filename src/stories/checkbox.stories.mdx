@@ -3,6 +3,21 @@ import { html } from 'lit-html';
 import '../checkbox.ts';
 import { sizeArray } from '../util/type.ts';
 
+```tsx
+import '@akrc/seaweed/checkbox.js';
+
+<sw-checkbox></sw-checkbox>;
+
+const checkbox = document.getElementsByTagName('sw-checkbox')[0];
+checkbox.addEventListener('change', (event: Event) => {
+    if (event.detail.value as boolean) {
+        alert(true);
+    } else {
+        alert(false);
+    }
+});
+```
+
 <Meta
     title="CheckBox"
     args={{
