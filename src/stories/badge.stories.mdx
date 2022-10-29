@@ -2,8 +2,31 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { html } from 'lit-html';
 import '../badge.ts';
 
-<Meta title="Badge" />
+<Meta
+    title="Badge"
+    args={{
+        type: 'normal',
+        text: 'JavaScript',
+        noborder: false,
+        disabled: false,
+    }}
+    argTypes={{
+        type: {
+            control: 'select',
+            options: ['normal', 'info', 'warning', 'error', 'success'],
+        },
+    }}
+/>
 
 <Canvas>
-    <Story name="Page">{() => html`<sw-badge>Test</sw-badge>`}</Story>
+    <Story name="Page">
+        {({ type, text, noborder, disabled }) =>
+            html`<sw-badge
+                type=${type}
+                ?noborder=${noborder}
+                ?disabled=${disabled}
+                >${text}</sw-badge
+            >`
+        }
+    </Story>
 </Canvas>
