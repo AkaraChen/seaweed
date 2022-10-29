@@ -96,17 +96,13 @@ export class CheckBox extends LitElement {
         }
     `;
 
-    @property({ type: Boolean })
-    checked: boolean = false;
+    @property({ type: Boolean }) checked = false;
 
-    @property()
-    size: size = 'normal';
+    @property() size: size = 'normal';
 
-    @property({ type: Boolean })
-    disabled: boolean;
+    @property({ type: Boolean }) disabled: boolean;
 
-    @property()
-    label: string = '';
+    @property() label = '';
 
     formatLabel() {
         if (this.label !== '') {

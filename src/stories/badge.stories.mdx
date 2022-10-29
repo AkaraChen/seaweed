@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { html } from 'lit-html';
 import '../badge.ts';
+import { typeArray } from '../util/type.ts';
 
 <Meta
     title="Badge"
@@ -13,7 +14,7 @@ import '../badge.ts';
     argTypes={{
         type: {
             control: 'select',
-            options: ['normal', 'info', 'warning', 'error', 'success'],
+            options: ['normal', ...typeArray],
         },
     }}
 />

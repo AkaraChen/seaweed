@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { html } from 'lit-html';
 import '../button.ts';
+import { typeArray, sizeArray } from '../util/type.ts';
 
 <Meta
     title="Button"
@@ -14,11 +15,11 @@ import '../button.ts';
     argTypes={{
         type: {
             control: 'select',
-            options: ['info', 'error', 'warning', 'success'],
+            options: typeArray,
         },
         size: {
             control: 'select',
-            options: ['small', 'normal', 'large'],
+            options: sizeArray,
         },
     }}
 />

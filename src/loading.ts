@@ -20,10 +20,10 @@ export class Loading extends LitElement {
     `;
 
     @property()
-    size: string = '24px';
+    size = '24px';
 
     @property()
-    color: string = '#bbb';
+    color = '#bbb';
 
     @query('svg')
     icon: SVGElement;

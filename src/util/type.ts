@@ -1,2 +1,7 @@
-export type size = 'small' | 'normal' | 'large';
-export type type = 'info' | 'warning' | 'error' | 'success';
+import type { TupleToUnion } from 'type-fest';
+
+export const sizeArray = ['small', 'normal', 'large'] as const;
+export const typeArray = ['info', 'warning', 'error', 'success'] as const;
+
+export type size = TupleToUnion<typeof sizeArray>;
+export type type = TupleToUnion<typeof typeArray>;

@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { html } from 'lit-html';
 import '../alert.ts';
+import { typeArray } from '../util/type.ts';
 
 <Meta
     title="Alert"
@@ -14,7 +15,7 @@ import '../alert.ts';
     argTypes={{
         type: {
             control: 'select',
-            options: ['info', 'error', 'warning', 'success'],
+            options: typeArray,
         },
         border: {
             control: 'select',

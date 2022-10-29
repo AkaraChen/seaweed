@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs';
 import { html } from 'lit-html';
 import '../checkbox.ts';
+import { sizeArray } from '../util/type.ts';
 
 <Meta
     title="CheckBox"
@@ -12,7 +13,7 @@ import '../checkbox.ts';
     argTypes={{
         size: {
             control: 'select',
-            options: ['small', 'normal', 'large'],
+            options: sizeArray,
         },
     }}
 />

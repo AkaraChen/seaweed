@@ -112,7 +112,7 @@ export class Button extends LitElement {
     `;
 
     @property({ type: Boolean })
-    primary: boolean = false;
+    primary = false;
 
     @property()
     size: size = 'normal';
@@ -121,10 +121,10 @@ export class Button extends LitElement {
     type: type = 'info';
 
     @property({ type: Boolean })
-    loading: boolean = false;
+    loading = false;
 
     @property({ type: Boolean })
-    disabled: boolean = false;
+    disabled = false;
 
     formatLoading = () => {
         if (this.loading) {

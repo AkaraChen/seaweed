@@ -58,6 +58,7 @@ export class Alert extends LitElement {
         .alert.fill {
             background-color: var(--icon);
             color: white;
+            border: none;
         }
         .alert.fill .icon {
             color: white;
@@ -77,7 +78,7 @@ export class Alert extends LitElement {
     type: type = 'info';
 
     @property({ type: Boolean })
-    fill: boolean = false;
+    fill = false;
 
     @property()
     border: 'none' | 'top' | 'left' = 'none';
