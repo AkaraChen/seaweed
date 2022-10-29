@@ -1,0 +1,26 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
+import { html } from 'lit-html';
+import '../linkcard.ts';
+
+<Meta
+    title="LinkCard"
+    args={{
+        title: 'Example',
+        link: 'https://example.com',
+        image: 'https://via.placeholder.com/55',
+        alt: 'image alt',
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ title, link, image, alt }) =>
+            html`<sw-link-card
+                title=${title}
+                link=${link}
+                image=${image}
+                alt=${alt}
+            ></sw-link-card>`
+        }
+    </Story>
+</Canvas>

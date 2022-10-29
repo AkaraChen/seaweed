@@ -80,7 +80,7 @@ export class Alert extends LitElement {
     fill: boolean = false;
 
     @property()
-    border: 'top' | 'left' = undefined;
+    border: 'none' | 'top' | 'left' = 'none';
 
     titleHTML() {
         if (this.title) {
@@ -106,7 +106,7 @@ export class Alert extends LitElement {
             'alert',
             { [`type-${this.type}`]: this.type },
             { fill: this.fill },
-            { [`border-${this.border}`]: !this.fill && this.border }
+            { [`border-${this.border}`]: !this.fill && this.border !== 'none' }
         );
 
     render() {

@@ -33,6 +33,7 @@ export class Button extends LitElement {
             transition: 0.25s all;
             color: black;
             font-size: 15px;
+            cursor: pointer;
         }
         button:hover,
         button:focus {

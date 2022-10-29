@@ -1,6 +1,6 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { boxSizing } from './util/style';
+import { boxSizing, fontFallback } from './util/style';
 import { size } from './util/type';
 import className from '@akrc/classnames';
 
@@ -8,6 +8,7 @@ import className from '@akrc/classnames';
 export class CheckBox extends LitElement {
     static styles = css`
         ${boxSizing}
+        ${fontFallback}
         :host {
             display: inline-block;
             margin-right: 0.5em;
@@ -24,9 +25,7 @@ export class CheckBox extends LitElement {
             border: var(--border-width) solid var(--border-color);
             border-radius: 2px;
             cursor: pointer;
-        }
-        input:active {
-            border-color: var(--color);
+            transition: 0.25s all;
         }
         @media (prefers-color-scheme: dark) {
             input {
@@ -66,6 +65,7 @@ export class CheckBox extends LitElement {
         }
         label {
             user-select: none;
+            cursor: pointer;
         }
         div {
             display: flex;
@@ -82,6 +82,7 @@ export class CheckBox extends LitElement {
         }
         input[disabled] {
             background-color: rgb(245, 245, 245);
+            cursor: no-drop;
         }
         input[disabled]::before {
             background-color: #ddd;
@@ -119,9 +120,14 @@ export class CheckBox extends LitElement {
 
     private handler(e: Event) {
         const element = e.target as HTMLInputElement;
-        element.checked
-            ? this.setAttribute('checked', '')
-            : this.removeAttribute('checked');
+        const state = element.checked;
+        this.dispatchEvent(
+            new CustomEvent('change', {
+                detail: {
+                    value: state,
+                },
+            })
+        );
     }
 
     render() {
@@ -130,7 +136,7 @@ export class CheckBox extends LitElement {
                 <input
                     type="checkbox"
                     class=${this.classNames()}
-                    @click=${this.handler}
+                    @input=${this.handler}
                     ?disabled=${this.disabled}
                     ?checked=${this.checked}
                     id="checkbox"

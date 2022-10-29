@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { html } from 'lit-html';
+import '../button.ts';
+
+<Meta
+    title="Button"
+    args={{
+        type: 'info',
+        size: 'normal',
+        primary: true,
+    }}
+    argTypes={{
+        type: {
+            control: 'select',
+            options: ['info', 'error', 'warning', 'success'],
+        },
+        size: {
+            control: 'select',
+            options: ['small', 'normal', 'large'],
+        },
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ type, size, primary }) =>
+            html`<sw-button type=${type} size=${size} ?primary=${primary}
+                >Button</sw-button
+            >`
+        }
+    </Story>
+</Canvas>
