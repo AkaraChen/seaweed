@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { html } from 'lit-html';
+import '../loading.ts';
+
+<Meta
+    title="Loading"
+    args={{
+        color: '#bbb',
+        size: '50px',
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ color, size }) => {
+            return html`<sw-loading color=${color} size=${size}></sw-loading>`;
+        }}
+    </Story>
+</Canvas>

@@ -8,6 +8,8 @@ import '../button.ts';
         type: 'info',
         size: 'normal',
         primary: true,
+        loading: false,
+        disabled: false,
     }}
     argTypes={{
         type: {
@@ -23,8 +25,13 @@ import '../button.ts';
 
 <Canvas>
     <Story name="Page">
-        {({ type, size, primary }) =>
-            html`<sw-button type=${type} size=${size} ?primary=${primary}
+        {({ type, size, primary, loading, disabled }) =>
+            html`<sw-button
+                type=${type}
+                size=${size}
+                ?primary=${primary}
+                ?loading=${loading}
+                ?disabled=${disabled}
                 >Button</sw-button
             >`
         }

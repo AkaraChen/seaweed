@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { size, type } from './util/type';
 import className from '@akrc/classnames';
 import { fontFallback } from './util/style';
+import './loading';
 
 @customElement('sw-button')
 export class Button extends LitElement {
@@ -11,11 +12,13 @@ export class Button extends LitElement {
         button {
             --primary: #1890ff;
             --primary-hover: #40a9ff;
+            --font-color: #000;
         }
         @media (prefers-color-scheme: dark) {
             button {
                 --primary: #177ddc;
                 --primary-hover: #095cb5;
+                --font-color: #fff;
             }
         }
         button {
@@ -102,6 +105,10 @@ export class Button extends LitElement {
                 --primary-hover: #237804;
             }
         }
+        button.loading,
+        button[disabled] {
+            opacity: 0.5;
+        }
     `;
 
     @property({ type: Boolean })
@@ -113,16 +120,43 @@ export class Button extends LitElement {
     @property()
     type: type = 'info';
 
+    @property({ type: Boolean })
+    loading: boolean = false;
+
+    @property({ type: Boolean })
+    disabled: boolean = false;
+
+    formatLoading = () => {
+        if (this.loading) {
+            const size = this.size === 'small' ? '14px' : '18px';
+            const color = this.primary ? '#fff' : 'var(--font-color)';
+            return html` <style>
+                    sw-loading {
+                        margin-right: 0.5em;
+                    }
+                    button.size-small sw-loading {
+                        margin-right: 0.25em;
+                    }
+                </style>
+                <sw-loading size=${size} color=${color}></sw-loading>`;
+        }
+    };
+
     classNames = () =>
         className(
             { primary: this.primary },
             { [`size-${this.size}`]: this.size },
-            { [`type-${this.type}`]: this.type }
+            { [`type-${this.type}`]: this.type },
+            { loading: this.loading }
         );
 
     render() {
-        return html`<button class=${this.classNames()}>
-            <slot></slot>
+        return html`<button
+            class=${this.classNames()}
+            ?disabled=${this.disabled}
+        >
+            ${this.formatLoading()}
+            <p><slot></slot></p>
         </button>`;
     }
 }
