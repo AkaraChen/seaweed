@@ -5,4 +5,5 @@ npm run lint
 npm run prettier
 npm run build
 npm run lit-analyzer
+npm run test
 git add .

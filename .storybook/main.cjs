@@ -1,7 +1,9 @@
+const { mergeConfig } = require('vite');
+
 const config = {
     stories: [
-        '../src/**/*.stories.mdx',
-        '../src/**/*.stories.@(js|jsx|ts|tsx)',
+        '../stories/**/*.stories.mdx',
+        '../stories/**/*.stories.@(js|jsx|ts|tsx)',
     ],
     addons: [
         '@storybook/addon-links',
@@ -15,6 +17,13 @@ const config = {
     features: {
         storyStoreV7: true,
         previewMdx2: true,
+    },
+    async viteFinal(config) {
+        return mergeConfig(config, {
+            resolve: {
+                alias: { '@': '../src' },
+            },
+        });
     },
 };
 

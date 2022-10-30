@@ -74,7 +74,13 @@ export class LinkCard extends LitElement {
     @property()
     alt: string;
 
-    formatLink = () => new URL(this.link).origin;
+    formatLink = () => {
+        try {
+            return new URL(this.link).origin;
+        } catch (e) {
+            return this.link;
+        }
+    };
 
     formatImage = () => {
         if (this.image) {
