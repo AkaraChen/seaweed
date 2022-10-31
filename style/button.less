@@ -2,17 +2,7 @@ button {
     --primary: #1890ff;
     --primary-hover: #40a9ff;
     --font-color: #000;
-}
 
-@media (prefers-color-scheme: dark) {
-    button {
-        --primary: #177ddc;
-        --primary-hover: #095cb5;
-        --font-color: #fff;
-    }
-}
-
-button {
     display: inline-flex;
     height: 32px;
     align-items: center;
@@ -39,6 +29,10 @@ button:focus {
 
 @media (prefers-color-scheme: dark) {
     button {
+        --primary: #177ddc;
+        --primary-hover: #095cb5;
+        --font-color: #fff;
+
         border-color: #434343;
         color: white;
         box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
@@ -78,10 +72,8 @@ button.size-small {
 button.type-error {
     --primary: #ff4d4f;
     --primary-hover: #ff7875;
-}
 
-@media (prefers-color-scheme: dark) {
-    button.type-error {
+    @media (prefers-color-scheme: dark) {
         --primary: #a61d24;
         --primary-hover: #800f19;
     }
@@ -90,10 +82,8 @@ button.type-error {
 button.type-warning {
     --primary: #faad14;
     --primary-hover: #ffc53d;
-}
 
-@media (prefers-color-scheme: dark) {
-    button.type-warning {
+    @media (prefers-color-scheme: dark) {
         --primary: #d48806;
         --primary-hover: #ad6800;
     }
@@ -102,10 +92,8 @@ button.type-warning {
 button.type-success {
     --primary: #52c41a;
     --primary-hover: #73d13d;
-}
 
-@media (prefers-color-scheme: dark) {
-    button.type-success {
+    @media (prefers-color-scheme: dark) {
         --primary: #389e0d;
         --primary-hover: #237804;
     }

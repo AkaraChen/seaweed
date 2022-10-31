@@ -3,6 +3,7 @@
 
 npm run lint
 npm run prettier
+npm run style-lint
 npm run build
 npm run lit-analyzer
 npm pkg set type=module
