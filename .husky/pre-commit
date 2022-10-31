@@ -5,5 +5,7 @@ npm run lint
 npm run prettier
 npm run build
 npm run lit-analyzer
+npm pkg set type=module
 npm run test
+npm pkg set type=commonjs
 git add .

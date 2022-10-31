@@ -3,7 +3,6 @@
     "version": "0.0.1",
     "description": "",
     "main": "index.js",
-    "type": "module",
     "scripts": {
         "build": "rollup -c rollup.config.mjs",
         "lint": "eslint --ext ts,mdx --fix .",
@@ -63,5 +62,5 @@
     "files": [
         "dist"
     ],
-    "dependencies": {}
+    "type": "commonjs"
 }
