@@ -61,6 +61,5 @@
     },
     "files": [
         "dist"
-    ],
-    "type": "commonjs"
+    ]
 }
