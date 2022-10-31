@@ -1,11 +1,13 @@
 {
     "extends": [
         "stylelint-config-standard",
-        "stylelint-config-recommended-less"
+        "stylelint-config-recommended-less",
+        "@wordpress/stylelint-config"
     ],
     "customSyntax": "postcss-less",
     "rules": {
         "indentation": 4,
-        "no-descending-specificity": null
+        "no-descending-specificity": null,
+        "function-url-quotes": "always"
     }
 }

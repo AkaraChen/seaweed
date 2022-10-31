@@ -15,7 +15,7 @@ button {
     background-color: transparent;
     box-shadow: 0 2px #00000004;
     transition: 0.25s all;
-    color: black;
+    color: #000;
     font-size: 15px;
     cursor: pointer;
     user-select: none;
@@ -28,13 +28,14 @@ button:focus {
 }
 
 @media (prefers-color-scheme: dark) {
+
     button {
         --primary: #177ddc;
         --primary-hover: #095cb5;
         --font-color: #fff;
 
         border-color: #434343;
-        color: white;
+        color: #fff;
         box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
     }
 
@@ -47,7 +48,7 @@ button:focus {
 
 button.primary {
     background-color: var(--primary);
-    color: white;
+    color: #fff;
     border-color: var(--primary);
 }
 
