@@ -58,7 +58,7 @@
         "postcss-less": "^6.0.0",
         "postcss-nesting": "^10.2.0",
         "prettier": "2.7.1",
-        "rollup": "3.2.3",
+        "rollup": "3.2.4",
         "rollup-plugin-cleanup": "3.2.1",
         "rollup-plugin-delete": "2.0.0",
         "rollup-plugin-esbuild": "4.10.1",
