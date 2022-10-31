@@ -38,7 +38,7 @@
         "@typescript-eslint/parser": "5.41.0",
         "@wordpress/stylelint-config": "^21.3.0",
         "autoprefixer": "^10.4.13",
-        "babel-loader": "8.2.5",
+        "babel-loader": "9.0.0",
         "esbuild": "0.15.12",
         "eslint": "8.26.0",
         "eslint-config-prettier": "8.5.0",
