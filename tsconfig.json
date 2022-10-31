@@ -2,9 +2,18 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "moduleResolution": "node",
-        "target": "ES6",
+        "target": "ESNext",
         "useDefineForClassFields": false,
         "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true
-    }
+        "esModuleInterop": true,
+        "module": "ESNext",
+        "paths": {
+            "@": [
+                "./src"
+            ],
+            "#": [
+                "./style"
+            ]
+        }
+    },
 }

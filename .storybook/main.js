@@ -21,7 +21,7 @@ module.exports = {
 
         config.module.rules.unshift({
             test: /\.css$/,
-            use: 'lit-css-loader',
+            use: ['lit-css-loader'],
             include: path.resolve(__dirname, '../style/'),
         });
 

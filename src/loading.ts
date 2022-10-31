@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { loadingAlt } from './util/icon';
+import { loadingAlt } from '@/util/icon';
 import styles from '#/loading.css';
 
 @customElement('sw-loading')

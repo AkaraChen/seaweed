@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { size } from './util/type';
+import { size } from '@/util/type';
 import className from '@akrc/classnames';
 import styles from '#/checkbox.css';
 import baseStyles from '#/base.css';
