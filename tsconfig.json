@@ -8,11 +8,11 @@
         "esModuleInterop": true,
         "module": "ESNext",
         "paths": {
-            "@": [
-                "./src"
+            "@/*": [
+                "./src/*"
             ],
-            "#": [
-                "./style"
+            "#/*": [
+                "./style/*"
             ]
         }
     },

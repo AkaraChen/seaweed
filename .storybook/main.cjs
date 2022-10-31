@@ -1,4 +1,9 @@
 const path = require('path');
+const fs = require('fs');
+const postcss = require('postcss');
+const postcssNesting = require('postcss-nesting');
+const processor = postcss(postcssNesting());
+const syntax = require('postcss-less');
 
 module.exports = {
     stories: ['../stories/*.stories.mdx'],
@@ -19,13 +24,16 @@ module.exports = {
         config.resolve.alias['@'] = path.resolve(__dirname, '../src');
         config.resolve.alias['#'] = path.resolve(__dirname, '../style');
 
-        config.module.rules.unshift({
-            test: /\.css$/,
+        config.module.rules.push({
+            test: /\.less$/,
             loader: 'lit-css-loader',
-            include: path.resolve(__dirname, '../style/'),
+            options: {
+                transform: (css, { filePath }) => {
+                    const base = fs.readFileSync(path.resolve("./style/base.less")).toString()
+                    return processor.process(base + css, { from: filePath, syntax }).css
+                }
+            }
         });
-
-        config.module.rules[9].exclude = path.resolve(__dirname, '../style/');
 
         return config;
     },

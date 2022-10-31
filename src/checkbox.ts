@@ -2,12 +2,11 @@ import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { size } from '@/util/type';
 import className from '@akrc/classnames';
-import styles from '#/checkbox.css';
-import baseStyles from '#/base.css';
+import { styles } from '#/checkbox.less';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {
-    static styles = [baseStyles, styles];
+    static styles = styles;
 
     @property({ type: Boolean }) checked = false;
 

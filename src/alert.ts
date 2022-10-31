@@ -2,13 +2,12 @@ import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { type } from '@/util/type';
 import className from '@akrc/classnames';
-import { ErrorRound, InfoRound, SuccessRound, WarningRound } from '@/util/icon';
-import styles from '#/alert.css';
-import baseStyles from '#/base.css';
+import { ErrorRound, InfoRound, SuccessRound, WarningRound } from './util/icon';
+import { styles } from '#/alert.less';
 
 @customElement('sw-alert')
 export class Alert extends LitElement {
-    static styles = [baseStyles, styles];
+    static styles = styles;
 
     @property()
     title: string;

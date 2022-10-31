@@ -2,12 +2,11 @@ import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import { type } from '@/util/type';
-import styles from '#/badge.css';
-import baseStyles from '#/base.css';
+import { styles } from '#/badge.less';
 
 @customElement('sw-badge')
 export class Badge extends LitElement {
-    static styles = [baseStyles, styles];
+    static styles = styles;
 
     @property()
     type: type | 'normal' = 'normal';

@@ -3,12 +3,11 @@ import { customElement, property } from 'lit/decorators.js';
 import { size, type } from '@/util/type';
 import className from '@akrc/classnames';
 import './loading';
-import styles from '#/button.css';
-import baseStyles from '#/base.css';
+import { styles } from '#/button.less';
 
 @customElement('sw-button')
 export class Button extends LitElement {
-    static styles = [baseStyles, styles];
+    static styles = styles;
 
     @property({ type: Boolean })
     primary = false;
