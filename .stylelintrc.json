@@ -8,6 +8,10 @@
     "rules": {
         "indentation": 4,
         "no-descending-specificity": null,
-        "function-url-quotes": "always"
-    }
+        "function-url-quotes": "always",
+        "plugin/declaration-block-no-ignored-properties": true
+    },
+    "plugins": [
+        "stylelint-declaration-block-no-ignored-properties"
+    ]
 }

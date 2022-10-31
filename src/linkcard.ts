@@ -2,7 +2,7 @@ import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styles } from '#/linkcard.less';
 
-export interface LinkCardProp {
+export interface LinkCardProperty {
     title: string;
     link: string;
     image?: string;
@@ -32,34 +32,34 @@ export class LinkCard extends LitElement {
     formatLink = () => {
         try {
             return new URL(this.link).origin;
-        } catch (e) {
+        } catch {
             return this.link;
         }
     };
 
     formatImage = () => {
         if (this.image) {
-            return html`<img
-                src=${this.image}
-                height="55"
-                width="55"
-                alt=${this.alt ? this.alt : this.formatLink()}
-                class="image"
-            />`;
+            return html`
+                <img
+                    src=${this.image}
+                    height="55"
+                    width="55"
+                    alt=${this.alt ?? this.formatLink()}
+                    class="image"
+                />
+            `;
         }
     };
 
     render() {
-        return html`<a
-            class="container"
-            href="${this.link}"
-            target="${this.target}"
-        >
-            <div class="head">
-                <h2 class="title">${this.title}</h2>
-                <p class="link">${this.formatLink()}</p>
-            </div>
-            ${this.formatImage()}
-        </a>`;
+        return html`
+            <a class="container" href="${this.link}" target="${this.target}">
+                <div class="head">
+                    <h2 class="title">${this.title}</h2>
+                    <p class="link">${this.formatLink()}</p>
+                </div>
+                ${this.formatImage()}
+            </a>
+        `;
     }
 }

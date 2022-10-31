@@ -8,7 +8,8 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended",
         "plugin:lit/recommended",
-        "plugin:wc/recommended"
+        "plugin:wc/recommended",
+        "plugin:unicorn/recommended"
     ],
     "overrides": [
         {
@@ -26,9 +27,11 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "prettier"
+        "prettier",
+        "unicorn"
     ],
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "unicorn/template-indent": 0
     }
 }

@@ -27,12 +27,14 @@ import '@akrc/seaweed/linkcard.js';
 <Canvas>
     <Story name="Page">
         {({ title, link, image, alt }) =>
-            html`<sw-link-card
-                title=${title}
-                link=${link}
-                image=${image}
-                alt=${alt}
-            ></sw-link-card>`
+            html`
+                <sw-link-card
+                    title=${title}
+                    link=${link}
+                    image=${image}
+                    alt=${alt}
+                ></sw-link-card>
+            `
         }
     </Story>
 </Canvas>

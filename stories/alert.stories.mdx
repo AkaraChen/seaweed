@@ -37,13 +37,15 @@ import '@akrc/seaweed/alert.js';
 <Canvas>
     <Story name="Page">
         {({ type, text, title, fill, border }) =>
-            html`<sw-alert
-                type=${type}
-                title=${title}
-                ?fill=${fill}
-                border=${border}
-                >${text}</sw-alert
-            >`
+            html`
+                <sw-alert
+                    type=${type}
+                    title=${title}
+                    ?fill=${fill}
+                    border=${border}
+                    >${text}</sw-alert
+                >
+            `
         }
     </Story>
 </Canvas>

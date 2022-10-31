@@ -25,8 +25,8 @@ export class CheckBox extends LitElement {
     classNames = () =>
         className({ [`size-${this.size}`]: this.size != 'normal' });
 
-    private handler(e: Event) {
-        const element = e.target as HTMLInputElement;
+    private handler(event: Event) {
+        const element = event.target as HTMLInputElement;
         const state = element.checked;
         this.dispatchEvent(
             new CustomEvent('change', {

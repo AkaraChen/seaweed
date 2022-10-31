@@ -3,10 +3,10 @@ import '../dist/index.js';
 import { formatTag, list } from './util.js';
 
 test('all', () => {
-    list.forEach((item) => {
+    for (const item of list) {
         document.body.innerHTML += formatTag(item);
-    });
-    list.forEach((item) => {
+    }
+    for (const item of list) {
         expect(document.querySelectorAll(item).length).not.toBe(0);
-    });
+    }
 });

@@ -29,14 +29,18 @@ export class Alert extends LitElement {
 
     iconHTML() {
         switch (this.type) {
-            case 'info':
+            case 'info': {
                 return InfoRound;
-            case 'success':
+            }
+            case 'success': {
                 return SuccessRound;
-            case 'warning':
+            }
+            case 'warning': {
                 return WarningRound;
-            case 'error':
+            }
+            case 'error': {
                 return ErrorRound;
+            }
         }
     }
 
@@ -49,12 +53,14 @@ export class Alert extends LitElement {
         );
 
     render() {
-        return html` <div class="${this.classNames()}">
-            <div class="icon-container">${this.iconHTML()}</div>
-            <div>
-                ${this.titleHTML()}
-                <slot></slot>
+        return html`
+            <div class="${this.classNames()}">
+                <div class="icon-container">${this.iconHTML()}</div>
+                <div>
+                    ${this.titleHTML()}
+                    <slot></slot>
+                </div>
             </div>
-        </div>`;
+        `;
     }
 }

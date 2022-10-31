@@ -32,12 +32,14 @@ import '@akrc/seaweed/badge.js';
 <Canvas>
     <Story name="Page">
         {({ type, text, noborder, disabled }) =>
-            html`<sw-badge
-                type=${type}
-                ?noborder=${noborder}
-                ?disabled=${disabled}
-                >${text}</sw-badge
-            >`
+            html`
+                <sw-badge
+                    type=${type}
+                    ?noborder=${noborder}
+                    ?disabled=${disabled}
+                    >${text}</sw-badge
+                >
+            `
         }
     </Story>
 </Canvas>

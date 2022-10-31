@@ -35,14 +35,16 @@ import '@akrc/seaweed/button.js';
 <Canvas>
     <Story name="Page">
         {({ type, size, primary, loading, disabled }) =>
-            html`<sw-button
-                type=${type}
-                size=${size}
-                ?primary=${primary}
-                ?loading=${loading}
-                ?disabled=${disabled}
-                >Button</sw-button
-            >`
+            html`
+                <sw-button
+                    type=${type}
+                    size=${size}
+                    ?primary=${primary}
+                    ?loading=${loading}
+                    ?disabled=${disabled}
+                    >Button</sw-button
+                >
+            `
         }
     </Story>
 </Canvas>

@@ -28,7 +28,8 @@ export class Button extends LitElement {
         if (this.loading) {
             const size = this.size === 'small' ? '14px' : '18px';
             const color = this.primary ? '#fff' : 'var(--font-color)';
-            return html` <style>
+            return html`
+                <style>
                     sw-loading {
                         margin-right: 0.5em;
                     }
@@ -36,7 +37,8 @@ export class Button extends LitElement {
                         margin-right: 0.25em;
                     }
                 </style>
-                <sw-loading size=${size} color=${color}></sw-loading>`;
+                <sw-loading size=${size} color=${color}></sw-loading>
+            `;
         }
     };
 
@@ -49,12 +51,11 @@ export class Button extends LitElement {
         );
 
     render() {
-        return html`<button
-            class=${this.classNames()}
-            ?disabled=${this.disabled}
-        >
-            ${this.formatLoading()}
-            <p><slot></slot></p>
-        </button>`;
+        return html`
+            <button class=${this.classNames()} ?disabled=${this.disabled}>
+                ${this.formatLoading()}
+                <p><slot></slot></p>
+            </button>
+        `;
     }
 }
