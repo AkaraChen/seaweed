@@ -1,32 +1,17 @@
-import { html, css, LitElement } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import { loadingAlt } from './util/icon';
+import styles from '#/loading.css';
 
 @customElement('sw-loading')
 export class Loading extends LitElement {
-    static styles = css`
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        svg {
-            animation: rotate 1.5s linear infinite;
-            margin: 0;
-        }
-    `;
+    static styles = [styles];
 
     @property()
     size = '24px';
 
     @property()
     color = '#bbb';
-
-    @query('svg')
-    icon: SVGElement;
 
     render() {
         return html`

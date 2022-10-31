@@ -6,7 +6,6 @@ export const parameters = {
             date: /Date$/,
         },
     },
-    layout: 'centered',
     options: {
         storySort: {
             method: 'alphabetical',

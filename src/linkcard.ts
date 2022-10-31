@@ -1,6 +1,7 @@
-import { css, html, LitElement } from 'lit';
+import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { fontFallback } from './util/style';
+import styles from '#/linkcard.css';
+import baseStyles from '#/base.css';
 
 export interface LinkCardProp {
     title: string;
@@ -12,52 +13,7 @@ export interface LinkCardProp {
 
 @customElement('sw-link-card')
 export class LinkCard extends LitElement {
-    static styles = css`
-        ${fontFallback}
-        .container {
-            box-sizing: border-box;
-            display: flex;
-            background-color: rgb(247, 247, 247);
-            width: 275px;
-            border-radius: 8px;
-            padding: 1em;
-            text-decoration: none;
-            color: black;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-        }
-        .title {
-            margin: 0;
-            font-size: 17px;
-            font-weight: 500;
-        }
-        .link {
-            margin: 0;
-            margin-top: 0.25em;
-            font-size: 16px;
-            color: gray;
-        }
-        .image {
-            width: 55px;
-            height: 55px;
-            border-radius: 4px;
-        }
-        @media (prefers-color-scheme: dark) {
-            .container {
-                background-color: #222;
-            }
-            .title {
-                color: #bbb;
-            }
-            .image {
-                filter: brightness(0.9);
-            }
-        }
-        .primary {
-            background-color: var(--blue);
-        }
-    `;
+    static styles = [baseStyles, styles];
 
     @property()
     title: string;
