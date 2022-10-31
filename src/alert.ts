@@ -1,7 +1,7 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { type } from '@/util/type';
 import className from '@akrc/classnames';
+import { type } from '@/util/type';
 import { ErrorRound, InfoRound, SuccessRound, WarningRound } from './util/icon';
 import { styles } from '#/alert.less';
 

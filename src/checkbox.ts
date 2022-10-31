@@ -1,7 +1,7 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { size } from '@/util/type';
 import className from '@akrc/classnames';
+import { size } from '@/util/type';
 import { styles } from '#/checkbox.less';
 
 @customElement('sw-checkbox')
