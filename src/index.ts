@@ -1,5 +1,7 @@
 import './alert';
-import './button';
-import './linkcard';
-import './checkbox';
 import './badge';
+import './button';
+import './checkbox';
+import './linkcard';
+import './loading';
+import './switch';

@@ -22,34 +22,14 @@ export class Switch extends LitElement {
     @property({ type: Boolean })
     loading = false;
 
-    loadingHTML() {
-        if (this.loading) {
-            let size: number;
-            switch (this.size) {
-                case 'normal': {
-                    size = 18;
-                    break;
-                }
-                case 'large': {
-                    size = 22;
-                    break;
-                }
-                case 'small': {
-                    size = 14;
-                    break;
-                }
-            }
-            return html`<sw-loading size="${size}px"></sw-loading>`;
-        }
-    }
-
     private handler = (event: Event) => handleCheckbox(event, this);
 
     classNames = () =>
         className(
             'switch',
             { [`size-${this.size}`]: this.size },
-            { disabled: this.disabled || this.loading }
+            { disabled: this.disabled },
+            { loading: this.loading }
         );
 
     render() {
@@ -61,7 +41,7 @@ export class Switch extends LitElement {
                     ?checked=${this.checked}
                     ?disabled=${this.disabled}
                 />
-                <span class="slider"> ${this.loadingHTML()} </span>
+                <span class="slider"></span>
             </label>
         </div>`;
     }
