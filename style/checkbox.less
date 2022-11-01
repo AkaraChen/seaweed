@@ -16,17 +16,13 @@ input {
     border: var(--border-width) solid var(--border-color);
     border-radius: 2px;
     cursor: pointer;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    input {
+    @media (prefers-color-scheme: dark) {
         --border-color: #666;
     }
 }
 
 input::before {
-    content: "";
+    content: '';
     display: block;
     width: var(--size);
     height: var(--size);
@@ -68,6 +64,9 @@ label {
     user-select: none;
     cursor: pointer;
     margin-left: 0.5em;
+    @media (prefers-color-scheme: dark) {
+        color: #ffffffd9;
+    }
 }
 
 div {
@@ -75,29 +74,17 @@ div {
     align-items: center;
 }
 
-@media (prefers-color-scheme: dark) {
-
-    label {
-        color: #ffffffd9;
-    }
-}
-
 input[disabled] {
     background-color: rgb(245 245 245);
     cursor: no-drop;
+    @media (prefers-color-scheme: dark) {
+        background-color: #444;
+    }
 }
 
 input[disabled]::before {
     background-color: #ddd;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    input[disabled] {
-        background-color: #444;
-    }
-
-    input[disabled]::before {
+    @media (prefers-color-scheme: dark) {
         background-color: #848484;
     }
 }

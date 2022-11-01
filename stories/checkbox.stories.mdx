@@ -24,7 +24,6 @@ checkbox.addEventListener('change', (event: Event) => {
     title="CheckBox"
     args={{
         size: 'normal',
-        label: 'Label',
         disabled: false,
     }}
     argTypes={{
@@ -37,11 +36,10 @@ checkbox.addEventListener('change', (event: Event) => {
 
 <Canvas>
     <Story name="Page">
-        {({ size, label, disabled }) =>
+        {({ size, disabled }) =>
             html`
                 <sw-checkbox
                     size=${size}
-                    label=${label}
                     checked
                     ?disabled=${disabled}
                 ></sw-checkbox>

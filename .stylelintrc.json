@@ -9,7 +9,9 @@
         "indentation": 4,
         "no-descending-specificity": null,
         "function-url-quotes": "always",
-        "plugin/declaration-block-no-ignored-properties": true
+        "plugin/declaration-block-no-ignored-properties": true,
+        "string-quotes": "single",
+        "at-rule-empty-line-before": "never"
     },
     "plugins": [
         "stylelint-declaration-block-no-ignored-properties"

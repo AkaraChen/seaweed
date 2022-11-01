@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import { size } from '@/util/type';
 import { styles } from '#/checkbox.less';
+import { handleCheckbox } from './util/event';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {
@@ -14,28 +15,10 @@ export class CheckBox extends LitElement {
 
     @property({ type: Boolean }) disabled: boolean;
 
-    @property() label = '';
-
-    formatLabel() {
-        if (this.label !== '') {
-            return html`<label for="checkbox">${this.label}</label>`;
-        }
-    }
-
     classNames = () =>
         className({ [`size-${this.size}`]: this.size != 'normal' });
 
-    private handler(event: Event) {
-        const element = event.target as HTMLInputElement;
-        const state = element.checked;
-        this.dispatchEvent(
-            new CustomEvent('change', {
-                detail: {
-                    value: state,
-                },
-            })
-        );
-    }
+    private handler = (event: Event) => handleCheckbox(event, this);
 
     render() {
         return html`
@@ -48,7 +31,6 @@ export class CheckBox extends LitElement {
                     ?checked=${this.checked}
                     id="checkbox"
                 />
-                ${this.formatLabel()}
             </div>
         `;
     }

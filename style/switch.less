@@ -1,0 +1,68 @@
+.switch {
+    --width: 37.5px;
+    --height: 21.25px;
+    --slider: 16.25px;
+    --slider-offset: calc(calc(var(--height) - var(--slider)) / 2);
+
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    user-select: none;
+}
+
+.disabled .slider {
+    opacity: 0.6;
+}
+
+.switch.size-small {
+    --width: 30px;
+    --height: 17px;
+    --slider: 13px;
+}
+
+.switch.size-large {
+    --width: 45px;
+    --height: 25.5px;
+    --slider: 19.5px;
+}
+
+.switch input {
+    visibility: hidden;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: background-color 0.25s;
+    border-radius: var(--height);
+    @media (prefers-color-scheme: dark) {
+        background-color: #666;
+    }
+}
+
+.slider::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    height: var(--slider);
+    width: var(--slider);
+    left: var(--slider-offset);
+    bottom: var(--slider-offset);
+    background-color: #fff;
+    transition: all 0.25s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #1890ff;
+}
+
+input:checked + .slider::before {
+    transform: translateX(var(--slider));
+}
