@@ -3,6 +3,7 @@
     --height: 21.25px;
     --slider: 16.25px;
     --slider-offset: calc(calc(var(--height) - var(--slider)) / 2);
+    --loading-offset: 1.75px;
 
     position: relative;
     display: inline-block;
@@ -11,17 +12,27 @@
     user-select: none;
 }
 
+.switch sw-loading {
+    position: relative;
+    left: var(--loading-offset);
+    top: var(--loading-offset);
+    transition: all 0.25s;
+}
+
 .disabled .slider {
+    cursor: no-drop;
     opacity: 0.6;
 }
 
 .switch.size-small {
+    --loading-offset: 0;
     --width: 30px;
     --height: 17px;
     --slider: 13px;
 }
 
 .switch.size-large {
+    --loading-offset: 2px;
     --width: 45px;
     --height: 25.5px;
     --slider: 19.5px;
@@ -39,7 +50,7 @@
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    transition: background-color 0.25s;
+    transition: all 0.25s;
     border-radius: var(--height);
     @media (prefers-color-scheme: dark) {
         background-color: #666;
@@ -65,4 +76,8 @@ input:checked + .slider {
 
 input:checked + .slider::before {
     transform: translateX(var(--slider));
+}
+
+input:checked + .slider sw-loading {
+    left: calc(1.5px + var(--slider));
 }
