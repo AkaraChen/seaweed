@@ -13,6 +13,9 @@
     padding: 4px 8px;
     font-size: 14px;
     color: var(--color);
+    @media (prefers-color-scheme: dark) {
+        background-color: transparent;
+    }
 }
 
 .badge.type-success {
@@ -38,13 +41,8 @@
     --color: var(--bd);
     --bg: #faf0f1;
 }
-
 @media (prefers-color-scheme: dark) {
-
-    .badge {
-        background-color: transparent;
-    }
-
+    //
     .badge.type-normal {
         color: #ffffffd1;
     }
@@ -54,20 +52,15 @@
     border: none;
     background-color: var(--bd);
     color: var(--bg);
+    @media (prefers-color-scheme: dark) {
+        opacity: 0.9;
+    }
 }
 
 .badge.noborder.type-normal {
     background-color: #eee;
     color: #000;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .badge.noborder {
-        opacity: 0.9;
-    }
-
-    .badge.noborder.type-normal {
+    @media (prefers-color-scheme: dark) {
         background-color: #555;
         color: #ffffffd1;
     }

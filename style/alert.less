@@ -9,6 +9,9 @@
     align-items: center;
     color: #2d3748;
     border-radius: 2px;
+    @media (prefers-color-scheme: dark) {
+        opacity: 0.8;
+    }
 }
 
 :host {
@@ -46,13 +49,6 @@
 .alert.type-error {
     --bg: #fef0f0;
     --icon: #e53e3e;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .alert {
-        opacity: 0.8;
-    }
 }
 
 .alert.fill {

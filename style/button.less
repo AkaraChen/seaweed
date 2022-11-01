@@ -19,17 +19,7 @@ button {
     font-size: 15px;
     cursor: pointer;
     user-select: none;
-}
-
-button:hover,
-button:focus {
-    border-color: var(--primary-hover);
-    color: var(--primary-hover);
-}
-
-@media (prefers-color-scheme: dark) {
-
-    button {
+    @media (prefers-color-scheme: dark) {
         --primary: #177ddc;
         --primary-hover: #095cb5;
         --font-color: #fff;
@@ -38,9 +28,13 @@ button:focus {
         color: #fff;
         box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
     }
+}
 
-    button:hover,
-    button:focus {
+button:hover,
+button:focus {
+    border-color: var(--primary-hover);
+    color: var(--primary-hover);
+    @media (prefers-color-scheme: dark) {
         border-color: var(--primary-hover);
         color: var(--primary-hover);
     }
@@ -73,7 +67,6 @@ button.size-small {
 button.type-error {
     --primary: #ff4d4f;
     --primary-hover: #ff7875;
-
     @media (prefers-color-scheme: dark) {
         --primary: #a61d24;
         --primary-hover: #800f19;
@@ -83,7 +76,6 @@ button.type-error {
 button.type-warning {
     --primary: #faad14;
     --primary-hover: #ffc53d;
-
     @media (prefers-color-scheme: dark) {
         --primary: #d48806;
         --primary-hover: #ad6800;
@@ -93,7 +85,6 @@ button.type-warning {
 button.type-success {
     --primary: #52c41a;
     --primary-hover: #73d13d;
-
     @media (prefers-color-scheme: dark) {
         --primary: #389e0d;
         --primary-hover: #237804;

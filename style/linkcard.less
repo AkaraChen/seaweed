@@ -10,12 +10,18 @@
     justify-content: space-between;
     align-items: center;
     user-select: none;
+    @media (prefers-color-scheme: dark) {
+        background-color: #222;
+    }
 }
 
 .title {
     margin: 0;
     font-size: 17px;
     font-weight: 500;
+    @media (prefers-color-scheme: dark) {
+        color: #bbb;
+    }
 }
 
 .link {
@@ -29,19 +35,7 @@
     width: 55px;
     height: 55px;
     border-radius: 4px;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .container {
-        background-color: #222;
-    }
-
-    .title {
-        color: #bbb;
-    }
-
-    .image {
+    @media (prefers-color-scheme: dark) {
         filter: brightness(0.9);
     }
 }
