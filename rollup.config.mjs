@@ -1,6 +1,6 @@
 import { defineConfig } from 'rollup';
 import glob from 'glob';
-import fs from 'fs'
+import fs from 'fs';
 import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import esbuild from 'rollup-plugin-esbuild';
@@ -11,7 +11,7 @@ import MinifyHTML from 'rollup-plugin-minify-html-literals';
 import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';
 import syntax from 'postcss-less';
-import autoprefixer from 'autoprefixer'
+import autoprefixer from 'autoprefixer';
 
 const processor = postcss(postcssNesting(), autoprefixer());
 
@@ -26,9 +26,12 @@ export default defineConfig({
         litCss({
             include: /\.less$/i,
             transform: (css, { filePath }) => {
-                const base = fs.readFileSync(path.resolve("./style/base.less")).toString()
-                return processor.process(base + css, { from: filePath, syntax }).css
-            }
+                const base = fs
+                    .readFileSync(path.resolve('./style/base.less'))
+                    .toString();
+                return processor.process(base + css, { from: filePath, syntax })
+                    .css;
+            },
         }),
         MinifyHTML.default(),
         esbuild({ minify: true }),

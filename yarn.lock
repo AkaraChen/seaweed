@@ -11350,7 +11350,7 @@ stylelint-scss@^4.0.0:
     postcss-selector-parser "^6.0.6"
     postcss-value-parser "^4.1.0"
 
-stylelint@^14.0:
+stylelint@^14.0, stylelint@^14.14.0:
   version "14.14.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-14.14.0.tgz#1acb52497c9a921f23f9c4014d4e0ee6eba768d0"
   integrity sha512-yUI+4xXfPHVnueYddSQ/e1GuEA/2wVhWQbGj16AmWLtQJtn28lVxfS4b0CsWyVRPgd3Auzi0NXOthIEUhtQmmA==

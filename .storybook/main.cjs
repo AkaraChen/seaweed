@@ -29,10 +29,15 @@ module.exports = {
             loader: 'lit-css-loader',
             options: {
                 transform: (css, { filePath }) => {
-                    const base = fs.readFileSync(path.resolve("./style/base.less")).toString()
-                    return processor.process(base + css, { from: filePath, syntax }).css
-                }
-            }
+                    const base = fs
+                        .readFileSync(path.resolve('./style/base.less'))
+                        .toString();
+                    return processor.process(base + css, {
+                        from: filePath,
+                        syntax,
+                    }).css;
+                },
+            },
         });
 
         return config;

@@ -11,9 +11,8 @@
         "function-url-quotes": "always",
         "plugin/declaration-block-no-ignored-properties": true,
         "string-quotes": "single",
-        "at-rule-empty-line-before": "never"
+        "at-rule-empty-line-before": "never",
+        "rule-empty-line-before": null
     },
-    "plugins": [
-        "stylelint-declaration-block-no-ignored-properties"
-    ]
+    "plugins": ["stylelint-declaration-block-no-ignored-properties"]
 }
