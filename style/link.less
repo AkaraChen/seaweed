@@ -1,6 +1,7 @@
 a {
     color: #1890ff;
     cursor: pointer;
+    text-decoration: none;
 }
 
 a::after {
@@ -9,8 +10,9 @@ a::after {
 
 a.disabled {
     opacity: 0.5;
+    cursor: no-drop;
 }
 
 a.underline:hover {
-    border-bottom: #1890ff 1px solid;
+    text-decoration: underline 1px #1890ff !important;
 }

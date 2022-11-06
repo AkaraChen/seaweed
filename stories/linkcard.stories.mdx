@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs';
 import { html } from 'lit';
 import '@/linkcard.ts';
+import { targetArray } from '../src/util/type.ts';
 
 # LinkCard
 
@@ -15,12 +16,19 @@ import '@akrc/seaweed/linkcard.js';
 ```
 
 <Meta
-    title="LinkCard"
+    title="Common/LinkCard"
     args={{
         title: 'Example',
         link: 'https://example.com',
         image: 'https://via.placeholder.com/55',
         alt: 'image alt',
+        target: '_blank',
+    }}
+    argTypes={{
+        target: {
+            control: 'select',
+            options: targetArray,
+        },
     }}
 />
 

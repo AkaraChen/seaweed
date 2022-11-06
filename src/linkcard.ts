@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styles } from '#/linkcard.less';
+import { target } from './util/type';
 
 export interface LinkCardProperty {
     title: string;
@@ -24,7 +25,7 @@ export class LinkCard extends LitElement {
     image: string;
 
     @property()
-    target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
+    target: target;
 
     @property()
     alt: string;

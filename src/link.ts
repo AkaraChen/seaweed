@@ -13,9 +13,24 @@ export class Link extends LitElement {
     @property({ type: Boolean })
     underline = false;
 
-    render() {
-        return html`<a class=${this.classNames()}><slot></slot></a>`;
-    }
+    @property()
+    href: string;
+
+    @property()
+    target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
+
     classNames = () =>
-        className({ disabled: this.disabled }, { underline: this.underline });
+        className(
+            { disabled: this.disabled },
+            { underline: this.underline && !this.disabled }
+        );
+
+    render() {
+        return html`<a
+            class=${this.classNames()}
+            href=${this.href}
+            target=${this.target}
+            ><slot></slot
+        ></a>`;
+    }
 }
