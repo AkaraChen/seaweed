@@ -1,0 +1,32 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
+import { html } from 'lit';
+import '@/link.ts';
+
+# LinkCard
+
+```ts
+import '@akrc/seaweed/link.js';
+
+<sw-link>text</sw-link>;
+```
+
+<Meta
+    title="Link"
+    args={{
+        text: 'Link',
+        disabled: false,
+        underline: false,
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ text, disabled, underline }) =>
+            html`
+                <sw-link ?disabled=${disabled} ?underline=${underline}
+                    >${text}</sw-link
+                >
+            `
+        }
+    </Story>
+</Canvas>
