@@ -12,4 +12,9 @@ export const parameters = {
             order: ['Introduction'],
         },
     },
+    darkMode: {
+        classTarget: 'html',
+        darkClass: 'custom-dark-mode',
+        stylePreview: true,
+    },
 };
