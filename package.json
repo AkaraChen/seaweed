@@ -41,7 +41,7 @@
         "autoprefixer": "^10.4.13",
         "babel-loader": "9.1.0",
         "esbuild": "0.15.14",
-        "eslint": "8.27.0",
+        "eslint": "8.28.0",
         "eslint-config-prettier": "8.5.0",
         "eslint-mdx": "2.0.5",
         "eslint-plugin-lit": "^1.6.1",
