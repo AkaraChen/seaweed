@@ -23,12 +23,6 @@ export class Alert extends LitElement {
     @property()
         border: 'none' | 'top' | 'left' = 'none';
 
-    titleHTML() {
-        if (this.title) {
-            return html`<div class="title">${this.title}</div> `;
-        }
-    }
-
     iconHTML() {
         switch (this.type) {
         case 'info': {
@@ -57,9 +51,9 @@ export class Alert extends LitElement {
     render() {
         return html`
           <div class="${this.classNames()}">
-              <div class="icon-container text-lg">${this.iconHTML()}</div>
+              <div class="icon-container">${this.iconHTML()}</div>
               <div>
-                  ${this.titleHTML()}
+                  ${this.title && html`<div class="title">${this.title}</div>`}
                   <slot></slot>
               </div>
           </div>

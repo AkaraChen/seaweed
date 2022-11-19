@@ -24,22 +24,20 @@ export class Button extends LitElement {
     @property({type: Boolean})
         disabled = false;
 
-    formatLoading = () => {
-        if (this.loading) {
-            const sizeString = this.size === 'small' ? '14px' : '18px';
-            const color = this.primary ? '#fff' : 'var(--font-color)';
-            return html`
-              <style>
-                  sw-loading {
-                      margin-right: 0.5em;
-                  }
-                  button.size-small sw-loading {
-                      margin-right: 0.25em;
-                  }
-              </style>
-              <sw-loading size=${sizeString} color=${color}></sw-loading>
-            `;
-        }
+    loadingIcon = () => {
+        const sizeString = this.size === 'small' ? '14px' : '18px';
+        const color = this.primary ? '#fff' : '#666';
+        return html`
+          <style>
+              sw-loading {
+                  margin-right: 0.5em;
+              }
+              button.size-small sw-loading {
+                  margin-right: 0.25em;
+              }
+          </style>
+          <sw-loading size=${sizeString} color=${color}></sw-loading>
+        `;
     };
 
     classNames = () =>
@@ -53,7 +51,7 @@ export class Button extends LitElement {
     render() {
         return html`
           <button class=${this.classNames()} ?disabled=${this.disabled}>
-              ${this.formatLoading()}
+              ${this.loading ? '' : this.loadingIcon()}
               <p><slot></slot></p>
           </button>
         `;

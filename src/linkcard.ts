@@ -38,28 +38,22 @@ export class LinkCard extends LitElement {
         }
     };
 
-    formatImage = () => {
-        if (this.image) {
-            return html`
-              <img
-                  src=${this.image}
-                  height="55"
-                  width="55"
-                  alt=${this.alt ?? this.formatLink()}
-                  class="image"
-              />
-            `;
-        }
-    };
-
     render() {
         return html`
-          <a class="container" href="${this.link}" target="${this.target}">
+          <a href="${this.link}" target="${this.target}">
               <div class="head">
                   <h2 class="title">${this.title}</h2>
                   <p class="link">${this.formatLink()}</p>
               </div>
-              ${this.formatImage()}
+              ${this.image && html`
+                <img
+                    src=${this.image}
+                    height="55"
+                    width="55"
+                    alt=${this.alt ?? this.formatLink()}
+                    class="image"
+                />
+              `}
           </a>
         `;
     }
