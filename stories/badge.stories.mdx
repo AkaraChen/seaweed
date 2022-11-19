@@ -20,6 +20,7 @@ import "@akrc/seaweed/badge.js";
         text: "JavaScript",
         noborder: false,
         disabled: false,
+        rounded: false
     }}
     argTypes={{
         type: {
@@ -31,12 +32,13 @@ import "@akrc/seaweed/badge.js";
 
 <Canvas>
     <Story name="Page">
-        {({ type, text, noborder, disabled }) =>
+        {({ type, text, noborder, disabled, rounded }) =>
             html`
                 <sw-badge
                     type=${type}
                     ?noborder=${noborder}
                     ?disabled=${disabled}
+                    ?rounded=${rounded}
                     >${text}</sw-badge
                 >
             `

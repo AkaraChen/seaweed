@@ -12,17 +12,21 @@ export class Badge extends LitElement {
         type: type | 'normal' = 'normal';
 
     @property({type: Boolean})
-        noborder: false;
+        noborder = false;
 
     @property({type: Boolean})
-        disabled: false;
+        disabled = false;
+
+    @property({type: Boolean})
+        rounded = false;
 
     classNames = () =>
         className(
             'badge',
             {[`type-${this.type}`]: this.type},
             {noborder: this.noborder},
-            {disabled: this.disabled}
+            {disabled: this.disabled},
+            {rounded: this.rounded}
         );
 
     render() {

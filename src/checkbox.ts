@@ -9,11 +9,14 @@ import {handleCheckbox} from '../util/event';
 export class CheckBox extends LitElement {
     static styles = styles;
 
-    @property({type: Boolean}) checked = false;
+    @property({type: Boolean})
+        checked = false;
 
-    @property() size: size = 'normal';
+    @property()
+        size: size = 'normal';
 
-    @property({type: Boolean}) disabled: boolean;
+    @property({type: Boolean})
+        disabled: boolean;
 
     classNames = () =>
         className({[`size-${this.size}`]: this.size !== 'normal'});
