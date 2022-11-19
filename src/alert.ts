@@ -50,7 +50,7 @@ export class Alert extends LitElement {
 
     render() {
         return html`
-          <div class="${this.classNames()}">
+          <div class=${this.classNames()}>
               <div class="icon-container">${this.iconHTML()}</div>
               <div>
                   ${this.title && html`<div class="title">${this.title}</div>`}

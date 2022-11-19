@@ -4,7 +4,9 @@ export const list = [
     'button',
     'checkbox',
     'link-card',
-    'loading'
+    'loading',
+    'progress',
+    'link'
 ].map(item => `sw-${item}`);
 
 export const formatTag = (tag: string) => `<${tag}></${tag}>`;
