@@ -9,7 +9,7 @@ import className from '@akrc/classnames';
 
 @customElement('sw-progress')
 export class Progress extends LitElement {
-    static styles = styles;
+    static override styles = styles;
 
     @property({type: Number})
         value = 50;
@@ -28,7 +28,7 @@ export class Progress extends LitElement {
         {[`${this.size}`]: sizeArray.includes(this.size)}
     );
 
-    render() {
+    override render() {
         return html`
           <div class=${this.classNames()}>
             <span style="width: ${this.value / this.max * 100}%;"></span>

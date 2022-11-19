@@ -7,7 +7,7 @@ import {styles} from '#/button.less';
 
 @customElement('sw-button')
 export class Button extends LitElement {
-    static styles = styles;
+    static override styles = styles;
 
     @property({type: Boolean})
         primary = false;
@@ -52,7 +52,7 @@ export class Button extends LitElement {
             {rounded: this.rounded}
         );
 
-    render() {
+    override render() {
         return html`
           <button class=${this.classNames()} ?disabled=${this.disabled}>
               ${this.loading ? this.loadingIcon() : nothing}

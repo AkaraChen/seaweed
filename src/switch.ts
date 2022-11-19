@@ -8,7 +8,7 @@ import './loading';
 
 @customElement('sw-switch')
 export class Switch extends LitElement {
-    static styles = styles;
+    static override styles = styles;
 
     @property({type: Boolean})
         checked = false;
@@ -32,7 +32,7 @@ export class Switch extends LitElement {
             {loading: this.loading}
         );
 
-    render() {
+    override render() {
         return html`
           <div class=${this.classNames()}>
               <label>

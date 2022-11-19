@@ -13,7 +13,7 @@ export interface LinkCardProperty {
 
 @customElement('sw-link-card')
 export class LinkCard extends LitElement {
-    static styles = [styles];
+    static override styles = [styles];
 
     @property()
         title: string;
@@ -38,7 +38,7 @@ export class LinkCard extends LitElement {
         }
     };
 
-    render() {
+    override render() {
         return html`
           <a href="${this.link}" target="${this.target}">
               <div class="head">

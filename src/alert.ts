@@ -9,7 +9,7 @@ import {styles} from '#/alert.less';
 
 @customElement('sw-alert')
 export class Alert extends LitElement {
-    static styles = styles;
+    static override styles = styles;
 
     @property()
         title: string;
@@ -48,7 +48,7 @@ export class Alert extends LitElement {
             {[`border-${this.border}`]: !this.fill && this.border !== 'none'}
         );
 
-    render() {
+    override render() {
         return html`
           <div class=${this.classNames()}>
               <div class="icon-container">${this.iconHTML()}</div>

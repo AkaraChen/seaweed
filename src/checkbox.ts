@@ -7,7 +7,7 @@ import {handleCheckbox} from '../util/event';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {
-    static styles = styles;
+    static override styles = styles;
 
     @property({type: Boolean})
         checked = false;
@@ -23,7 +23,7 @@ export class CheckBox extends LitElement {
 
     private handler = (event: Event) => handleCheckbox(event, this);
 
-    render() {
+    override render() {
         return html`
           <div>
               <input

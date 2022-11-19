@@ -6,7 +6,7 @@ import {styles} from '#/badge.less';
 
 @customElement('sw-badge')
 export class Badge extends LitElement {
-    static styles = styles;
+    static override styles = styles;
 
     @property()
         type: type | 'normal' = 'normal';
@@ -29,7 +29,7 @@ export class Badge extends LitElement {
             {rounded: this.rounded}
         );
 
-    render() {
+    override render() {
         return html`
           <div class=${this.classNames()}>
               <slot></slot>

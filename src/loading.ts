@@ -5,7 +5,7 @@ import {styles} from '#/loading.less';
 
 @customElement('sw-loading')
 export class Loading extends LitElement {
-    static styles = styles;
+    static override styles = styles;
 
     @property()
         size = '24px';
@@ -13,7 +13,7 @@ export class Loading extends LitElement {
     @property()
         color = '#bbb';
 
-    render() {
+    override render() {
         return html`
           <style>
               :host {

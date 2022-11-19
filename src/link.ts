@@ -1,11 +1,11 @@
 import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import {customElement, property, query} from 'lit/decorators.js';
 import {styles} from '#/link.less';
 import className from '@akrc/classnames';
 
 @customElement('sw-link')
 export class Link extends LitElement {
-    static styles = [styles];
+    static override styles = [styles];
 
     @property({type: Boolean})
         disabled = false;
@@ -25,7 +25,20 @@ export class Link extends LitElement {
             {underline: this.underline && !this.disabled}
         );
 
-    render() {
+    @query('a')
+        link: HTMLAnchorElement;
+
+    override connectedCallback() {
+        super.connectedCallback();
+        if (this.disabled) {
+            addEventListener('click', event => {
+                event.preventDefault();
+                return false;
+            });
+        }
+    }
+
+    override render() {
         return html`
           <a
               class=${this.classNames()}
