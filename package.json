@@ -78,6 +78,6 @@
         "./*": "./dist/*"
     },
     "dependencies": {
-        "eslint-config-akrc": "^0.0.4"
+        "eslint-config-akrc": "^0.0.5"
     }
 }

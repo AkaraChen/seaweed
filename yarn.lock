@@ -5693,15 +5693,16 @@ eslint-config-airbnb-base@^15.0.0:
     object.entries "^1.1.5"
     semver "^6.3.0"
 
-eslint-config-akrc@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/eslint-config-akrc/-/eslint-config-akrc-0.0.4.tgz#8bb4089ca531f83281ad503c964c3ccb54c9dc59"
-  integrity sha512-o1md9yiYPHO+o8GUk55HIBcmrFo7DopO4XNV6khd60XzXx9nkbQZoSz4+DivUUR5N+zJ2JwmvXAntWyNo/FX6g==
+eslint-config-akrc@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/eslint-config-akrc/-/eslint-config-akrc-0.0.5.tgz#82cd5a0f5d37e60f6c096533eca04f7df090a5c4"
+  integrity sha512-FaCNPSuQVgYMRPBGD53btUQhWlKOD19jeSODTkfdZcn/zNCLPgyrWVY7LNdrs4P4iwa1wwJCdc6we4Ytma/vOw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.43.0"
     "@typescript-eslint/parser" "^5.43.0"
     eslint "^8.27.0"
     eslint-config-airbnb-base "^15.0.0"
+    eslint-config-prettier "^8.5.0"
     eslint-plugin-import "^2.26.0"
     eslint-plugin-node "^11.1.0"
     eslint-plugin-prettier "^4.2.1"
@@ -5711,6 +5712,11 @@ eslint-config-akrc@^0.0.4:
     prettier "^2.7.1"
     typescript "^4.9.3"
     vue-eslint-parser "^9.1.0"
+
+eslint-config-prettier@^8.5.0:
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
+  integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
