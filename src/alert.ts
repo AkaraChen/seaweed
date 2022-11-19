@@ -1,4 +1,4 @@
-import {html, LitElement} from 'lit';
+import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import {type} from '../util/type';
@@ -53,7 +53,7 @@ export class Alert extends LitElement {
           <div class=${this.classNames()}>
               <div class="icon-container">${this.iconHTML()}</div>
               <div>
-                  ${this.title && html`<div class="title">${this.title}</div>`}
+                  ${this.title ? html`<div class="title">${this.title}</div>` : nothing}
                   <slot></slot>
               </div>
           </div>
