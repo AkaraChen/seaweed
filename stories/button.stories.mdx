@@ -19,6 +19,7 @@ import "@akrc/seaweed/button.js";
         primary: true,
         loading: false,
         disabled: false,
+        rounded: false
     }}
     argTypes={{
         type: {
@@ -34,13 +35,14 @@ import "@akrc/seaweed/button.js";
 
 <Canvas>
     <Story name="Page">
-        {({ type, size, primary, loading, disabled }) =>
+        {({ type, size, primary, loading, disabled, rounded }) =>
             html`<sw-button
                     type=${type}
                     size=${size}
                     ?primary=${primary}
                     ?loading=${loading}
                     ?disabled=${disabled}
+                    ?rounded=${rounded}
                     >
                     Button
                     </sw-button>`

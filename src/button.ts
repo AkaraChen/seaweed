@@ -24,6 +24,9 @@ export class Button extends LitElement {
     @property({type: Boolean})
         disabled = false;
 
+    @property({type: Boolean})
+        rounded = false;
+
     loadingIcon = () => {
         const sizeString = this.size === 'small' ? '14px' : '18px';
         const color = this.primary ? '#fff' : '#666';
@@ -45,7 +48,8 @@ export class Button extends LitElement {
             {primary: this.primary},
             {[`size-${this.size}`]: this.size},
             {[`type-${this.type}`]: this.type},
-            {loading: this.loading}
+            {loading: this.loading},
+            {rounded: this.rounded}
         );
 
     render() {

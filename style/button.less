@@ -2,6 +2,7 @@ button {
     --primary: #1890ff;
     --primary-hover: #40a9ff;
     --font-color: #000;
+    --border-color: #d9d9d9;
 
     display: inline-flex;
     height: 32px;
@@ -11,7 +12,7 @@ button {
     border-radius: 2px;
     outline: none;
     border: none;
-    border: 1px solid #d9d9d9;
+    border: 1px solid var(--border-color);
     background-color: transparent;
     box-shadow: 0 2px #00000004;
     transition: 0.25s all;
@@ -23,8 +24,8 @@ button {
         --primary: #177ddc;
         --primary-hover: #095cb5;
         --font-color: #fff;
+        --border-color: #434343;
 
-        border-color: #434343;
         color: #fff;
         box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
     }
@@ -99,4 +100,8 @@ button.loading {
 button[disabled] {
     cursor: no-drop;
     opacity: 0.5;
+}
+
+button.rounded {
+    border-radius: 16px;
 }
