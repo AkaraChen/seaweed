@@ -1,9 +1,9 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
-import {size} from '@/util/type';
+import {size} from '../util/type';
 import {styles} from '#/checkbox.less';
-import {handleCheckbox} from './util/event';
+import {handleCheckbox} from '../util/event';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {

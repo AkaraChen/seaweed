@@ -1,10 +1,10 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
-import {type} from '@/util/type';
+import {type} from '../util/type';
 import {
     ErrorRound, InfoRound, SuccessRound, WarningRound
-} from './util/icon';
+} from '../util/icon';
 import {styles} from '#/alert.less';
 
 @customElement('sw-alert')

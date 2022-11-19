@@ -2,8 +2,8 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import {styles} from '#/switch.less';
-import {size} from './util/type';
-import {handleCheckbox} from './util/event';
+import {size} from '../util/type';
+import {handleCheckbox} from '../util/event';
 import './loading';
 
 @customElement('sw-switch')

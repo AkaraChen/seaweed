@@ -1,7 +1,7 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs";
 import { html } from "lit";
 import "@/switch.ts";
-import { sizeArray } from "@/util/type.ts";
+import { sizeArray } from "../util/type.ts";
 
 # Switch
 
@@ -17,7 +17,6 @@ import "@akrc/seaweed/switch.js";
         size: "normal",
         disabled: false,
         checked: false,
-        loading: false,
     }}
     argTypes={{
         size: {
@@ -29,12 +28,11 @@ import "@akrc/seaweed/switch.js";
 
 <Canvas>
     <Story name="Page">
-        {({ size, disabled, checked, loading }) =>
+        {({ size, disabled, checked }) =>
             html`<sw-switch
                 size=${size}
                 ?checked=${checked}
                 ?disabled=${disabled}
-                ?loading=${loading}
             ></sw-switch>`
         }
     </Story>

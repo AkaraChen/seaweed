@@ -1,7 +1,7 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from '#/linkcard.less';
-import {target} from './util/type';
+import {target} from '../util/type';
 
 export interface LinkCardProperty {
     title: string;

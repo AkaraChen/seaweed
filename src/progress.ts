@@ -4,7 +4,7 @@ import {customElement, property} from 'lit/decorators.js';
 import {styles} from '#/progress.less';
 import {
     typeArray, type, size, sizeArray
-} from './util/type';
+} from '../util/type';
 import className from '@akrc/classnames';
 
 @customElement('sw-progress')

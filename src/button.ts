@@ -1,7 +1,7 @@
 import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
-import {size, type} from '@/util/type';
+import {size, type} from '../util/type';
 import './loading';
 import {styles} from '#/button.less';
 

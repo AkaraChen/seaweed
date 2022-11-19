@@ -1,7 +1,7 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
-import {type} from '@/util/type';
+import {type} from '../util/type';
 import {styles} from '#/badge.less';
 
 @customElement('sw-badge')
