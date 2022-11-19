@@ -1,4 +1,4 @@
-import {html, LitElement} from 'lit';
+import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import {size, type} from '@/util/type';
@@ -51,7 +51,7 @@ export class Button extends LitElement {
     render() {
         return html`
           <button class=${this.classNames()} ?disabled=${this.disabled}>
-              ${this.loading ? this.loadingIcon() : ''}
+              ${this.loading ? this.loadingIcon() : nothing}
               <p><slot></slot></p>
           </button>
         `;
