@@ -1,15 +1,15 @@
-import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import className from '@akrc/classnames';
-import { type } from '@/util/type';
-import { styles } from '#/badge.less';
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import className from "@akrc/classnames";
+import { type } from "@/util/type";
+import { styles } from "#/badge.less";
 
-@customElement('sw-badge')
+@customElement("sw-badge")
 export class Badge extends LitElement {
     static styles = styles;
 
     @property()
-    type: type | 'normal' = 'normal';
+    type: type | "normal" = "normal";
 
     @property({ type: Boolean })
     noborder: false;
@@ -19,13 +19,17 @@ export class Badge extends LitElement {
 
     classNames = () =>
         className(
-            'badge',
+            "badge",
             { [`type-${this.type}`]: this.type },
             { noborder: this.noborder },
             { disabled: this.disabled }
         );
 
     render() {
-        return html`<div class=${this.classNames()}><slot></slot></div>`;
+        return html`
+            <div class=${this.classNames()}>
+                <slot></slot>
+            </div>
+        `;
     }
 }

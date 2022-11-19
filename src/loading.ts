@@ -1,17 +1,17 @@
-import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { loadingAlt } from './util/icon';
-import { styles } from '#/loading.less';
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import { loadingAlt } from "./util/icon";
+import { styles } from "#/loading.less";
 
-@customElement('sw-loading')
+@customElement("sw-loading")
 export class Loading extends LitElement {
     static styles = styles;
 
     @property()
-    size = '24px';
+    size = "24px";
 
     @property()
-    color = '#bbb';
+    color = "#bbb";
 
     render() {
         return html`

@@ -1,7 +1,7 @@
-import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { styles } from '#/linkcard.less';
-import { target } from './util/type';
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import { styles } from "#/linkcard.less";
+import { target } from "./util/type";
 
 export interface LinkCardProperty {
     title: string;
@@ -11,7 +11,7 @@ export interface LinkCardProperty {
     alt?: string;
 }
 
-@customElement('sw-link-card')
+@customElement("sw-link-card")
 export class LinkCard extends LitElement {
     static styles = [styles];
 

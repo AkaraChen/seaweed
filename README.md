@@ -25,10 +25,10 @@ pnpm add @akrc/seaweed
 
 ```ts
 // import manually
-import '@akrc/seaweed/button.js';
+import "@akrc/seaweed/button.js";
 
 // or you can full import
-import '@akrc/seaweed';
+import "@akrc/seaweed";
 ```
 
 ```html

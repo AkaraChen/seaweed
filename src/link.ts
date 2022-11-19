@@ -1,9 +1,9 @@
-import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { styles } from '#/link.less';
-import className from '@akrc/classnames';
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import { styles } from "#/link.less";
+import className from "@akrc/classnames";
 
-@customElement('sw-link')
+@customElement("sw-link")
 export class Link extends LitElement {
     static styles = [styles];
 
@@ -17,7 +17,7 @@ export class Link extends LitElement {
     href: string;
 
     @property()
-    target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
+    target: "_blank" | "_parent" | "_self" | "_top" = "_blank";
 
     classNames = () =>
         className(
@@ -26,11 +26,14 @@ export class Link extends LitElement {
         );
 
     render() {
-        return html`<a
-            class=${this.classNames()}
-            href=${this.href}
-            target=${this.target}
-            ><slot></slot
-        ></a>`;
+        return html`
+            <a
+                class=${this.classNames()}
+                href=${this.href}
+                target=${this.target}
+            >
+                <slot></slot>
+            </a>
+        `;
     }
 }

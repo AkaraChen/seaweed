@@ -1,8 +1,8 @@
-import { test, expect } from 'vitest';
-import '../dist/index.js';
-import { formatTag, list } from './util.js';
+import { test, expect } from "vitest";
+import "../dist/index.js";
+import { formatTag, list } from "./util.js";
 
-test('all', () => {
+test("all", () => {
     for (const item of list) {
         document.body.innerHTML += formatTag(item);
     }

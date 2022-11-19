@@ -1,14 +1,14 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { html } from 'lit';
-import '@/alert.ts';
-import { typeArray } from '@/util/type.ts';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { html } from "lit";
+import "@/alert.ts";
+import { typeArray } from "@/util/type.ts";
 
 # Alert
 
 Alert is used to notify users of current state changes or features.
 
 ```tsx
-import '@akrc/seaweed/alert.js';
+import "@akrc/seaweed/alert.js";
 
 <sw-alert>Lorem ipsum dolor sit amet</sw-alert>;
 ```
@@ -16,20 +16,20 @@ import '@akrc/seaweed/alert.js';
 <Meta
     title="Common/Alert"
     args={{
-        type: 'info',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        title: '',
+        type: "info",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        title: "",
         fill: true,
-        border: 'none',
+        border: "none",
     }}
     argTypes={{
         type: {
-            control: 'select',
+            control: "select",
             options: typeArray,
         },
         border: {
-            control: 'select',
-            options: ['none', 'top', 'left'],
+            control: "select",
+            options: ["none", "top", "left"],
         },
     }}
 />

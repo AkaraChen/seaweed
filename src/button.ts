@@ -1,11 +1,11 @@
-import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import className from '@akrc/classnames';
-import { size, type } from '@/util/type';
-import './loading';
-import { styles } from '#/button.less';
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import className from "@akrc/classnames";
+import { size, type } from "@/util/type";
+import "./loading";
+import { styles } from "#/button.less";
 
-@customElement('sw-button')
+@customElement("sw-button")
 export class Button extends LitElement {
     static styles = styles;
 
@@ -13,10 +13,10 @@ export class Button extends LitElement {
     primary = false;
 
     @property()
-    size: size = 'normal';
+    size: size = "normal";
 
     @property()
-    type: type = 'info';
+    type: type = "info";
 
     @property({ type: Boolean })
     loading = false;
@@ -26,8 +26,8 @@ export class Button extends LitElement {
 
     formatLoading = () => {
         if (this.loading) {
-            const size = this.size === 'small' ? '14px' : '18px';
-            const color = this.primary ? '#fff' : 'var(--font-color)';
+            const sizeString = this.size === "small" ? "14px" : "18px";
+            const color = this.primary ? "#fff" : "var(--font-color)";
             return html`
                 <style>
                     sw-loading {
@@ -37,7 +37,7 @@ export class Button extends LitElement {
                         margin-right: 0.25em;
                     }
                 </style>
-                <sw-loading size=${size} color=${color}></sw-loading>
+                <sw-loading size=${sizeString} color=${color}></sw-loading>
             `;
         }
     };

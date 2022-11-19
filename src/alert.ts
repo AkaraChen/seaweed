@@ -1,11 +1,11 @@
-import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import className from '@akrc/classnames';
-import { type } from '@/util/type';
-import { ErrorRound, InfoRound, SuccessRound, WarningRound } from './util/icon';
-import { styles } from '#/alert.less';
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import className from "@akrc/classnames";
+import { type } from "@/util/type";
+import { ErrorRound, InfoRound, SuccessRound, WarningRound } from "./util/icon";
+import { styles } from "#/alert.less";
 
-@customElement('sw-alert')
+@customElement("sw-alert")
 export class Alert extends LitElement {
     static styles = styles;
 
@@ -13,13 +13,13 @@ export class Alert extends LitElement {
     title: string;
 
     @property()
-    type: type = 'info';
+    type: type = "info";
 
     @property({ type: Boolean })
     fill = false;
 
     @property()
-    border: 'none' | 'top' | 'left' = 'none';
+    border: "none" | "top" | "left" = "none";
 
     titleHTML() {
         if (this.title) {
@@ -29,16 +29,16 @@ export class Alert extends LitElement {
 
     iconHTML() {
         switch (this.type) {
-            case 'info': {
+            case "info": {
                 return InfoRound;
             }
-            case 'success': {
+            case "success": {
                 return SuccessRound;
             }
-            case 'warning': {
+            case "warning": {
                 return WarningRound;
             }
-            case 'error': {
+            case "error": {
                 return ErrorRound;
             }
         }
@@ -46,16 +46,16 @@ export class Alert extends LitElement {
 
     classNames = () =>
         className(
-            'alert',
+            "alert",
             { [`type-${this.type}`]: this.type },
             { fill: this.fill },
-            { [`border-${this.border}`]: !this.fill && this.border !== 'none' }
+            { [`border-${this.border}`]: !this.fill && this.border !== "none" }
         );
 
     render() {
         return html`
             <div class="${this.classNames()}">
-                <div class="icon-container">${this.iconHTML()}</div>
+                <div class="icon-container text-lg">${this.iconHTML()}</div>
                 <div>
                     ${this.titleHTML()}
                     <slot></slot>

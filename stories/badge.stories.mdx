@@ -1,14 +1,14 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { html } from 'lit';
-import '@/badge.ts';
-import { typeArray } from '@/util/type.ts';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { html } from "lit";
+import "@/badge.ts";
+import { typeArray } from "@/util/type.ts";
 
 # Badge
 
 Badges are used to highlight a items status.
 
 ```tsx
-import '@akrc/seaweed/badge.js';
+import "@akrc/seaweed/badge.js";
 
 <sw-badge>JavaScript</sw-badge>;
 ```
@@ -16,15 +16,15 @@ import '@akrc/seaweed/badge.js';
 <Meta
     title="Common/Badge"
     args={{
-        type: 'normal',
-        text: 'JavaScript',
+        type: "normal",
+        text: "JavaScript",
         noborder: false,
         disabled: false,
     }}
     argTypes={{
         type: {
-            control: 'select',
-            options: ['normal', ...typeArray],
+            control: "select",
+            options: ["normal", ...typeArray],
         },
     }}
 />

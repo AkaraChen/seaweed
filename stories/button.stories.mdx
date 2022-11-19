@@ -1,12 +1,12 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { html } from 'lit';
-import '@/button.ts';
-import { typeArray, sizeArray } from '@/util/type.ts';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { html } from "lit";
+import "@/button.ts";
+import { typeArray, sizeArray } from "@/util/type.ts";
 
 # Button
 
 ```tsx
-import '@akrc/seaweed/button.js';
+import "@akrc/seaweed/button.js";
 
 <sw-button>Button</sw-button>;
 ```
@@ -14,19 +14,19 @@ import '@akrc/seaweed/button.js';
 <Meta
     title="Common/Button"
     args={{
-        type: 'info',
-        size: 'normal',
+        type: "info",
+        size: "normal",
         primary: true,
         loading: false,
         disabled: false,
     }}
     argTypes={{
         type: {
-            control: 'select',
+            control: "select",
             options: typeArray,
         },
         size: {
-            control: 'select',
+            control: "select",
             options: sizeArray,
         },
     }}

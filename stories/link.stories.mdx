@@ -1,12 +1,12 @@
-import { Meta, Canvas, Story } from '@storybook/addon-docs';
-import { html } from 'lit';
-import '@/link.ts';
-import { targetArray } from '../src/util/type.ts';
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { html } from "lit";
+import "@/link.ts";
+import { targetArray } from "../src/util/type.ts";
 
 # Link
 
 ```tsx
-import '@akrc/seaweed/link.js';
+import "@akrc/seaweed/link.js";
 
 <sw-link>text</sw-link>;
 ```
@@ -14,15 +14,15 @@ import '@akrc/seaweed/link.js';
 <Meta
     title="Common/Link"
     args={{
-        text: 'Link',
+        text: "Link",
         disabled: false,
         underline: false,
-        href: 'https://bing.com',
-        target: '_blank',
+        href: "https://bing.com",
+        target: "_blank",
     }}
     argTypes={{
         target: {
-            control: 'select',
+            control: "select",
             options: targetArray,
         },
     }}

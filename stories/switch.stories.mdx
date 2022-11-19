@@ -1,12 +1,12 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { html } from 'lit';
-import '@/switch.ts';
-import { sizeArray } from '@/util/type.ts';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { html } from "lit";
+import "@/switch.ts";
+import { sizeArray } from "@/util/type.ts";
 
 # Switch
 
 ```tsx
-import '@akrc/seaweed/switch.js';
+import "@akrc/seaweed/switch.js";
 
 <sw-switch></sw-switch>;
 ```
@@ -14,14 +14,14 @@ import '@akrc/seaweed/switch.js';
 <Meta
     title="Form/Switch"
     args={{
-        size: 'normal',
+        size: "normal",
         disabled: false,
         checked: false,
         loading: false,
     }}
     argTypes={{
         size: {
-            control: 'select',
+            control: "select",
             options: sizeArray,
         },
     }}

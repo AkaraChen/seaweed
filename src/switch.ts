@@ -1,12 +1,12 @@
-import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import className from '@akrc/classnames';
-import { styles } from '#/switch.less';
-import { size } from './util/type';
-import { handleCheckbox } from './util/event';
-import './loading';
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import className from "@akrc/classnames";
+import { styles } from "#/switch.less";
+import { size } from "./util/type";
+import { handleCheckbox } from "./util/event";
+import "./loading";
 
-@customElement('sw-switch')
+@customElement("sw-switch")
 export class Switch extends LitElement {
     static styles = styles;
 
@@ -17,7 +17,7 @@ export class Switch extends LitElement {
     disabled: boolean;
 
     @property()
-    size: size = 'normal';
+    size: size = "normal";
 
     @property({ type: Boolean })
     loading = false;
@@ -26,23 +26,25 @@ export class Switch extends LitElement {
 
     classNames = () =>
         className(
-            'switch',
+            "switch",
             { [`size-${this.size}`]: this.size },
             { disabled: this.disabled },
             { loading: this.loading }
         );
 
     render() {
-        return html`<div class=${this.classNames()}>
-            <label>
-                <input
-                    type="checkbox"
-                    @input=${this.handler}
-                    ?checked=${this.checked}
-                    ?disabled=${this.disabled}
-                />
-                <span class="slider"></span>
-            </label>
-        </div>`;
+        return html`
+            <div class=${this.classNames()}>
+                <label>
+                    <input
+                        type="checkbox"
+                        @input=${this.handler}
+                        ?checked=${this.checked}
+                        ?disabled=${this.disabled}
+                    />
+                    <span class="slider"></span>
+                </label>
+            </div>
+        `;
     }
 }
