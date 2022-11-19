@@ -51,7 +51,7 @@ export class Button extends LitElement {
     render() {
         return html`
           <button class=${this.classNames()} ?disabled=${this.disabled}>
-              ${this.loading ? '' : this.loadingIcon()}
+              ${this.loading ? this.loadingIcon() : ''}
               <p><slot></slot></p>
           </button>
         `;
