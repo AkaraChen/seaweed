@@ -1,5 +1,5 @@
 {
-    "extends": ["akrc"],
+    "extends": ["akrc", "plugin:lit/recommended", "plugin:wc/recommended"],
     "rules": {
         "default-case": 0
     }

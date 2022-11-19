@@ -1,7 +1,7 @@
-import { html, LitElement } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { styles } from "#/linkcard.less";
-import { target } from "./util/type";
+import {html, LitElement} from 'lit';
+import {customElement, property} from 'lit/decorators.js';
+import {styles} from '#/linkcard.less';
+import {target} from './util/type';
 
 export interface LinkCardProperty {
     title: string;
@@ -11,24 +11,24 @@ export interface LinkCardProperty {
     alt?: string;
 }
 
-@customElement("sw-link-card")
+@customElement('sw-link-card')
 export class LinkCard extends LitElement {
     static styles = [styles];
 
     @property()
-    title: string;
+        title: string;
 
     @property()
-    link: string;
+        link: string;
 
     @property()
-    image: string;
+        image: string;
 
     @property()
-    target: target;
+        target: target;
 
     @property()
-    alt: string;
+        alt: string;
 
     formatLink = () => {
         try {
@@ -41,26 +41,26 @@ export class LinkCard extends LitElement {
     formatImage = () => {
         if (this.image) {
             return html`
-                <img
-                    src=${this.image}
-                    height="55"
-                    width="55"
-                    alt=${this.alt ?? this.formatLink()}
-                    class="image"
-                />
+              <img
+                  src=${this.image}
+                  height="55"
+                  width="55"
+                  alt=${this.alt ?? this.formatLink()}
+                  class="image"
+              />
             `;
         }
     };
 
     render() {
         return html`
-            <a class="container" href="${this.link}" target="${this.target}">
-                <div class="head">
-                    <h2 class="title">${this.title}</h2>
-                    <p class="link">${this.formatLink()}</p>
-                </div>
-                ${this.formatImage()}
-            </a>
+          <a class="container" href="${this.link}" target="${this.target}">
+              <div class="head">
+                  <h2 class="title">${this.title}</h2>
+                  <p class="link">${this.formatLink()}</p>
+              </div>
+              ${this.formatImage()}
+          </a>
         `;
     }
 }
