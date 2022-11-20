@@ -22,7 +22,7 @@ export default defineConfig({
     output: {
         dir: 'dist',
         chunkFileNames: 'chunk/[hash].js',
-        compact: true,
+        compact: true
     },
     plugins: [
         litCss({
