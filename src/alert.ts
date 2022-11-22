@@ -23,6 +23,9 @@ export class Alert extends LitElement {
     @property()
         border: 'none' | 'top' | 'left' = 'none';
 
+    @property({type: Boolean})
+        outline = false;
+
     iconHTML() {
         switch (this.type) {
         case 'info': {
@@ -45,7 +48,8 @@ export class Alert extends LitElement {
             'alert',
             {[`type-${this.type}`]: this.type},
             {fill: this.fill},
-            {[`border-${this.border}`]: !this.fill && this.border !== 'none'}
+            {[`border-${this.border}`]: !this.fill && this.border !== 'none'},
+            {outline: this.outline}
         );
 
     override render() {

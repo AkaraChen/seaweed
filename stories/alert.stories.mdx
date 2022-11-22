@@ -21,6 +21,7 @@ import "@akrc/seaweed/alert.js";
         title: "",
         fill: true,
         border: "none",
+        outline: false
     }}
     argTypes={{
         type: {
@@ -36,13 +37,14 @@ import "@akrc/seaweed/alert.js";
 
 <Canvas>
     <Story name="Page">
-        {({ type, text, title, fill, border }) =>
+        {({ type, text, title, fill, border, outline }) =>
             html`
                 <sw-alert
                     type=${type}
                     title=${title}
                     ?fill=${fill}
                     border=${border}
+                    ?outline=${outline}
                     >${text}</sw-alert
                 >
             `
