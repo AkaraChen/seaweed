@@ -1,5 +1,5 @@
 import {html, LitElement} from 'lit';
-import {customElement, property, query} from 'lit/decorators.js';
+import {customElement, property} from 'lit/decorators.js';
 import {styles} from '#/link.less';
 import className from '@akrc/classnames';
 
@@ -25,17 +25,13 @@ export class Link extends LitElement {
             {underline: this.underline && !this.disabled}
         );
 
-    @query('a')
-        link: HTMLAnchorElement;
-
     override connectedCallback() {
         super.connectedCallback();
-        if (this.disabled) {
-            addEventListener('click', event => {
+        this.addEventListener('click', (event:Event) => {
+            if (this.disabled) {
                 event.preventDefault();
-                return false;
-            });
-        }
+            }
+        });
     }
 
     override render() {
