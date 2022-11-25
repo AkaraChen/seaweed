@@ -15,7 +15,8 @@ import "@akrc/seaweed/avatar.js";
     title="Data display/Avatar"
     args={{
         src: 'https://avatars.githubusercontent.com/akarachen',
-        size: 'normal'
+        size: 'normal',
+        rounded: true
     }}
     argTypes={{
         size: {
@@ -27,8 +28,8 @@ import "@akrc/seaweed/avatar.js";
 
 <Canvas>
     <Story name="Page">
-        {({ src, size }) =>
-            html`<sw-avatar src=${src} size=${size}></sw-avatar>`
+        {({ src, size, rounded }) =>
+            html`<sw-avatar src=${src} size=${size} ?rounded=${rounded}></sw-avatar>`
         }
     </Story>
 </Canvas>

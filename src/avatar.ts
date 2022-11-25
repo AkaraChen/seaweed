@@ -3,6 +3,7 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from '#/avatar.less';
 import {size, sizeArray} from '../util/type';
+import classNames from '@akrc/classnames';
 
 @customElement('sw-avatar')
 export class Avatar extends LitElement {
@@ -13,6 +14,9 @@ export class Avatar extends LitElement {
 
     @property()
         size: size | number = 'normal';
+
+    @property({type: Boolean})
+        rounded = true;
 
     getSize() {
         const sizeMap = {
@@ -30,10 +34,13 @@ export class Avatar extends LitElement {
         return 50;
     }
 
+    classNames = () =>
+        classNames({rounded: this.rounded});
+
     override render() {
         const size = this.getSize();
         return html`
-          <img src=${this.src} height=${size} width=${size} />
+          <img src=${this.src} height=${size} width=${size} class=${this.classNames()} />
         `;
     }
 }
