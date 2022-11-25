@@ -1,0 +1,48 @@
+.divider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.position-left {
+    & .left-box {
+        width: 25%;
+        flex: unset;
+    }
+}
+.position-right {
+    & .right-box {
+        width: 25%;
+        flex: unset;
+    }
+}
+
+.center-box {
+    margin: 0 12px;
+}
+
+.left-box,
+.right-box {
+    background-color: #dcdfe6;
+    height: 2px;
+    flex: 1;
+    @media (prefers-color-scheme: dark) {
+        background-color: #4c4d4f;
+    }
+}
+
+.vertical {
+    display: inline-block;
+    background-color: #dcdfe6;
+    @media (prefers-color-scheme: dark) {
+        background-color: #4c4d4f;
+    }
+
+    height: 20px;
+    width: 2px;
+    & .left-box,
+    & .right-box,
+    & .center-box {
+        display: none;
+    }
+}
