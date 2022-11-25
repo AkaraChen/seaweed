@@ -33,7 +33,7 @@ export class Avatar extends LitElement {
     override render() {
         const size = this.getSize();
         return html`
-          <img src=${this.src} height=${size}> width=${size}</img>
+          <img src=${this.src} height=${size} width=${size} />
         `;
     }
 }
