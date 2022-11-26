@@ -20,11 +20,15 @@ export class Divider extends LitElement {
     @property({type: Boolean})
         dashed: boolean;
 
+    @property({type: Boolean})
+        dotted: boolean;
+
     classNames = () => className(
         'divider',
         {[`position-${this.position}`]: postionArray.includes(this.position)},
         {vertical: this.vertical},
-        {dashed: this.dashed}
+        {dashed: this.dashed},
+        {dotted: this.dotted}
     );
 
     override render() {

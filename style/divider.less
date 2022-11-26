@@ -40,6 +40,13 @@
     }
 }
 
+.dotted {
+    & .left-box,
+    & .right-box {
+        border-top-style: dotted;
+    }
+}
+
 .vertical {
     display: inline-block;
     border-left: #dcdfe6 2px solid;
@@ -50,6 +57,10 @@
 
     &.dashed {
         border-left-style: dashed;
+    }
+
+    &.dotted {
+        border-left-style: dotted;
     }
 
     & .left-box,
