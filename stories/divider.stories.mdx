@@ -16,7 +16,8 @@ import "@akrc/seaweed/avatar.js";
     args={{
         text: 'lorem',
         position: 'medium',
-        vertical: false
+        vertical: false,
+        dashed: false
     }}
     argTypes={{
         position: {
@@ -28,8 +29,8 @@ import "@akrc/seaweed/avatar.js";
 
 <Canvas>
     <Story name="Page">
-        {({ text, position, vertical }) =>
-            html`<sw-divider text=${text} position=${position} ?vertical=${vertical}></sw-divider>`
+        {({ text, position, vertical, dashed }) =>
+            html`<sw-divider text=${text} position=${position} ?vertical=${vertical} ?dashed=${dashed}></sw-divider>`
         }
     </Story>
 </Canvas>

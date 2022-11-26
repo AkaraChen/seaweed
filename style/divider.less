@@ -19,27 +19,39 @@
 
 .center-box {
     margin: 0 12px;
+    @media (prefers-color-scheme: dark) {
+        color: #fff;
+    }
 }
 
 .left-box,
 .right-box {
-    background-color: #dcdfe6;
-    height: 2px;
+    border-top: #dcdfe6 2px solid;
     flex: 1;
     @media (prefers-color-scheme: dark) {
-        background-color: #4c4d4f;
+        border-color: #4c4d4f;
+    }
+}
+
+.dashed {
+    & .left-box,
+    & .right-box {
+        border-top-style: dashed;
     }
 }
 
 .vertical {
     display: inline-block;
-    background-color: #dcdfe6;
+    border-left: #dcdfe6 2px solid;
+    height: 20px;
     @media (prefers-color-scheme: dark) {
-        background-color: #4c4d4f;
+        border-color: #4c4d4f;
     }
 
-    height: 20px;
-    width: 2px;
+    &.dashed {
+        border-left-style: dashed;
+    }
+
     & .left-box,
     & .right-box,
     & .center-box {
