@@ -1,0 +1,21 @@
+input {
+    outline: none;
+    padding: 8px 12px;
+    border: #d9d9d9 solid 1px;
+    border-radius: 2px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: transparent;
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        border-color: #1890ff;
+        box-shadow: 0 0 1px #1890ff;
+    }
+    &::placeholder {
+        color: #d9d9d9;
+    }
+    @media (prefers-color-scheme: dark) {
+        border-color: #434343;
+    }
+}

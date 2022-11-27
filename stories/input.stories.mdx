@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { html } from "lit";
+import "@/input.ts";
+import { typeArray } from "../util/type.ts";
+
+# Alert
+
+Alert is used to notify users of current state changes or features.
+
+```tsx
+import "@akrc/seaweed/input.js";
+
+<sw-input></sw-input>;
+```
+
+<Meta
+    title="Form/Input"
+    args={{
+        type: "normal",
+        placeholder: ""
+    }}
+    argTypes={{
+        type: {
+            control: "select",
+            options: [...typeArray, 'normal'],
+        },
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ type, placeholder }) =>
+            html`
+                <sw-input
+                    type=${type}
+                    placeholder=${placeholder}
+                    ></sw-input>
+            `
+        }
+    </Story>
+</Canvas>
