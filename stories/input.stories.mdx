@@ -1,7 +1,7 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs";
 import { html } from "lit";
 import "@/input.ts";
-import { typeArray } from "../util/type.ts";
+import { typeArray, sizeArray } from "../util/type.ts";
 
 # Alert
 
@@ -17,23 +17,29 @@ import "@akrc/seaweed/input.js";
     title="Form/Input"
     args={{
         type: "normal",
-        placeholder: ""
+        placeholder: "",
+        size: "normal"
     }}
     argTypes={{
         type: {
             control: "select",
             options: [...typeArray, 'normal'],
         },
+        size: {
+            control: "select",
+            options: sizeArray,
+        },
     }}
 />
 
 <Canvas>
     <Story name="Page">
-        {({ type, placeholder }) =>
+        {({ type, placeholder, size }) =>
             html`
                 <sw-input
                     type=${type}
                     placeholder=${placeholder}
+                    size=${size}
                     ></sw-input>
             `
         }
