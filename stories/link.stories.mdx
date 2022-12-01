@@ -1,7 +1,7 @@
 import { Meta, Canvas, Story } from "@storybook/addon-docs";
 import { html } from "lit";
 import "@/link.ts";
-import { targetArray } from "../util/type.ts";
+import { targetArray, typeArray } from "../util/type.ts";
 
 # Link
 
@@ -19,24 +19,30 @@ import "@akrc/seaweed/link.js";
         underline: false,
         href: "https://bing.com",
         target: "_blank",
+        type: "info"
     }}
     argTypes={{
         target: {
             control: "select",
             options: targetArray,
         },
+        type: {
+            control: "select",
+            options: typeArray,
+        },
     }}
 />
 
 <Canvas>
     <Story name="Page">
-        {({ text, disabled, underline, href, target }) =>
+        {({ text, disabled, underline, href, target, type }) =>
             html`
                 <sw-link
                     ?disabled=${disabled}
                     ?underline=${underline}
                     href=${href}
                     target=${target}
+                    type=${type}
                     >${text}</sw-link
                 >
             `

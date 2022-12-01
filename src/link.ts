@@ -2,6 +2,7 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from '#/link.less';
 import className from '@akrc/classnames';
+import {type, typeArray} from '../util/type';
 
 @customElement('sw-link')
 export class Link extends LitElement {
@@ -17,12 +18,16 @@ export class Link extends LitElement {
         href: string;
 
     @property()
+        type: type = 'info';
+
+    @property()
         target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
 
     classNames = () =>
         className(
             {disabled: this.disabled},
-            {underline: this.underline && !this.disabled}
+            {underline: this.underline && !this.disabled},
+            {[`type-${this.type}`]: typeArray.includes(this.type)}
         );
 
     override connectedCallback() {
