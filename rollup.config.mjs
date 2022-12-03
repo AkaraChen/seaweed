@@ -11,8 +11,6 @@ import MinifyHTML from 'rollup-plugin-minify-html-literals';
 import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';
 import syntax from 'postcss-less';
-import {Processor} from 'windicss/lib';
-import {HTMLParser} from 'windicss/utils/parser';
 import filesize from 'rollup-plugin-filesize';
 
 const processor = postcss(postcssNesting());
@@ -28,27 +26,10 @@ export default defineConfig({
         litCss({
             include: /\.less$/i,
             transform: (css, {filePath}) => {
-                const fileName = filePath
-                    .replaceAll('/', '\\')
-                    .split('\\')
-                    .at(-1);
-                const template = path.resolve(
-                    './src',
-                    fileName.split('.')[0] + '.ts'
-                );
-                const content = fs.readFileSync(template).toString();
-                const windiProcessor = new Processor();
-                const htmlClasses = new HTMLParser(content)
-                    .parseClasses()
-                    .map(index => index.result)
-                    .join(' ');
-                const interpretedSheet = windiProcessor.interpret(htmlClasses).styleSheet;
-                const styles = interpretedSheet.build();
-
                 const base = fs
                     .readFileSync(path.resolve('./style/base.less'))
                     .toString();
-                return processor.process(base + css + styles, {
+                return processor.process(base + css, {
                     from: filePath,
                     syntax
                 }).css;
