@@ -2,6 +2,8 @@
     display: flex;
     width: 100%;
     align-items: center;
+
+    --border-style: solid;
 }
 
 .position-left {
@@ -26,7 +28,7 @@
 
 .left-box,
 .right-box {
-    border-top: #dcdfe6 2px solid;
+    border-top: #dcdfe6 2px var(--border-style);
     flex: 1;
     @media (prefers-color-scheme: dark) {
         border-color: #4c4d4f;
@@ -34,33 +36,19 @@
 }
 
 .dashed {
-    & .left-box,
-    & .right-box {
-        border-top-style: dashed;
-    }
+    --border-style: dashed;
 }
 
 .dotted {
-    & .left-box,
-    & .right-box {
-        border-top-style: dotted;
-    }
+    --border-style: dotted;
 }
 
 .vertical {
     display: inline-block;
-    border-left: #dcdfe6 2px solid;
+    border-left: #dcdfe6 2px var(--border-style);
     height: 20px;
     @media (prefers-color-scheme: dark) {
         border-color: #4c4d4f;
-    }
-
-    &.dashed {
-        border-left-style: dashed;
-    }
-
-    &.dotted {
-        border-left-style: dotted;
     }
 
     & .left-box,
