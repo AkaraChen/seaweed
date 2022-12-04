@@ -3,7 +3,6 @@
     "version": "0.0.3",
     "description": "",
     "main": "index.js",
-    "private": "true",
     "packageManager": "yarn@1.22.19",
     "scripts": {
         "build": "rollup -c rollup.config.mjs",
