@@ -39,6 +39,7 @@
         "@typescript-eslint/parser": "5.45.0",
         "@wordpress/stylelint-config": "^21.3.0",
         "babel-loader": "9.1.0",
+        "dumi": "^2.0.10",
         "esbuild": "0.15.16",
         "eslint": "8.28.0",
         "eslint-config-akrc": "0.0.8",

@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "strict": true,
+        "skipLibCheck": true,
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "target": "ESNext",
@@ -9,7 +11,11 @@
         "module": "ESNext",
         "paths": {
             "@/*": ["./src/*"],
-            "#/*": ["./style/*"]
-        }
+            "#/*": ["./style/*"],
+            "@@/*": [
+                ".dumi/tmp/*"
+            ]
+        },
+        "baseUrl": "./",
     }
 }
