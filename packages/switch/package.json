@@ -2,8 +2,5 @@
   "name": "switch",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "shared": "workspace:^1.0.0"
-  }
+  "license": "MIT"
 }

@@ -52,6 +52,7 @@
         "rollup-plugin-lit-css": "4.0.0",
         "rollup-plugin-minify-html-literals": "^1.2.6",
         "rollup-plugin-node-externals": "^5.0.2",
+        "shared": "workspace:^1.0.0",
         "stylelint": "^14.14.0",
         "stylelint-config-recommended-less": "^1.0.4",
         "stylelint-config-standard": "^29.0.0",
@@ -71,5 +72,8 @@
     "workspaces": [
         "packages/*",
         "internal/*"
-    ]
+    ],
+    "dependencies": {
+        "cross-env": "^7.0.3"
+    }
 }

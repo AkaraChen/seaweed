@@ -19,6 +19,20 @@ const packages = new glob.GlobSync('./packages/*').found
     .filter(item => !['shared'].includes(item))
     .map(item => `./packages/${item}/${item}.ts`);
 
+export const litcssPlugin = litCSS({
+    include: /\.less$/i,
+    transform: (css, {filePath}) => {
+        const base = fs
+            .readFileSync(
+                path.resolve('./packages/shared/base.less')
+            ).toString();
+        return processor.process(base + css, {
+            from: filePath,
+            syntax
+        }).css;
+    }
+});
+
 export default defineConfig({
     input: packages,
     output: {
@@ -27,19 +41,7 @@ export default defineConfig({
         compact: true
     },
     plugins: [
-        litCSS({
-            include: /\.less$/i,
-            transform: (css, {filePath}) => {
-                const base = fs
-                    .readFileSync(
-                        path.resolve('./packages/shared/base.less')
-                    ).toString();
-                return processor.process(base + css, {
-                    from: filePath,
-                    syntax
-                }).css;
-            }
-        }),
+        litcssPlugin,
         MinifyHTML.default(),
         typescript(),
         externals({

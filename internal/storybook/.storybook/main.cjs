@@ -18,7 +18,9 @@ module.exports = {
         previewMdx2: true,
     },
     core: {
-        builder: "webpack5",
+        builder: process.env.NODE_ENV === 'development'
+            ? "@storybook/builder-vite"
+            : "webpack5"
     },
     webpackFinal: async (config) => {
         config.module.rules.push({
