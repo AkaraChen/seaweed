@@ -12,6 +12,7 @@ import postcssNesting from 'postcss-nesting';
 import syntax from 'postcss-less';
 import filesize from 'rollup-plugin-filesize';
 import externals from 'rollup-plugin-node-externals';
+import typescript from '@rollup/plugin-typescript';
 
 const processor = postcss(postcssNesting());
 const packages = new glob.GlobSync('./packages/*').found
@@ -41,6 +42,7 @@ export default defineConfig({
             }
         }),
         MinifyHTML.default(),
+        typescript(),
         esbuild({minify: true}),
         externals({
             include: ['lit']
