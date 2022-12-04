@@ -3,7 +3,6 @@ import glob from 'glob';
 import fs from 'node:fs';
 import path from 'node:path';
 import resolve from '@rollup/plugin-node-resolve';
-import esbuild from 'rollup-plugin-esbuild';
 import litCSS from 'rollup-plugin-lit-css';
 import del from 'rollup-plugin-delete';
 import MinifyHTML from 'rollup-plugin-minify-html-literals';
@@ -43,7 +42,6 @@ export default defineConfig({
         }),
         MinifyHTML.default(),
         typescript(),
-        esbuild({minify: true}),
         externals({
             include: ['lit']
         }),
