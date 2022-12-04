@@ -27,7 +27,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "babel-loader": "^8.3.0",
+    "babel-loader": "^9.0.0",
     "lit-html": "^2.4.0"
   }
 }
