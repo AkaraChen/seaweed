@@ -1,0 +1,43 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { html } from "lit";
+import "./progress.ts";
+import { typeArray, sizeArray } from "shared/type.ts";
+
+# Progress
+
+
+```tsx
+import "@akrc/seaweed/progress.js";
+
+<sw-progress>Lorem ipsum dolor sit amet</sw-progress>;
+```
+
+<Meta
+    title="Feedback/Progress"
+    args={{
+        value: 50,
+        max: 100,
+        type: "info",
+        size: "normal",
+    }}
+    argTypes={{
+        type: {
+            control: "select",
+            options: typeArray,
+        },
+        size: {
+            control: "select",
+            options: sizeArray,
+        },
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({value, max, type, size}) =>
+            html`
+                <sw-progress value=${value} max=${max} type=${type} size=${size}></sw-progress>
+            `
+        }
+    </Story>
+</Canvas>

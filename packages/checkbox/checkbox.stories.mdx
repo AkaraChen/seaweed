@@ -1,0 +1,49 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { html } from "lit";
+import "./checkbox.ts";
+import { sizeArray } from "shared/type.ts";
+
+# CheckBox
+
+```tsx
+import "@akrc/seaweed/checkbox.js";
+
+<sw-checkbox></sw-checkbox>;
+
+const checkbox = document.getElementsByTagName("sw-checkbox")[0];
+checkbox.addEventListener("change", (event: Event) => {
+    if (event.detail.value as boolean) {
+        alert(true);
+    } else {
+        alert(false);
+    }
+});
+```
+
+<Meta
+    title="Form/CheckBox"
+    args={{
+        size: "normal",
+        disabled: false,
+    }}
+    argTypes={{
+        size: {
+            control: "select",
+            options: sizeArray,
+        },
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ size, disabled }) =>
+            html`
+                <sw-checkbox
+                    size=${size}
+                    checked
+                    ?disabled=${disabled}
+                ></sw-checkbox>
+            `
+        }
+    </Story>
+</Canvas>

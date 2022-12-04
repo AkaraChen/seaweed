@@ -1,0 +1,9 @@
+{
+  "name": "divider",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "shared": "^1.0.0"
+  }
+}

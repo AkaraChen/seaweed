@@ -1,0 +1,51 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { html } from "lit";
+import "./link.ts";
+import { targetArray, typeArray } from "shared/type.ts";
+
+# Link
+
+```tsx
+import "@akrc/seaweed/link.js";
+
+<sw-link>text</sw-link>;
+```
+
+<Meta
+    title="Common/Link"
+    args={{
+        text: "Link",
+        disabled: false,
+        underline: false,
+        href: "https://bing.com",
+        target: "_blank",
+        type: "info"
+    }}
+    argTypes={{
+        target: {
+            control: "select",
+            options: targetArray,
+        },
+        type: {
+            control: "select",
+            options: typeArray,
+        },
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ text, disabled, underline, href, target, type }) =>
+            html`
+                <sw-link
+                    ?disabled=${disabled}
+                    ?underline=${underline}
+                    href=${href}
+                    target=${target}
+                    type=${type}
+                    >${text}</sw-link
+                >
+            `
+        }
+    </Story>
+</Canvas>

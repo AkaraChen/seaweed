@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { html } from "lit";
+import "./loading.ts";
+
+# Loading
+
+```tsx
+import "@akrc/seaweed/loading.js";
+
+<sw-loading color="#bbb" size="24px"></sw-loading>;
+```
+
+<Meta
+    title="Common/Loading"
+    args={{
+        color: "#bbb",
+        size: "24px",
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ color, size }) => {
+            return html`<sw-loading color=${color} size=${size}></sw-loading>`;
+        }}
+    </Story>
+</Canvas>

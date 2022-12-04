@@ -1,0 +1,15 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "dumi": "^2.0.10",
+    "lit-css-loader": "^2.0.0"
+  },
+  "scripts": {
+    "dev": "dumi dev",
+    "prepare": "dumi setup",
+    "build": "dumi build"
+  }
+}

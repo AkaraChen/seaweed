@@ -1,0 +1,48 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { html } from "lit";
+import "./linkcard.ts";
+import { targetArray } from "shared/type.ts";
+
+# LinkCard
+
+```tsx
+import "@akrc/seaweed/linkcard.js";
+
+<sw-link-card
+    title="title"
+    link="https://google.com"
+    image="https://google.com/favicon.ico"
+></sw-link-card>;
+```
+
+<Meta
+    title="Data display/LinkCard"
+    args={{
+        title: "Example",
+        link: "https://example.com",
+        image: "https://via.placeholder.com/55",
+        alt: "image alt",
+        target: "_blank",
+    }}
+    argTypes={{
+        target: {
+            control: "select",
+            options: targetArray,
+        },
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({ title, link, image, alt }) =>
+            html`
+                <sw-link-card
+                    title=${title}
+                    link=${link}
+                    image=${image}
+                    alt=${alt}
+                ></sw-link-card>
+            `
+        }
+    </Story>
+</Canvas>

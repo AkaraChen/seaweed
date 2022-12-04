@@ -4,31 +4,36 @@ import fs from 'node:fs';
 import path from 'node:path';
 import resolve from '@rollup/plugin-node-resolve';
 import esbuild from 'rollup-plugin-esbuild';
-import alias from '@rollup/plugin-alias';
-import litCss from 'rollup-plugin-lit-css';
+import litCSS from 'rollup-plugin-lit-css';
 import del from 'rollup-plugin-delete';
 import MinifyHTML from 'rollup-plugin-minify-html-literals';
 import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';
 import syntax from 'postcss-less';
 import filesize from 'rollup-plugin-filesize';
+import externals from 'rollup-plugin-node-externals';
 
 const processor = postcss(postcssNesting());
+const packages = new glob.GlobSync('./packages/*').found
+    .map(item => item.slice('./packages/'.length))
+    .filter(item => !['shared'].includes(item))
+    .map(item => `./packages/${item}/${item}.ts`);
 
 export default defineConfig({
-    input: glob.GlobSync('./src/*.ts').found,
+    input: packages,
     output: {
         dir: 'dist',
         chunkFileNames: 'chunk/[hash].js',
         compact: true
     },
     plugins: [
-        litCss({
+        litCSS({
             include: /\.less$/i,
             transform: (css, {filePath}) => {
                 const base = fs
-                    .readFileSync(path.resolve('./style/base.less'))
-                    .toString();
+                    .readFileSync(
+                        path.resolve('./packages/shared/base.less')
+                    ).toString();
                 return processor.process(base + css, {
                     from: filePath,
                     syntax
@@ -37,8 +42,10 @@ export default defineConfig({
         }),
         MinifyHTML.default(),
         esbuild({minify: true}),
+        externals({
+            include: ['lit']
+        }),
         resolve(),
-        alias({entries: {'@': './src', '#': './style'}}),
         del({targets: 'dist/*'}),
         filesize()
     ]

@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "skipLibCheck": true,
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "target": "ESNext",
@@ -7,5 +8,11 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "module": "ESNext",
+        "paths": {
+            "@@/*": [
+                ".dumi/tmp/*"
+            ]
+        },
+        "baseUrl": "./",
     }
 }

@@ -130,5 +130,8 @@ dist
 .DS_Store
 
 # dumi
-.dumi/tmp
-.dumi/tmp-production
+internal/dumi/.dumi/tmp
+internal/dumi/.dumi/tmp-production
+
+# storybook
+internal/storybook/storybook-static/**
