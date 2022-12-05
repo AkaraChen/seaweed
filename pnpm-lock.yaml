@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@akrc/classnames': 2.3.3
+      '@akrc/seaweed': workspace:^0.0.3
       '@rollup/plugin-node-resolve': 15.0.1
       '@rollup/plugin-typescript': ^10.0.1
       '@types/node': ^18.11.10
@@ -47,10 +48,9 @@ importers:
       type-fest: 3.3.0
       typescript: 4.9.3
       vitest: 0.25.3
-    dependencies:
-      cross-env: 7.0.3
     devDependencies:
       '@akrc/classnames': 2.3.3
+      '@akrc/seaweed': 'link:'
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.5.1
       '@rollup/plugin-typescript': 10.0.1_3d7bvrhnnvjmhphi3zgbz54owe
       '@types/node': 18.11.10
@@ -58,6 +58,7 @@ importers:
       '@typescript-eslint/eslint-plugin': 5.45.0_czs5uoqkd3podpy6vgtsxfc7au
       '@typescript-eslint/parser': 5.45.0_hsf322ms6xhhd4b5ne6lb74y4a
       '@wordpress/stylelint-config': 21.5.0_u4cmdib575x7lmfjhgvokchuwe
+      cross-env: 7.0.3
       eslint: 8.28.0
       eslint-config-akrc: 0.0.8
       eslint-plugin-lit: 1.6.1_eslint@8.28.0
@@ -95,10 +96,8 @@ importers:
 
   internal/dumi:
     specifiers:
-      '@akrc/seaweed': workspace:*
       dumi: ^2.0.10
     dependencies:
-      '@akrc/seaweed': link:../..
       dumi: 2.0.10
 
   internal/storybook:
@@ -7828,6 +7827,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     dev: false
@@ -9114,7 +9114,7 @@ packages:
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
-    dev: false
+    dev: true
 
   /cross-spawn/5.1.0:
     resolution: {integrity: sha512-pTgQJ5KC0d2hcY8eyL1IzlBPYjTkyH72XRZPnLyKus2mBfNjQs3klqbJU2VILqZryAZUt9JOb3h/mWMy23/f5A==}
@@ -11321,6 +11321,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -15635,6 +15636,7 @@ packages:
 
   /nan/2.17.0:
     resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
+    requiresBuild: true
     dev: false
     optional: true
 
