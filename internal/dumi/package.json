@@ -8,9 +8,9 @@
     "dumi": "^2.0.10"
   },
   "scripts": {
-    "dev": "pnpm run prebuild && dumi dev",
+    "dev": "lerna run prebuild && dumi dev",
     "prebuild": "pnpm run -w build:package",
     "prepare": "dumi setup",
-    "build": "pnpm run prebuild && dumi build"
+    "build": "lerna run prebuild && dumi build"
   }
 }
