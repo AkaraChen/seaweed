@@ -1,20 +1,20 @@
 ---
 hero:
   title: Seaweed
-  description: 
+  description: 基于 Web component 的下一代组件库
   actions:
-    - text: Get Started
+    - text: 现在开始
       link: /
     - text: Github
       link: https://github.com/akarachen/seaweed
 features:
-  - title: Lightweight
+  - title: 高质量
     emoji: 💎
-    description: Do one thing, and do it well.
-  - title: Cross framework
+    description: 经过长时间打磨的高质量组件。
+  - title: 跨框架
     emoji: 🌈
-    description: You use React? You use Vue? No matter.
-  - title: More
+    description: 你用 React？你用 Vue？都没问题。
+  - title: 轻量
     emoji: 🚀
-    description: More features included...
+    description: 用着轻巧，没有负担。
 ---
