@@ -5,7 +5,7 @@ export default defineConfig({
     name: 'seaweed',
         nav: [
             { title: '介绍', link: '/introduction' },
-            { title: '组件', link: '/common/button'}
+            { title: '组件', link: '/components/button'}
         ]
   },
 });
