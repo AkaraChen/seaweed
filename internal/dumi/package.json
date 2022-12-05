@@ -4,9 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@akrc/seaweed": "workspace:^0.0.3",
-    "dumi": "^2.0.10",
-    "lit-css-loader": "^2.0.0"
+    "@akrc/seaweed": "workspace:*",
+    "dumi": "^2.0.10"
   },
   "scripts": {
     "dev": "dumi dev",
