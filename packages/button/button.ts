@@ -2,7 +2,7 @@ import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import {size, type} from 'shared/type';
-import '../loading/loading';
+import 'loading/loading';
 import {styles} from './button.less';
 
 @customElement('sw-button')
