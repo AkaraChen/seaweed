@@ -13,7 +13,6 @@ import filesize from 'rollup-plugin-filesize';
 import externals from 'rollup-plugin-node-externals';
 import typescript from '@rollup/plugin-typescript';
 
-const processor = postcss(postcssNesting());
 const packages = new glob.GlobSync('./packages/*').found
     .map(item => item.slice('./packages/'.length))
     .filter(item => !['shared'].includes(item))
@@ -22,6 +21,7 @@ const packages = new glob.GlobSync('./packages/*').found
 export const litcssPlugin = litCSS({
     include: /\.less$/i,
     transform: (css, {filePath}) => {
+        const processor = postcss(postcssNesting());
         const base = fs
             .readFileSync(
                 path.resolve('./packages/shared/base.less')

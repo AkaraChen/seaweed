@@ -1,20 +1,20 @@
 ---
 hero:
-  title: Site
+  title: Seaweed
   description: 
   actions:
-    - text: Hello
+    - text: Get Started
       link: /
-    - text: World
-      link: /
+    - text: Github
+      link: https://github.com/akarachen/seaweed
 features:
-  - title: Hello
+  - title: Lightweight
     emoji: 💎
-    description: Put hello description here
-  - title: World
+    description: Do one thing, and do it well.
+  - title: Cross framework
     emoji: 🌈
-    description: Put world description here
-  - title: '!'
+    description: You use React? You use Vue? No matter.
+  - title: More
     emoji: 🚀
-    description: Put ! description here
+    description: More features included...
 ---

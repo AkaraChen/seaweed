@@ -11,7 +11,6 @@ button {
     padding: 4px 15px;
     border-radius: 2px;
     outline: none;
-    border: none;
     border: 1px solid var(--border-color);
     background-color: transparent;
     box-shadow: 0 2px #00000004;
@@ -93,11 +92,13 @@ button.type-success {
 }
 
 button.loading {
+    pointer-events: none;
     cursor: wait;
     opacity: 0.5;
 }
 
 button[disabled] {
+    pointer-events: none;
     cursor: no-drop;
     opacity: 0.5;
 }
