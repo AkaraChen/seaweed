@@ -10,7 +10,7 @@ title: 按钮
 import '@akrc/seaweed/button'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em'}}>
+    return <div style={{display:'flex', gap: '0.25em', 'flex-wrap': 'wrap'}}>
         <sw-button>Normal</sw-button>
         <sw-button type="info" primary>Info</sw-button>
         <sw-button type="success" primary>Success</sw-button>
@@ -26,7 +26,7 @@ export default () => {
 import '@akrc/seaweed/button'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em'}}>
+    return <div style={{display:'flex', gap: '0.25em', 'flex-wrap': 'wrap'}}>
         <sw-button size="small">Small</sw-button>
         <sw-button size="normal">Normal</sw-button>
         <sw-button size="large">Large</sw-button>
@@ -41,7 +41,7 @@ export default () => {
 import '@akrc/seaweed/button'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em'}}>
+    return <div style={{display:'flex', gap: '0.25em', 'flex-wrap': 'wrap'}}>
         <sw-button primary loading>Loading</sw-button>
         <sw-button loading>Loading</sw-button>
     </div>
@@ -54,7 +54,7 @@ export default () => {
 import '@akrc/seaweed/button'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em'}}>
+    return <div style={{display:'flex', gap: '0.25em', 'flex-wrap': 'wrap'}}>
         <sw-button primary disabled>Loading</sw-button>
         <sw-button disabled>Loading</sw-button>
     </div>
