@@ -1,7 +1,5 @@
 ---
 title: 按钮
-demo:
-    cols: 2
 ---
 
 # 按钮
@@ -60,5 +58,15 @@ export default () => {
         <sw-button primary disabled>Loading</sw-button>
         <sw-button disabled>Loading</sw-button>
     </div>
+}
+```
+
+## 圆角按钮
+
+```tsx
+import '@akrc/seaweed/button'
+
+export default () => {
+    return <sw-button rounded>Rounded</sw-button>
 }
 ```
