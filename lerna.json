@@ -6,5 +6,9 @@
   "workspaces": [
     "packages/*",
     "internal/*"
+  ],
+  "packages": [
+    "packages/*",
+    "internal/*"
   ]
 }

@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@akrc/seaweed": "workspace:^0.0.3",
     "dumi": "^2.0.10"
   },
   "scripts": {
-    "dev": "dumi dev",
+    "dev": "pnpm run prebuild && dumi dev",
+    "prebuild": "pnpm run -w build:package",
     "prepare": "dumi setup",
-    "build": "dumi build"
+    "build": "pnpm run prebuild && dumi build"
   }
 }
