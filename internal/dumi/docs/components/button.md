@@ -1,5 +1,5 @@
 ---
-title: 按钮 Button
+title: Button 按钮
 group:
   title: 通用
   order: 0
