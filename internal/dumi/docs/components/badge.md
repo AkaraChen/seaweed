@@ -1,5 +1,5 @@
 ---
-title: 徽章 Badge
+title: Badge 徽章
 group:
   title: 数据展示
   order: 1
