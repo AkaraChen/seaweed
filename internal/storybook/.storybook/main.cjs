@@ -5,12 +5,11 @@ const postcssNesting = require("postcss-nesting");
 const processor = postcss(postcssNesting());
 const syntax = require("postcss-less");
 module.exports = {
-  stories: ["../../../packages/", "../introduction.stories.mdx"],
+  stories: ["../../../packages/**/*.mdx", "../introduction.stories.mdx"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@styled/storybook-dark-mode"],
   framework: "@storybook/web-components",
   features: {
-    storyStoreV7: true,
-    previewMdx2: true
+    storyStoreV7: true
   },
   core: {
     builder: "webpack5"
@@ -32,8 +31,5 @@ module.exports = {
       }
     });
     return config;
-  },
-  docs: {
-    docsPage: "automatic"
   }
 };
