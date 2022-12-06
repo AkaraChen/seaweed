@@ -1,5 +1,5 @@
 ---
-title: 链接 Link
+title: Link 链接
 group:
   title: 通用
   order: 0
