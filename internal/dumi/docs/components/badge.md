@@ -13,7 +13,7 @@ group:
 import '@akrc/seaweed/badge'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em'}}>
+    return <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
         <sw-badge>Normal</sw-badge>
         <sw-badge type="info">Info</sw-badge>
         <sw-badge type="success">Success</sw-badge>
@@ -29,7 +29,7 @@ export default () => {
 import '@akrc/seaweed/badge'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em'}}>
+    return <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
         <sw-badge>Normal</sw-badge>
         <sw-badge noborder type="info">Info</sw-badge>
         <sw-badge noborder type="success">Success</sw-badge>
@@ -45,15 +45,15 @@ export default () => {
 import '@akrc/seaweed/badge'
 
 export default () => {
-    return <div style={{display:'flex', flexDirection: 'column', gap: '1em'}}>
-        <div style={{display:'flex', gap: '0.25em'}}>
+    return <div style={{display:'flex', flexDirection: 'column', gap: '1em', flexWrap: 'wrap'}}>
+        <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
             <sw-badge rounded>Normal</sw-badge>
             <sw-badge rounded type="info">Info</sw-badge>
             <sw-badge rounded type="success">Success</sw-badge>
             <sw-badge rounded type="warning">Warning</sw-badge>
             <sw-badge rounded type="error">Error</sw-badge>
         </div>
-        <div style={{display:'flex', gap: '0.25em'}}>
+        <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
             <sw-badge rounded>Normal</sw-badge>
             <sw-badge rounded noborder type="info">Info</sw-badge>
             <sw-badge rounded noborder type="success">Success</sw-badge>
@@ -70,29 +70,29 @@ export default () => {
 import '@akrc/seaweed/badge'
 
 export default () => {
-    return <div style={{display:'flex', flexDirection: 'column', gap: '1em'}}>
-        <div style={{display:'flex', gap: '0.25em'}}>
+    return <div style={{display:'flex', flexDirection: 'column', gap: '1em', flexWrap: 'wrap'}}>
+        <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
             <sw-badge disabled>Normal</sw-badge>
             <sw-badge disabled type="info">Info</sw-badge>
             <sw-badge disabled type="success">Success</sw-badge>
             <sw-badge disabled type="warning">Warning</sw-badge>
             <sw-badge disabled type="error">Error</sw-badge>
         </div>
-        <div style={{display:'flex', gap: '0.25em'}}>
+        <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
             <sw-badge disabled>Normal</sw-badge>
             <sw-badge disabled noborder type="info">Info</sw-badge>
             <sw-badge disabled noborder type="success">Success</sw-badge>
             <sw-badge disabled noborder type="warning">Warning</sw-badge>
             <sw-badge disabled noborder type="error">Error</sw-badge>
         </div>
-        <div style={{display:'flex', gap: '0.25em'}}>
+        <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
             <sw-badge disabled rounded>Normal</sw-badge>
             <sw-badge disabled rounded type="info">Info</sw-badge>
             <sw-badge disabled rounded type="success">Success</sw-badge>
             <sw-badge disabled rounded type="warning">Warning</sw-badge>
             <sw-badge disabled rounded type="error">Error</sw-badge>
         </div>
-        <div style={{display:'flex', gap: '0.25em'}}>
+        <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
             <sw-badge disabled rounded>Normal</sw-badge>
             <sw-badge disabled rounded noborder type="info">Info</sw-badge>
             <sw-badge disabled rounded noborder type="success">Success</sw-badge>
