@@ -7,6 +7,18 @@ group:
 
 # 进度
 
+## 值
+
+就像使用 HTML5 自带的 process 元素一样，我们可以使用 `value` 和 `max` 来设置进度。
+
+```tsx
+import '@akrc/seaweed/progress'
+
+export default () => {
+    return <sw-progress value={20} max="50"></sw-progress>
+}
+```
+
 ## 进度类型
 
 ```tsx

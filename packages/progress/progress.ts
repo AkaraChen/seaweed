@@ -29,9 +29,10 @@ export class Progress extends LitElement {
     );
 
     override render() {
+        const rate = `${this.value / this.max * 100}%`;
         return html`
           <div class=${this.classNames()}>
-            <span style="width: ${this.value / this.max * 100}%;"></span>
+            <span style="width: ${rate};"></span>
             </div>
         `;
     }

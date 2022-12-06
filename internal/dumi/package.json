@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "@akrc/seaweed": "workspace:^0.0.3",
-    "dumi": "^2.0.10"
+    "dumi": "^2.0.10",
+    "react": "18.2.0"
   },
   "scripts": {
     "dev": "lerna run prebuild && dumi dev",
