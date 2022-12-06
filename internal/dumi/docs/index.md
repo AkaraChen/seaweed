@@ -4,7 +4,7 @@ hero:
   description: 基于 Web component 的下一代组件库
   actions:
     - text: 现在开始
-      link: /
+      link: /guide/introduction
     - text: Github
       link: https://github.com/akarachen/seaweed
 features:
