@@ -18,7 +18,7 @@ export class Progress extends LitElement {
         max = 100;
 
     @property()
-        size: size = 'small';
+        size: size = 'normal';
 
     @property()
         type: type = 'info';
