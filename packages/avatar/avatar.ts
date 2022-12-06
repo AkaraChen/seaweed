@@ -16,7 +16,7 @@ export class Avatar extends LitElement {
         size: size | number = 'normal';
 
     @property({type: Boolean})
-        rounded = true;
+        rounded: boolean;
 
     getSize() {
         const sizeMap = {
