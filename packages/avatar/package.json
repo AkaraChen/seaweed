@@ -2,5 +2,10 @@
   "name": "avatar",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@akrc/classnames": "^2.3.3",
+    "lit": "2.4.1",
+    "shared": "workspace:^1.0.0"
+  }
 }

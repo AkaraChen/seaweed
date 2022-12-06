@@ -4,7 +4,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import resolve from '@rollup/plugin-node-resolve';
 import litCSS from 'rollup-plugin-lit-css';
-import del from 'rollup-plugin-delete';
 import MinifyHTML from 'rollup-plugin-minify-html-literals';
 import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';
@@ -48,7 +47,6 @@ export default defineConfig({
             include: ['lit']
         }),
         resolve(),
-        del({targets: 'dist/*'}),
         filesize()
     ]
 });

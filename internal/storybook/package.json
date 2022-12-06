@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@akrc/classnames": "^2.3.3",
     "@babel/core": "7.20.5",
     "@babel/plugin-proposal-decorators": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",
@@ -16,9 +17,11 @@
     "@storybook/preview-web": "^6.5.14",
     "@storybook/web-components": "6.5.14",
     "@styled/storybook-dark-mode": "1.1.5",
+    "lit": "2.4.1",
     "lit-css-loader": "^2.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "shared": "workspace:^1.0.0"
   },
   "scripts": {
     "dev": "start-storybook -p 6006",
