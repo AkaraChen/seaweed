@@ -23,6 +23,9 @@ export class Progress extends LitElement {
     @property()
         type: type = 'info';
 
+    @property()
+        color: string;
+
     classNames = () => className(
         {[`${this.type}`]: typeArray.includes(this.type)},
         {[`${this.size}`]: sizeArray.includes(this.size)}
@@ -30,9 +33,10 @@ export class Progress extends LitElement {
 
     override render() {
         const rate = `${this.value / this.max * 100}%`;
+        const color = this.color ? `background-color: ${this.color}` : '';
         return html`
           <div class=${this.classNames()}>
-            <span style="width: ${rate};"></span>
+            <span style="width: ${rate}; ${color}"></span>
             </div>
         `;
     }

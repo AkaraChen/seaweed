@@ -19,6 +19,7 @@ import "@akrc/seaweed/progress.js";
         max: 100,
         type: "info",
         size: "normal",
+        color: ''
     }}
     argTypes={{
         type: {
@@ -34,9 +35,9 @@ import "@akrc/seaweed/progress.js";
 
 <Canvas>
     <Story name="Page">
-        {({value, max, type, size}) =>
+        {({value, max, type, size, color}) =>
             html`
-                <sw-progress value=${value} max=${max} type=${type} size=${size}></sw-progress>
+                <sw-progress value=${value} max=${max} type=${type} size=${size} color=${color}></sw-progress>
             `
         }
     </Story>

@@ -34,6 +34,16 @@ export default () => {
 }
 ```
 
+## 自定义颜色
+
+```tsx
+import '@akrc/seaweed/progress'
+
+export default () => {
+    return <sw-progress color="#bbb"></sw-progress>
+}
+```
+
 ## 进度大小
 
 ```tsx
