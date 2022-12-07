@@ -3,7 +3,6 @@ import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import {styles} from './switch.less';
 import {size} from 'shared/type';
-import {handleCheckbox} from 'shared/event';
 import '../loading/loading';
 
 @customElement('sw-switch')
@@ -22,7 +21,18 @@ export class Switch extends LitElement {
     @property({type: Boolean})
         loading = false;
 
-    private handler = (event: Event) => handleCheckbox(event, this);
+    get value() {
+        return this.shadowRoot.querySelector('input').checked;
+    }
+
+    set value(value: boolean) {
+        this.shadowRoot.querySelector('input').checked = value;
+    }
+
+    private handler = (event: Event) => {
+        const input = event.target as HTMLInputElement;
+        this.value = input.checked;
+    };
 
     classNames = () =>
         className(

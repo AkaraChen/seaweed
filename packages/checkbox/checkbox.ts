@@ -3,7 +3,6 @@ import {customElement, property} from 'lit/decorators.js';
 import className from '@akrc/classnames';
 import {size} from 'shared/type';
 import {styles} from './checkbox.less';
-import {handleCheckbox} from 'shared/event';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {
@@ -21,7 +20,18 @@ export class CheckBox extends LitElement {
     classNames = () =>
         className({[`size-${this.size}`]: this.size !== 'normal'});
 
-    private handler = (event: Event) => handleCheckbox(event, this);
+    get value() {
+        return this.shadowRoot.querySelector('input').checked;
+    }
+
+    set value(value: boolean) {
+        this.shadowRoot.querySelector('input').checked = value;
+    }
+
+    private handler = (event: Event) => {
+        const input = event.target as HTMLInputElement;
+        this.value = input.checked;
+    };
 
     override render() {
         return html`

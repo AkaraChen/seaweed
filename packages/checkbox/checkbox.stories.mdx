@@ -9,15 +9,6 @@ import { sizeArray } from "shared/type.ts";
 import "@akrc/seaweed/checkbox.js";
 
 <sw-checkbox></sw-checkbox>;
-
-const checkbox = document.getElementsByTagName("sw-checkbox")[0];
-checkbox.addEventListener("change", (event: Event) => {
-    if (event.detail.value as boolean) {
-        alert(true);
-    } else {
-        alert(false);
-    }
-});
 ```
 
 <Meta
