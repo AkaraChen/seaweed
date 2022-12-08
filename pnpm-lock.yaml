@@ -81,14 +81,14 @@ importers:
       '@akrc/classnames': ^2.3.3
       '@akrc/seaweed': workspace:^0.0.3
       dumi: ^2.0.10
-      lit: 2.4.1
+      lit: 2.5.0
       react: 18.2.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
       '@akrc/seaweed': link:../..
       dumi: 2.0.10_react@18.2.0
-      lit: 2.4.1
+      lit: 2.5.0
       react: 18.2.0
       shared: link:../../packages/shared
 
@@ -108,7 +108,7 @@ importers:
       '@storybook/web-components': 6.5.14
       '@styled/storybook-dark-mode': 1.1.5
       babel-loader: ^9.0.0
-      lit: 2.4.1
+      lit: 2.5.0
       lit-css-loader: ^2.0.0
       lit-html: ^2.4.0
       react: 18.2.0
@@ -120,7 +120,7 @@ importers:
       '@babel/plugin-proposal-decorators': 7.20.5_@babel+core@7.20.5
       '@babel/preset-typescript': 7.18.6_@babel+core@7.20.5
       '@storybook/addon-actions': 6.5.14_biqbaboplfbrettd7655fr4n2y
-      '@storybook/addon-essentials': 6.5.14_5djm7pfuaibol77sqfcbsea6wy
+      '@storybook/addon-essentials': 6.5.14_rsv73vwptzrx27jnfz25e7uhie
       '@storybook/addon-links': 6.5.14_biqbaboplfbrettd7655fr4n2y
       '@storybook/builder-webpack5': 6.5.14_biqbaboplfbrettd7655fr4n2y
       '@storybook/manager-webpack5': 6.5.14_biqbaboplfbrettd7655fr4n2y
@@ -128,7 +128,7 @@ importers:
       '@storybook/preview-web': 6.5.14_biqbaboplfbrettd7655fr4n2y
       '@storybook/web-components': 6.5.14_efqjacqpj5uiznqkcu7qxauyie
       '@styled/storybook-dark-mode': 1.1.5
-      lit: 2.4.1
+      lit: 2.5.0
       lit-css-loader: 2.0.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -140,141 +140,141 @@ importers:
   packages/alert:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/avatar:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/badge:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/button:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       loading: workspace:*
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       loading: link:../loading
       shared: link:../shared
 
   packages/checkbox:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/divider:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/input:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/link:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/linkcard:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/loading:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/progress:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/shared:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
 
   packages/spoiler:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/switch:
     specifiers:
       '@akrc/classnames': ^2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
       '@akrc/classnames': 2.3.3
-      lit: 2.4.1
+      lit: 2.5.0
       shared: link:../shared
 
 packages:
@@ -3178,8 +3178,8 @@ packages:
       write-file-atomic: 4.0.2
     dev: true
 
-  /@lit/reactive-element/1.4.2:
-    resolution: {integrity: sha512-VMOxsWh/QDwrxPsgkSQnuZ+8mfNy1OTjzzUdLBvvZtpahwPTHTeVZ51RZRqO4xfKVrR+btIPA8D01IL3xeG66w==}
+  /@lit/reactive-element/1.5.0:
+    resolution: {integrity: sha512-fQh9FDK0LPTwDk+0HhSZEtb8K0LTN1wXerwpGrWA+a8tWulYRDLI4vQDWp4GOIsewn0572KYV/oZ3+492D7osA==}
     dev: false
 
   /@loadable/component/5.15.2_react@18.1.0:
@@ -4034,7 +4034,7 @@ packages:
       - webpack-command
     dev: false
 
-  /@storybook/addon-essentials/6.5.14_5djm7pfuaibol77sqfcbsea6wy:
+  /@storybook/addon-essentials/6.5.14_rsv73vwptzrx27jnfz25e7uhie:
     resolution: {integrity: sha512-6fmfDHbp1y/hF0GU0W95RLw4rzN3KGcEcpAZ8HbgTyXIF528j0hhlvkD5AjnQ5dVarlHdKAtMRZA9Y3OCEZD6A==}
     peerDependencies:
       '@babel/core': ^7.9.6
@@ -4107,7 +4107,7 @@ packages:
       '@storybook/node-logger': 6.5.14
       '@storybook/web-components': 6.5.14_efqjacqpj5uiznqkcu7qxauyie
       core-js: 3.26.1
-      lit: 2.4.1
+      lit: 2.5.0
       lit-html: 2.4.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -14192,8 +14192,8 @@ packages:
   /lit-element/3.2.2:
     resolution: {integrity: sha512-6ZgxBR9KNroqKb6+htkyBwD90XGRiqKDHVrW/Eh0EZ+l+iC+u+v+w3/BA5NGi4nizAVHGYvQBHUDuSmLjPp7NQ==}
     dependencies:
-      '@lit/reactive-element': 1.4.2
-      lit-html: 2.4.0
+      '@lit/reactive-element': 1.5.0
+      lit-html: 2.5.0
     dev: false
 
   /lit-html/2.4.0:
@@ -14201,12 +14201,18 @@ packages:
     dependencies:
       '@types/trusted-types': 2.0.2
 
-  /lit/2.4.1:
-    resolution: {integrity: sha512-qohSgLiyN1cFnJG26dIiY03S4F49857A0AHQfnS0zYtnUVnD2MFvx+UT52rtXsIuNFQrnUupX+zyGSATlk1f/A==}
+  /lit-html/2.5.0:
+    resolution: {integrity: sha512-bLHosg1XL3JRUcKdSVI0sLCs0y1wWrj2sqqAN3cZ7bDDPNgmDHH29RV48x6Wz3ZmkxIupaE+z7uXSZ/pXWAO1g==}
     dependencies:
-      '@lit/reactive-element': 1.4.2
+      '@types/trusted-types': 2.0.2
+    dev: false
+
+  /lit/2.5.0:
+    resolution: {integrity: sha512-DtnUP6vR3l4Q8nRPPNBD+UxbAhwJPeky+OVbi3pdgMqm0g57xFSl1Sj64D1rIB+nVNdiVVg8YxB0hqKjvdadZA==}
+    dependencies:
+      '@lit/reactive-element': 1.5.0
       lit-element: 3.2.2
-      lit-html: 2.4.0
+      lit-html: 2.5.0
     dev: false
 
   /load-json-file/1.1.0:
