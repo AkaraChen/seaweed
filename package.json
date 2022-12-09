@@ -42,7 +42,7 @@
         "postcss": "^8.4.18",
         "postcss-less": "^6.0.0",
         "postcss-nesting": "^10.2.0",
-        "rollup": "3.7.0",
+        "rollup": "3.7.1",
         "rollup-plugin-filesize": "^9.1.2",
         "rollup-plugin-lit-css": "4.0.0",
         "rollup-plugin-minify-html-literals": "^1.2.6",
