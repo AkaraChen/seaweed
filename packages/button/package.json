@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@akrc/classnames": "^2.3.3",
-    "lit": "2.4.1",
+    "lit": "2.5.0",
     "loading": "workspace:*",
     "shared": "workspace:^1.0.0"
   }
