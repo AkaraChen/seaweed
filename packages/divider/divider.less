@@ -20,10 +20,14 @@
 }
 
 .center-box {
-    margin: 0 12px;
+    padding: 0 12px;
     @media (prefers-color-scheme: dark) {
         color: #fff;
     }
+}
+
+.empty .center-box {
+    padding: 0;
 }
 
 .left-box,
@@ -45,6 +49,8 @@
 
 .vertical {
     display: inline-block;
+    vertical-align: bottom;
+    width: unset;
     border-left: #dcdfe6 2px var(--border-style);
     height: 20px;
     @media (prefers-color-scheme: dark) {

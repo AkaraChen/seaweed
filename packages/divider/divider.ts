@@ -9,7 +9,7 @@ export class Divider extends LitElement {
     static override styles = styles;
 
     @property()
-        text: string;
+        text: string = '';
 
     @property()
         position: position = 'medium';
@@ -28,7 +28,8 @@ export class Divider extends LitElement {
         {[`position-${this.position}`]: postionArray.includes(this.position)},
         {vertical: this.vertical},
         {dashed: this.dashed},
-        {dotted: this.dotted}
+        {dotted: this.dotted},
+        {empty: this.text.length === 0}
     );
 
     override render() {
