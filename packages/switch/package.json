@@ -6,6 +6,7 @@
   "dependencies": {
     "clsx": "^1.2.1",
     "lit": "2.5.0",
+    "loading": "workspace:^1.0.0",
     "shared": "workspace:^1.0.0"
   }
 }
