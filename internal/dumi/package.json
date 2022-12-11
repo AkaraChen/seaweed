@@ -12,8 +12,7 @@
   },
   "scripts": {
     "dev": "lerna run prebuild && dumi dev",
-    "prebuild": "pnpm run -w build:package",
     "prepare": "dumi setup",
-    "build": "lerna run prebuild && dumi build"
+    "build": "lerna run build:package && dumi build"
   }
 }
