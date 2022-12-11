@@ -11,7 +11,6 @@
         "lint:es": "eslint --ext .js,.ts,.tsx,.jsx,.cjs,.mjs --fix ./packages/",
         "lint:lit": "lit-analyzer packages",
         "lint:style": "stylelint \"**/*.less\" --fix",
-        "prepare": "husky install",
         "test": "lerna run test",
         "taze": "taze major -r -w"
     },
