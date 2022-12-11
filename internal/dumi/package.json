@@ -11,8 +11,9 @@
     "shared": "workspace:^1.0.0"
   },
   "scripts": {
+    "prebuild": "pnpm run -w build:package",
     "dev": "lerna run prebuild && dumi dev",
     "prepare": "dumi setup",
-    "build": "lerna run build:package && dumi build"
+    "build": "lerna run prebuild && dumi build"
   }
 }
