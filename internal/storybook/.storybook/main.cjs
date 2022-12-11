@@ -4,6 +4,11 @@ const postcss = require("postcss");
 const postcssNesting = require("postcss-nesting");
 const processor = postcss(postcssNesting());
 const syntax = require("postcss-less");
+
+const base = fs.readFileSync(
+    path.resolve("../../packages/shared/base.less")
+  ).toString();
+
 module.exports = {
   stories: ["../../../packages/**/*.mdx", "../introduction.stories.mdx"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@styled/storybook-dark-mode"],
@@ -22,7 +27,6 @@ module.exports = {
         transform: (css, {
           filePath
         }) => {
-          const base = fs.readFileSync(path.resolve("../../packages/shared/base.less")).toString();
           return processor.process(base + css, {
             from: filePath,
             syntax
