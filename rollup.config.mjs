@@ -16,14 +16,16 @@ const packages = fg.sync('./packages/*', {onlyDirectories: true})
     .filter(item => !['shared'].includes(item))
     .map(item => `./packages/${item}/${item}.ts`);
 
+const base = fs
+    .readFileSync(
+        path.resolve('./packages/shared/base.less')
+    ).toString();
+
 export const litcssPlugin = litCSS({
     include: /\.less$/i,
     transform: (css, {filePath}) => {
         const processor = postcss(postcssNesting());
-        const base = fs
-            .readFileSync(
-                path.resolve('./packages/shared/base.less')
-            ).toString();
+
         return processor.process(base + css, {
             from: filePath,
             syntax
