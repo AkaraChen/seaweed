@@ -24,18 +24,7 @@ jobs:
           npm install pnpm -g
           pnpm install
 
-      - name: Run ESLint
+      - name: Run lint
         run: pnpm run -w lint
         continue-on-error: true
 
-      - name: commit
-        run: |
-          git pull
-          git config --global user.email akarachen@outlook.com
-          git config --global user.name akarachen
-          git add .
-          git commit -m "update" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
