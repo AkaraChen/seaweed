@@ -5,7 +5,7 @@ import {styles} from './progress.less';
 import {
     typeArray, type, size, sizeArray
 } from 'shared/type';
-import className from '@akrc/classnames';
+import clsx from 'clsx';
 
 @customElement('sw-progress')
 export class Progress extends LitElement {
@@ -26,7 +26,7 @@ export class Progress extends LitElement {
     @property()
         color: string;
 
-    classNames = () => className(
+    classNames = () => clsx(
         {[`${this.type}`]: typeArray.includes(this.type)},
         {[`${this.size}`]: sizeArray.includes(this.size)}
     );

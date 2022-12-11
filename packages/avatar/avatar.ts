@@ -3,7 +3,7 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from './avatar.less';
 import {size, sizeArray} from 'shared/type';
-import classNames from '@akrc/classnames';
+import clsx from 'clsx';
 
 @customElement('sw-avatar')
 export class Avatar extends LitElement {
@@ -35,7 +35,7 @@ export class Avatar extends LitElement {
     }
 
     classNames = () =>
-        classNames({rounded: this.rounded});
+        clsx({rounded: this.rounded});
 
     override render() {
         const size = this.getSize();

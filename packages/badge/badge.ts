@@ -1,6 +1,6 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import className from '@akrc/classnames';
+import clsx from 'clsx';
 import {type} from 'shared/type';
 import {styles} from './badge.less';
 
@@ -21,7 +21,7 @@ export class Badge extends LitElement {
         rounded = false;
 
     classNames = () =>
-        className(
+        clsx(
             'badge',
             {[`type-${this.type}`]: this.type},
             {noborder: this.noborder},

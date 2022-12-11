@@ -78,14 +78,12 @@ importers:
 
   internal/dumi:
     specifiers:
-      '@akrc/classnames': ^2.3.3
       '@akrc/seaweed': workspace:^0.0.3
       dumi: ^2.0.10
       lit: 2.5.0
       react: 18.2.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
       '@akrc/seaweed': link:../..
       dumi: 2.0.10_react@18.2.0
       lit: 2.5.0
@@ -94,7 +92,6 @@ importers:
 
   internal/storybook:
     specifiers:
-      '@akrc/classnames': ^2.3.3
       '@babel/core': 7.20.5
       '@babel/plugin-proposal-decorators': ^7.20.2
       '@babel/preset-typescript': ^7.18.6
@@ -115,7 +112,6 @@ importers:
       react-dom: 18.2.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
       '@babel/core': 7.20.5
       '@babel/plugin-proposal-decorators': 7.20.5_@babel+core@7.20.5
       '@babel/preset-typescript': 7.18.6_@babel+core@7.20.5
@@ -139,149 +135,145 @@ importers:
 
   packages/alert:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/avatar:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/badge:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/button:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       loading: workspace:*
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       loading: link:../loading
       shared: link:../shared
 
   packages/checkbox:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/divider:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/input:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/link:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/linkcard:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/loading:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/progress:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/shared:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
 
   packages/spoiler:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
   packages/switch:
     specifiers:
-      '@akrc/classnames': ^2.3.3
+      clsx: ^1.2.1
       lit: 2.5.0
       shared: workspace:^1.0.0
     dependencies:
-      '@akrc/classnames': 2.3.3
+      clsx: 1.2.1
       lit: 2.5.0
       shared: link:../shared
 
 packages:
-
-  /@akrc/classnames/2.3.3:
-    resolution: {integrity: sha512-g9jmAaRCg71ikQ/2fOePo57IGaaBspRXJjpQsO06dVVPNVkh2d67xfey/JJY+nbT+IZfxJJM/06Ry8Xo1NQGDg==}
-    dev: false
 
   /@ampproject/remapping/2.2.0:
     resolution: {integrity: sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==}
@@ -3371,7 +3363,7 @@ packages:
       lru-cache: 6.0.0
       mkdirp: 1.0.4
       npm-pick-manifest: 6.1.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       promise-retry: 2.0.1
       semver: 7.3.8
       which: 2.0.2
@@ -7934,7 +7926,6 @@ packages:
 
   /bluebird/3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
-    dev: false
 
   /bn.js/4.12.0:
     resolution: {integrity: sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==}
@@ -8202,7 +8193,7 @@ packages:
       mississippi: 2.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 2.7.1
       ssri: 5.3.0
       unique-filename: 1.1.1
@@ -8246,7 +8237,7 @@ packages:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 3.0.2
       ssri: 8.0.1
       tar: 6.1.12
@@ -8291,7 +8282,7 @@ packages:
       mississippi: 1.3.1
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 2.7.1
       ssri: 4.1.6
       unique-filename: 1.1.1
@@ -8694,6 +8685,11 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
     dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /cmd-shim/5.0.0:
     resolution: {integrity: sha512-qkCtZ59BidfEwHltnJwkyVZn+XQojdAySM1D1gSeh11Z4pW1Kpolkyo53L5noc0nrxmIvyFwTmJRo4xs7FFLPw==}
@@ -16569,7 +16565,7 @@ packages:
       npm-package-arg: 5.1.2
       npm-pick-manifest: 1.0.4
       osenv: 0.1.5
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       promise-retry: 1.1.1
       protoduck: 4.0.0
       safe-buffer: 5.2.1
@@ -17884,6 +17880,7 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
+    dev: true
 
   /promise-inflight/1.0.1_bluebird@3.7.2:
     resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
@@ -17894,7 +17891,6 @@ packages:
         optional: true
     dependencies:
       bluebird: 3.7.2
-    dev: false
 
   /promise-retry/1.1.1:
     resolution: {integrity: sha512-StEy2osPr28o17bIW776GtwO6+Q+M9zPiZkYfosciUUMYqjhU/ffwRAH0zN2+uvGyUsn8/YICIHRzLbPacpZGw==}

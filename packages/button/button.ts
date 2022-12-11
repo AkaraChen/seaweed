@@ -1,6 +1,6 @@
 import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import className from '@akrc/classnames';
+import clsx from 'clsx';
 import {size, type} from 'shared/type';
 import 'loading/loading';
 import {styles} from './button.less';
@@ -44,7 +44,7 @@ export class Button extends LitElement {
     };
 
     classNames = () =>
-        className(
+        clsx(
             {primary: this.primary},
             {[`size-${this.size}`]: this.size},
             {[`type-${this.type}`]: this.type},

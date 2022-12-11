@@ -1,7 +1,7 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from './link.less';
-import className from '@akrc/classnames';
+import clsx from 'clsx';
 import {type, typeArray} from 'shared/type';
 
 @customElement('sw-link')
@@ -24,7 +24,7 @@ export class Link extends LitElement {
         target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
 
     classNames = () =>
-        className(
+        clsx(
             {disabled: this.disabled},
             {underline: this.underline && !this.disabled},
             {[`type-${this.type}`]: typeArray.includes(this.type)}

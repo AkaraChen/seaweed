@@ -1,6 +1,6 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import className from '@akrc/classnames';
+import clsx from 'clsx';
 import {size} from 'shared/type';
 import {styles} from './checkbox.less';
 
@@ -18,7 +18,7 @@ export class CheckBox extends LitElement {
         disabled: boolean;
 
     classNames = () =>
-        className({[`size-${this.size}`]: this.size !== 'normal'});
+        clsx({[`size-${this.size}`]: this.size !== 'normal'});
 
     get value() {
         return this.shadowRoot.querySelector('input').checked;

@@ -1,4 +1,4 @@
-import className from '@akrc/classnames';
+import clsx from 'clsx';
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {
@@ -27,7 +27,7 @@ export class Input extends LitElement {
         this.shadowRoot.querySelector('input').value = value;
     }
 
-    classNames = () => className(
+    classNames = () => clsx(
         {[`type-${this.type}`]: [...typeArray, 'normal'].includes(this.type)},
         {[`size-${this.size}`]: sizeArray.includes(this.size)}
     );

@@ -1,6 +1,6 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import className from '@akrc/classnames';
+import clsx from 'clsx';
 import {styles} from './switch.less';
 import {size} from 'shared/type';
 import '../loading/loading';
@@ -35,7 +35,7 @@ export class Switch extends LitElement {
     };
 
     classNames = () =>
-        className(
+        clsx(
             'switch',
             {[`size-${this.size}`]: this.size},
             {disabled: this.disabled},

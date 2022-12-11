@@ -1,6 +1,6 @@
 import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import className from '@akrc/classnames';
+import clsx from 'clsx';
 import {type} from 'shared/type';
 import {
     ErrorRound, InfoRound, SuccessRound, WarningRound
@@ -44,7 +44,7 @@ export class Alert extends LitElement {
     }
 
     classNames = () =>
-        className(
+        clsx(
             'alert',
             {[`type-${this.type}`]: this.type},
             {fill: this.fill},

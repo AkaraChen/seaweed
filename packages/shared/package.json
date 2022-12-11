@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@akrc/classnames": "^2.3.3",
+    "clsx": "^1.2.1",
     "lit": "2.5.0"
   }
 }
