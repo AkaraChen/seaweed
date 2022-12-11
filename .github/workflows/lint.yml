@@ -1,13 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# ESLint is a tool for identifying and reporting on patterns
-# found in ECMAScript/JavaScript code.
-# More details at https://github.com/eslint/eslint
-# and https://eslint.org
-
-name: ESLint
+name: Lint
 
 on:
   push:
@@ -15,12 +6,10 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
-  schedule:
-    - cron: '17 9 * * 4'
 
 jobs:
   eslint:
-    name: Run eslint scanning
+    name: Run lint scanning
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -38,3 +27,15 @@ jobs:
       - name: Run ESLint
         run: pnpm run -w lint
         continue-on-error: true
+
+      - name: commit
+        run: |
+          git pull
+          git config --global user.email akarachen@outlook.com
+          git config --global user.name akarachen
+          git add .
+          git commit -m "update" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
