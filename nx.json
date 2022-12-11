@@ -17,7 +17,8 @@
       ],
       "outputs": [
         "{projectRoot}/dist",
-        ""
+        "{projectRoot}/internal/storybook/storybook-static",
+        "{projectRoot}/internal/dumi/dist"
       ]
     },
     "prebuild": {

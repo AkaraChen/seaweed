@@ -1,5 +1,5 @@
 import {defineConfig} from 'rollup';
-import glob from 'glob';
+import fg from 'fast-glob';
 import fs from 'node:fs';
 import path from 'node:path';
 import resolve from '@rollup/plugin-node-resolve';
@@ -11,7 +11,7 @@ import syntax from 'postcss-less';
 import filesize from 'rollup-plugin-filesize';
 import typescript from '@rollup/plugin-typescript';
 
-const packages = new glob.GlobSync('./packages/*').found
+const packages = fg.sync('./packages/*', {onlyDirectories: true})
     .map(item => item.slice('./packages/'.length))
     .filter(item => !['shared'].includes(item))
     .map(item => `./packages/${item}/${item}.ts`);
