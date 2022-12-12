@@ -110,7 +110,6 @@ importers:
       lit-html: ^2.5.0
       react: 18.2.0
       react-dom: 18.2.0
-      shared: workspace:^1.0.0
     dependencies:
       '@babel/core': 7.20.5
       '@babel/plugin-proposal-decorators': 7.20.5_@babel+core@7.20.5
@@ -128,7 +127,6 @@ importers:
       lit-css-loader: 2.0.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      shared: link:../../packages/shared
     devDependencies:
       babel-loader: 9.1.0_@babel+core@7.20.5
       lit-html: 2.5.0
