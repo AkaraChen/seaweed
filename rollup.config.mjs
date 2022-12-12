@@ -10,6 +10,9 @@ import postcssNesting from 'postcss-nesting';
 import syntax from 'postcss-less';
 import filesize from 'rollup-plugin-filesize';
 import esbuild from 'rollup-plugin-esbuild';
+import rimraf from 'rimraf';
+
+rimraf.sync('./dist');
 
 const packages = fg.sync('./packages/*', {onlyDirectories: true})
     .map(item => item.slice('./packages/'.length))

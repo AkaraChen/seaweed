@@ -8,6 +8,7 @@ importers:
       '@rollup/plugin-typescript': ^10.0.1
       '@types/node': ^18.11.13
       '@types/postcss-less': ^4.0.2
+      '@types/rimraf': ^3.0.2
       '@typescript-eslint/eslint-plugin': 5.46.0
       '@typescript-eslint/parser': 5.46.0
       '@wordpress/stylelint-config': ^21.5.0
@@ -27,6 +28,7 @@ importers:
       postcss: ^8.4.20
       postcss-less: ^6.0.0
       postcss-nesting: ^10.2.0
+      rimraf: ^3.0.2
       rollup: 3.7.3
       rollup-plugin-esbuild: ^5.0.0
       rollup-plugin-filesize: ^9.1.2
@@ -49,6 +51,7 @@ importers:
       '@rollup/plugin-typescript': 10.0.1_gf4pps3eltjonviaibug5x6klu
       '@types/node': 18.11.13
       '@types/postcss-less': 4.0.2
+      '@types/rimraf': 3.0.2
       '@typescript-eslint/eslint-plugin': 5.46.0_5mle7isnkfgjmrghnnczirv6iy
       '@typescript-eslint/parser': 5.46.0_ha6vam6werchizxrnqvarmz2zu
       '@wordpress/stylelint-config': 21.5.0_l3s4qeu3gkar2knsdy3w5miimm
@@ -67,6 +70,7 @@ importers:
       postcss: 8.4.20
       postcss-less: 6.0.0_postcss@8.4.20
       postcss-nesting: 10.2.0_postcss@8.4.20
+      rimraf: 3.0.2
       rollup: 3.7.3
       rollup-plugin-filesize: 9.1.2
       rollup-plugin-lit-css: 4.0.0
@@ -3578,7 +3582,7 @@ packages:
       lru-cache: 6.0.0
       mkdirp: 1.0.4
       npm-pick-manifest: 6.1.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       promise-retry: 2.0.1
       semver: 7.3.8
       which: 2.0.2
@@ -6108,7 +6112,6 @@ packages:
     dependencies:
       '@types/minimatch': 5.1.2
       '@types/node': 18.11.13
-    dev: false
 
   /@types/graceful-fs/4.1.5:
     resolution: {integrity: sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==}
@@ -6202,7 +6205,6 @@ packages:
 
   /@types/minimatch/5.1.2:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
-    dev: false
 
   /@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
@@ -6291,6 +6293,13 @@ packages:
     dependencies:
       '@types/node': 18.11.13
     dev: false
+
+  /@types/rimraf/3.0.2:
+    resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
+    dependencies:
+      '@types/glob': 8.0.0
+      '@types/node': 18.11.13
+    dev: true
 
   /@types/sax/1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
@@ -8159,6 +8168,7 @@ packages:
 
   /bluebird/3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
+    dev: false
 
   /bn.js/4.12.0:
     resolution: {integrity: sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==}
@@ -8470,7 +8480,7 @@ packages:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
       tar: 6.1.13
@@ -18234,7 +18244,6 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
-    dev: true
 
   /promise-inflight/1.0.1_bluebird@3.7.2:
     resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
@@ -18245,6 +18254,7 @@ packages:
         optional: true
     dependencies:
       bluebird: 3.7.2
+    dev: false
 
   /promise-retry/1.1.1:
     resolution: {integrity: sha512-StEy2osPr28o17bIW776GtwO6+Q+M9zPiZkYfosciUUMYqjhU/ffwRAH0zN2+uvGyUsn8/YICIHRzLbPacpZGw==}
