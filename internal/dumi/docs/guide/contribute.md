@@ -13,10 +13,10 @@ Seaweed 是一个使用 pnpm 和 lerna 构建的 monorepo 项目。
 
 ## 开发
 
-你可以将 Storybook 作为 dev server 来使用：
+你可以将 dumi 作为 dev server 来使用：
 
 ```shell
-pnpm run -r --filter storybook dev
+pnpm run -r --filter dumi dev
 ```
 
 ## 打包
@@ -26,11 +26,3 @@ pnpm run -r --filter storybook dev
 ```shell
 pnpm run -w build:package
 ```
-
-## 文档
-
-```shell
-pnpm run -r --filter dumi dev
-```
-
-文档并没有配置针对组件的 HMR。
