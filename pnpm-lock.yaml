@@ -193,6 +193,16 @@ importers:
       lit: 2.5.0
       shared: link:../shared
 
+  packages/form:
+    specifiers:
+      clsx: ^1.2.1
+      lit: 2.5.0
+      shared: workspace:^1.0.0
+    dependencies:
+      clsx: 1.2.1
+      lit: 2.5.0
+      shared: link:../shared
+
   packages/input:
     specifiers:
       clsx: ^1.2.1

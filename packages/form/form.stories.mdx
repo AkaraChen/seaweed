@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { html } from "lit";
+import "./form.ts";
+import "../input/input.ts";
+import "../switch/switch.ts";
+import "../checkbox/checkbox.less";
+import { sizeArray } from "shared/type.ts";
+
+<Meta
+    title="Form/Form"
+    args={{
+      label: 'Label'
+    }}
+/>
+
+<Canvas>
+    <Story name="Page">
+        {({label}) => html`<form>
+             <sw-form-item label=${label}>
+                <sw-input></sw-input>
+             </sw-form-item>
+             <sw-form-item label=${label}>
+                <sw-switch></sw-switch>
+             </sw-form-item>
+             <sw-form-item label=${label}>
+                <sw-checkbox></sw-checkbox>
+             </sw-form-item>
+            </form>`}
+    </Story>
+</Canvas>

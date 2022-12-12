@@ -1,6 +1,5 @@
 :host {
-    display: inline-block;
-    margin-right: 0.5em;
+    display: flex;
 }
 
 input {
@@ -10,7 +9,7 @@ input {
     --border-width: 1.5px;
 
     appearance: none;
-    font-size: 16px;
+    font-size: 18px;
     width: var(--size);
     height: var(--size);
     border: var(--border-width) solid var(--border-color);
@@ -23,7 +22,7 @@ input {
 
 input::before {
     content: '';
-    display: block;
+    display: inline-block;
     width: var(--size);
     height: var(--size);
     position: relative;
@@ -40,38 +39,16 @@ input:checked::before {
     opacity: 1;
 }
 
-input.size-small {
+.size-small {
     --border-width: 1px;
 
-    font-size: 12px;
+    font-size: 16px;
 }
 
-input.size-large {
-    --border-width: 2px;
+.size-large {
+    --border-width: 1.5px;
 
-    font-size: 20px;
-}
-
-input.size-small + label {
-    font-size: 12px;
-}
-
-input.size-large + label {
-    font-size: 18px;
-}
-
-label {
-    user-select: none;
-    cursor: pointer;
-    margin-left: 0.5em;
-    @media (prefers-color-scheme: dark) {
-        color: #ffffffd9;
-    }
-}
-
-div {
-    display: flex;
-    align-items: center;
+    font-size: 22px;
 }
 
 input[disabled] {

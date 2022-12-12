@@ -35,16 +35,14 @@ export class CheckBox extends LitElement {
 
     override render() {
         return html`
-          <div>
-              <input
-                  type="checkbox"
-                  class=${this.classNames()}
-                  @input=${this.handler}
-                  ?disabled=${this.disabled}
-                  ?checked=${this.checked}
-                  id="checkbox"
-              />
-          </div>
+          <input
+              type="checkbox"
+              class=${this.classNames()}
+              @input=${this.handler}
+              ?disabled=${this.disabled}
+              ?checked=${this.checked}
+              id="checkbox"
+          />
         `;
     }
 }
