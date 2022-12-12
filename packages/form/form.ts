@@ -13,7 +13,7 @@ export class FormItem extends LitElement {
         const label = this.label ? `${this.label}:` : nothing;
         return html`
           <label>
-              <div>${label}</div>
+              <span>${label}</span>
               <slot></slot>
           </label>
         `;
