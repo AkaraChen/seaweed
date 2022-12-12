@@ -11,8 +11,10 @@
         "lint:es": "eslint --ext .js,.ts,.tsx,.jsx,.cjs,.mjs --fix ./packages/",
         "lint:lit": "lit-analyzer packages",
         "lint:style": "stylelint \"**/*.less\" --fix",
-        "test": "lerna run test",
-        "taze": "taze major -r -w"
+        "test": "npm-run-all test:**",
+        "test:package": "lerna run test",
+        "taze": "taze major -r -w",
+        "test:type": "tsc --noEmit"
     },
     "keywords": [],
     "author": "",

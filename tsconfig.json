@@ -7,5 +7,6 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "module": "ES6",
-    }
+        "skipLibCheck": true
+    },
 }
