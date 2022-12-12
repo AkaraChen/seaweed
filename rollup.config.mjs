@@ -9,7 +9,7 @@ import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';
 import syntax from 'postcss-less';
 import filesize from 'rollup-plugin-filesize';
-import typescript from '@rollup/plugin-typescript';
+import esbuild from 'rollup-plugin-esbuild';
 
 const packages = fg.sync('./packages/*', {onlyDirectories: true})
     .map(item => item.slice('./packages/'.length))
@@ -25,7 +25,6 @@ export const litcssPlugin = litCSS({
     include: /\.less$/i,
     transform: (css, {filePath}) => {
         const processor = postcss(postcssNesting());
-
         return processor.process(base + css, {
             from: filePath,
             syntax
@@ -43,8 +42,8 @@ export default defineConfig({
     plugins: [
         litcssPlugin,
         MinifyHTML.default(),
-        typescript(),
-        resolve(),
+        resolve({extensions: ['.mjs', '.js', '.ts']}),
+        esbuild(),
         filesize()
     ]
 });

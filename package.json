@@ -64,5 +64,9 @@
     "workspaces": [
         "packages/*",
         "internal/*"
-    ]
+    ],
+    "dependencies": {
+        "esbuild": "^0.16.4",
+        "rollup-plugin-esbuild": "^5.0.0"
+    }
 }
