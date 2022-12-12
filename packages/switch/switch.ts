@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import {styles} from './switch.less';
 import {size} from 'shared/type';
 import 'loading/loading';
+import {getFormSize} from 'shared/form';
 
 @customElement('sw-switch')
 export class Switch extends LitElement {
@@ -16,7 +17,7 @@ export class Switch extends LitElement {
         disabled: boolean;
 
     @property()
-        size: size = 'normal';
+        size: size;
 
     @property({type: Boolean})
         loading = false;
@@ -37,7 +38,7 @@ export class Switch extends LitElement {
     classNames = () =>
         clsx(
             'switch',
-            {[`size-${this.size}`]: this.size},
+            `size-${this.size || getFormSize(this) || 'normal'}`,
             {disabled: this.disabled},
             {loading: this.loading}
         );

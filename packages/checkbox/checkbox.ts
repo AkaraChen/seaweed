@@ -3,6 +3,7 @@ import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
 import {size} from 'shared/type';
 import {styles} from './checkbox.less';
+import {getFormSize} from 'shared/form';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {
@@ -12,13 +13,15 @@ export class CheckBox extends LitElement {
         checked = false;
 
     @property()
-        size: size = 'normal';
+        size: size;
 
     @property({type: Boolean})
         disabled: boolean;
 
     classNames = () =>
-        clsx({[`size-${this.size}`]: this.size !== 'normal'});
+        clsx(
+            `size-${this.size || getFormSize(this) || 'normal'}`
+        );
 
     get value() {
         return this.shadowRoot.querySelector('input').checked;

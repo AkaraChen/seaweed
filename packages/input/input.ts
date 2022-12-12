@@ -1,8 +1,9 @@
 import clsx from 'clsx';
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import {getFormSize} from 'shared/form';
 import {
-    size, sizeArray, type, typeArray
+    size, type, typeArray
 } from 'shared/type';
 import {styles} from './input.less';
 
@@ -14,7 +15,7 @@ export class Input extends LitElement {
         type: type | 'normal' = 'normal';
 
     @property()
-        size: size = 'normal';
+        size: size;
 
     @property()
         placeholder: string;
@@ -29,7 +30,7 @@ export class Input extends LitElement {
 
     classNames = () => clsx(
         {[`type-${this.type}`]: [...typeArray, 'normal'].includes(this.type)},
-        {[`size-${this.size}`]: sizeArray.includes(this.size)}
+        `size-${this.size || getFormSize(this) || 'normal'}`
     );
 
     private handler = (event: Event) => {
