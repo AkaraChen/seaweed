@@ -21,6 +21,20 @@ export default () => {
 }
 ```
 
+## 圆形
+
+```tsx
+import '@akrc/seaweed/checkbox'
+
+export default () => {
+    return <div style={{display:'flex', gap: '0.25em', 'flex-wrap': 'wrap'}}>
+        <sw-checkbox size="small" rounded>Small</sw-checkbox>
+        <sw-checkbox size="normal" rounded>Normal</sw-checkbox>
+        <sw-checkbox size="large" rounded>Large</sw-checkbox>
+    </div>
+}
+```
+
 ## 禁用状态
 
 ```tsx

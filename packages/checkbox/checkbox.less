@@ -74,3 +74,13 @@ label {
 span {
     margin-left: 6px;
 }
+
+.rounded {
+    border-radius: 100%;
+    &::before {
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 0.75em;
+    }
+}

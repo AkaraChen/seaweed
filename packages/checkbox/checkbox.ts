@@ -18,9 +18,13 @@ export class CheckBox extends LitElement {
     @property({type: Boolean})
         disabled: boolean;
 
+    @property({type: Boolean})
+        rounded = false;
+
     classNames = () =>
         clsx(
-            `size-${this.size || getFormSize(this) || 'normal'}`
+            `size-${this.size || getFormSize(this) || 'normal'}`,
+            {rounded: this.rounded}
         );
 
     get value() {
