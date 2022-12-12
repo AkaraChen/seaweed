@@ -12,7 +12,9 @@ import filesize from 'rollup-plugin-filesize';
 import esbuild, {minify} from 'rollup-plugin-esbuild';
 import rimraf from 'rimraf';
 
-rimraf.sync('./dist');
+const isDevelopment = process.env.NODE_ENV === 'development';
+
+if (!isDevelopment) rimraf.sync('./dist');
 
 const packages = fg.sync('./packages/*', {onlyDirectories: true})
     .map(item => item.slice('./packages/'.length))
@@ -35,6 +37,21 @@ export const litcssPlugin = litCSS({
     }
 });
 
+const plugins = isDevelopment
+    ? [
+        litcssPlugin,
+        resolve({extensions: ['.mjs', '.js', '.ts']}),
+        esbuild()
+    ]
+    : [
+        litcssPlugin,
+        MinifyHTML.default(),
+        resolve({extensions: ['.mjs', '.js', '.ts']}),
+        esbuild(),
+        minify(),
+        filesize()
+    ];
+
 export default defineConfig({
     input: packages,
     output: {
@@ -42,12 +59,5 @@ export default defineConfig({
         chunkFileNames: 'chunk/[hash].js',
         compact: true
     },
-    plugins: [
-        litcssPlugin,
-        MinifyHTML.default(),
-        resolve({extensions: ['.mjs', '.js', '.ts']}),
-        esbuild(),
-        minify(),
-        filesize()
-    ]
+    plugins
 });
