@@ -9,7 +9,7 @@ import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';
 import syntax from 'postcss-less';
 import filesize from 'rollup-plugin-filesize';
-import esbuild from 'rollup-plugin-esbuild';
+import esbuild, {minify} from 'rollup-plugin-esbuild';
 import rimraf from 'rimraf';
 
 rimraf.sync('./dist');
@@ -47,6 +47,7 @@ export default defineConfig({
         MinifyHTML.default(),
         resolve({extensions: ['.mjs', '.js', '.ts']}),
         esbuild(),
+        minify(),
         filesize()
     ]
 });
