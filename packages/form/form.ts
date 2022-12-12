@@ -10,10 +10,10 @@ export class FormItem extends LitElement {
         label: string;
 
     override render() {
-        const label = this.label ? `${this.label}:` : nothing;
+        const label = this.label ? html`<span>${this.label}:</span>` : nothing;
         return html`
           <label>
-              <span>${label}</span>
+              ${label}
               <slot></slot>
           </label>
         `;
