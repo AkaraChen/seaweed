@@ -13,7 +13,7 @@ group:
 import '@akrc/seaweed/switch'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em', 'flex-wrap': 'wrap'}}>
+    return <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
         <sw-switch size="small" />
         <sw-switch size="normal" />
         <sw-switch size="large" />
@@ -27,7 +27,7 @@ export default () => {
 import '@akrc/seaweed/switch'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em', 'flex-wrap': 'wrap'}}>
+    return <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
         <sw-switch />
         <sw-switch checked />
     </div>
@@ -40,7 +40,7 @@ export default () => {
 import '@akrc/seaweed/switch'
 
 export default () => {
-    return <div style={{display:'flex', gap: '0.25em', 'flex-wrap': 'wrap'}}>
+    return <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
         <sw-switch />
         <sw-switch disabled />
     </div>

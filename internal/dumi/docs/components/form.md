@@ -11,7 +11,7 @@ import '@akrc/seaweed/checkbox'
 import '@akrc/seaweed/switch'
 
 export default () => {
-    return <form>
+    return <sw-form size="large">
         <sw-form-item label="姓名">
             <sw-input></sw-input>
         </sw-form-item>
@@ -21,8 +21,8 @@ export default () => {
             <sw-checkbox>产品经理</sw-checkbox>
         </sw-form-item>
         <sw-form-item>
-            <sw-switch checked>我已阅读用户协议</sw-switch>
+            <sw-switch>我已阅读用户协议</sw-switch>
         </sw-form-item>
-    </form>
+    </sw-form>
 }
 ```
