@@ -42,3 +42,9 @@ export class Input extends LitElement {
         return html`<input class=${this.classNames()} placeholder=${this.placeholder} @input=${this.handler}></input>`;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-input': Input
+    }
+}

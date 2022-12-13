@@ -64,3 +64,9 @@ export class Alert extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-alert': Alert
+    }
+}

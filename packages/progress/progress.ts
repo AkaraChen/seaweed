@@ -41,3 +41,9 @@ export class Progress extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-progress': Progress
+    }
+}

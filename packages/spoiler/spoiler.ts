@@ -33,3 +33,9 @@ export default class Spoiler extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-spoiler': Spoiler
+    }
+}

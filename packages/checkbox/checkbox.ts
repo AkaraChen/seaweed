@@ -56,3 +56,9 @@ export class CheckBox extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-checkbox': CheckBox
+    }
+}

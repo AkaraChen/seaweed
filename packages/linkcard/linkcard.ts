@@ -58,3 +58,9 @@ export class LinkCard extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-link-card': LinkCard
+    }
+}

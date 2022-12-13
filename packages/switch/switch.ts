@@ -59,3 +59,9 @@ export class Switch extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-switch': Switch
+    }
+}

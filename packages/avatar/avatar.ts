@@ -44,3 +44,9 @@ export class Avatar extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-avatar': Avatar
+    }
+}

@@ -7,6 +7,7 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "module": "ES6",
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "outDir": "./dist"
     },
 }

@@ -17,6 +17,12 @@ export class Form extends LitElement {
     }
 }
 
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-form': Form
+    }
+}
+
 @customElement('sw-form-item')
 export class FormItem extends LitElement {
     static override styles = itemStyles;
@@ -39,5 +45,11 @@ export class FormItem extends LitElement {
               <slot></slot>
           </label>
         `;
+    }
+}
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-form-item': FormItem
     }
 }

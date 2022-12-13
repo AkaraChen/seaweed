@@ -44,3 +44,9 @@ export class Divider extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-divider': Divider
+    }
+}

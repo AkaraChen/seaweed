@@ -51,3 +51,9 @@ export class Link extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-link': Link
+    }
+}
