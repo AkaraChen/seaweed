@@ -4,13 +4,10 @@ import {customElement, property} from 'lit/decorators.js';
 import {styles as itemStyles} from './form_item.less';
 import {size} from 'shared/type';
 import clsx from 'clsx';
-import {styles as styles} from './form.less';
 import {getFormSize} from 'shared/form';
 
 @customElement('sw-form')
 export class Form extends LitElement {
-    static override styles = styles;
-
     @property()
         size: size = 'normal';
 

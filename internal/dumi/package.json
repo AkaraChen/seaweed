@@ -7,7 +7,8 @@
     "@akrc/seaweed": "workspace:^0.0.3",
     "dumi": "^2.0.13",
     "lit": "2.5.0",
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "scripts": {
     "prebuild": "pnpm run -w build:package",
