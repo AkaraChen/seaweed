@@ -3,6 +3,15 @@
     "rules": {
         "default-case": "off",
         "max-classes-per-file": "off",
-        "no-unused-vars": "off"
-    }
+        "no-unused-vars": "off",
+        "unicorn/prefer-top-level-await": "off"
+    },
+    "overrides": [
+        {
+            "files": ["./packages/**/__test__/*.ts"],
+            "rules": {
+                "no-undef": "off"
+            }
+        }
+    ]
 }
