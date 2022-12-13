@@ -4,5 +4,13 @@
         "default-case": "off",
         "max-classes-per-file": "off",
         "no-unused-vars": "off"
-    }
+    },
+    "overrides": [
+        {
+            "files": ["./packages/**/__test__/*.ts"],
+            "rules": {
+                "no-undef": "off"
+            }
+        }
+    ]
 }

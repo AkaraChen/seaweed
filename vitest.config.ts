@@ -1,7 +1,11 @@
-import {defineConfig} from 'vitest/config';
+import {litcssPlugin} from './scripts/lit.mjs';
+import {defineConfig} from 'vite';
 
 export default defineConfig({
     test: {
-        environment: 'happy-dom'
-    }
+        environment: 'jsdom',
+        include: ['./packages/**/__test__/*.ts'],
+        globals: true
+    },
+    plugins: [litcssPlugin]
 });
