@@ -8,9 +8,10 @@ import MinifyHTML from 'rollup-plugin-minify-html-literals';
 import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';
 import syntax from 'postcss-less';
-import filesize from 'rollup-plugin-filesize';
-import esbuild, {minify} from 'rollup-plugin-esbuild';
+import esbuild from 'rollup-plugin-esbuild';
 import rimraf from 'rimraf';
+import summary from 'rollup-plugin-summary';
+import ts from 'rollup-plugin-ts';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -47,9 +48,8 @@ const plugins = isDevelopment
         litcssPlugin,
         MinifyHTML.default(),
         resolve({extensions: ['.mjs', '.js', '.ts']}),
-        esbuild(),
-        minify(),
-        filesize()
+        esbuild({minify: true}),
+        summary()
     ];
 
 export default defineConfig({
