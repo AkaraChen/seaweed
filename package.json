@@ -10,7 +10,7 @@
         "lint": "npm-run-all lint:**",
         "lint:es": "eslint --ext .js,.ts,.tsx,.jsx,.cjs,.mjs --fix ./packages/",
         "lint:lit": "lit-analyzer packages",
-        "lint:style": "stylelint \"**/*.less\" --fix",
+        "lint:style": "stylelint \"./packages/**/*.less\" --fix",
         "test": "npm-run-all test:**",
         "test:package": "lerna run test",
         "taze": "taze major -r -w",
