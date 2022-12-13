@@ -12,7 +12,4 @@
     "include": [
         "./packages/**/*.ts", "environment.d.ts"    
     ],
-    "exclude": [
-        "./packages/**/test/*.ts"
-    ]
 }
