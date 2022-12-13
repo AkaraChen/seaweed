@@ -32,6 +32,7 @@
         "@typescript-eslint/parser": "5.46.1",
         "@wordpress/stylelint-config": "^21.5.0",
         "cross-env": "^7.0.3",
+        "esbuild": "^0.16.4",
         "eslint": "8.29.0",
         "eslint-config-akrc": "0.0.8",
         "eslint-plugin-lit": "^1.7.1",
@@ -49,6 +50,7 @@
         "postcss-nesting": "^10.2.0",
         "rimraf": "^3.0.2",
         "rollup": "3.7.3",
+        "rollup-plugin-esbuild": "^5.0.0",
         "rollup-plugin-filesize": "^9.1.2",
         "rollup-plugin-lit-css": "4.0.0",
         "rollup-plugin-minify-html-literals": "^1.2.6",
@@ -74,9 +76,5 @@
     "workspaces": [
         "packages/*",
         "internal/*"
-    ],
-    "dependencies": {
-        "esbuild": "^0.16.4",
-        "rollup-plugin-esbuild": "^5.0.0"
-    }
+    ]
 }
