@@ -42,10 +42,9 @@ export class CheckBox extends LitElement {
 
     override render() {
         return html`
-          <label for="checkbox">
+          <label for="checkbox" class=${this.classNames()}>
             <input
               type="checkbox"
-              class=${this.classNames()}
               @input=${this.handler}
               ?disabled=${this.disabled}
               ?checked=${this.checked}
