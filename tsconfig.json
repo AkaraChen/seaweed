@@ -2,7 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "moduleResolution": "node",
-        "target": "ES2016",
+        "target": "ES2019",
         "useDefineForClassFields": false,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,

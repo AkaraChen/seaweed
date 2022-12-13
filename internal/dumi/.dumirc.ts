@@ -8,4 +8,5 @@ export default defineConfig({
             { title: '组件', link: '/components/button'}
         ]
   },
+  mfsu: false
 });

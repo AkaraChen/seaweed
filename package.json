@@ -14,7 +14,8 @@
         "test": "npm-run-all test:**",
         "test:package": "lerna run test",
         "taze": "taze major -r -w",
-        "test:type": "tsc --noEmit"
+        "test:type": "tsc --noEmit",
+        "start": "pnpm run -r --filter dumi dev"
     },
     "keywords": [],
     "author": "",
