@@ -2,19 +2,28 @@
     display: flex;
 }
 
+label {
+    --border-width: 1.5px;
+
+    display: flex;
+    align-items: stretch;
+}
+
 input {
     --size: 1em;
     --color: #1890ff;
     --border-color: #c8c8c8;
-    --border-width: 1.5px;
 
-    appearance: none;
     font-size: 18px;
+    appearance: none;
     width: var(--size);
     height: var(--size);
     border: var(--border-width) solid var(--border-color);
     border-radius: 3px;
     cursor: pointer;
+    position: relative;
+    top: calc(var(--border-width) * 2);
+    left: var(--border-width);
     @media (prefers-color-scheme: dark) {
         --border-color: #666;
     }
@@ -22,14 +31,14 @@ input {
 
 input::before {
     content: '';
-    display: inline-block;
+    display: block;
     width: var(--size);
     height: var(--size);
     position: relative;
     right: var(--border-width);
     bottom: var(--border-width);
     border-radius: 3px;
-    transition: 0.25s opacity, 0.25s background-color;
+    transition: 0.25s all;
     opacity: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 }
@@ -42,13 +51,25 @@ input:checked::before {
 .size-small {
     --border-width: 1px;
 
-    font-size: 16px;
+    & input {
+        font-size: 16px;
+    }
+
+    & span {
+        font-size: calc(16px - var(--border-width));
+    }
 }
 
 .size-large {
     --border-width: 1.5px;
 
-    font-size: 22px;
+    & input {
+        font-size: 22px;
+    }
+
+    & span {
+        font-size: calc(20px - var(--border-width));
+    }
 }
 
 input[disabled] {
@@ -66,13 +87,9 @@ input[disabled]::before {
     }
 }
 
-label {
-    display: flex;
-    align-items: center;
-}
-
 span {
     margin-left: 6px;
+    font-size: calc(18px - var(--border-width));
 }
 
 .rounded {
