@@ -18,7 +18,7 @@ importers:
       cross-env: ^7.0.3
       esbuild: ^0.16.4
       eslint: 8.29.0
-      eslint-config-akrc: 0.0.8
+      eslint-config-akrc: 0.0.9
       eslint-plugin-lit: ^1.7.1
       eslint-plugin-unicorn: ^45.0.2
       eslint-plugin-vue: ^9.8.0
@@ -66,7 +66,7 @@ importers:
       cross-env: 7.0.3
       esbuild: 0.16.4
       eslint: 8.29.0
-      eslint-config-akrc: 0.0.8
+      eslint-config-akrc: 0.0.9
       eslint-plugin-lit: 1.7.1_eslint@8.29.0
       eslint-plugin-unicorn: 45.0.2_eslint@8.29.0
       eslint-plugin-vue: 9.8.0_eslint@8.29.0
@@ -7263,8 +7263,8 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-config-akrc/0.0.8:
-    resolution: {integrity: sha512-RChYdPEyloK+naoOZFIMS+ihY2tsIw1rsWoiUPp03wlYtEnWXhM4DM9SAdvUiJe97uJSbvieZOpM0IAJTBxyDg==}
+  /eslint-config-akrc/0.0.9:
+    resolution: {integrity: sha512-7WxSYmTQrc7G3Nn1XIvGNtc7nBlzqpkjvDmEmExtpaFYnjFM5NPuffo9wbLUB0BmHnslJNhcfV+W5eUsRUK3PQ==}
     requiresBuild: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
@@ -8422,7 +8422,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.0.5
+      minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
     dev: true
