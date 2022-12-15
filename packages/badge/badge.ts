@@ -24,8 +24,7 @@ export class Badge extends LitElement {
     @property({type: Boolean})
         closable = false;
 
-    handler = () =>
-        this.dispatchEvent(new CustomEvent('close'));
+    handler = () => { if (!this.disabled) this.dispatchEvent(new CustomEvent('close')); };
 
     classNames = () =>
         clsx(
