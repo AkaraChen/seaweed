@@ -45,17 +45,19 @@ export class Switch extends LitElement {
 
     override render() {
         return html`
-          <label class=${this.classNames()}>
-              <input
-                  type="checkbox"
-                  @input=${this.handler}
-                  ?checked=${this.checked}
-                  ?disabled=${this.disabled}
-                  id="switch"
-              />
-              <span class="slider"></span>
+            <label class=${this.classNames()}>
+                <input
+                    type="checkbox"
+                    @input=${this.handler}
+                    ?checked=${this.checked}
+                    ?disabled=${this.disabled}
+                    id="switch"
+                />
+                <span class="slider"></span>
+            </label>
+            <label for="switch" class="slot">
+              <slot></slot>
           </label>
-          <label for="switch"><slot></slot></label>
         `;
     }
 }

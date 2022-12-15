@@ -1,3 +1,7 @@
+:host {
+    display: inline-flex;
+}
+
 .switch {
     --width: 37.5px;
     --height: 21.25px;
@@ -7,6 +11,7 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     width: var(--width);
     height: var(--height);
     user-select: none;
@@ -83,4 +88,8 @@ input:checked + .slider::before {
 
 input:checked + .slider sw-loading {
     left: calc(1.5px + var(--slider));
+}
+
+slot {
+    display: flex;
 }
