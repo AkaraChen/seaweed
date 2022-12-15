@@ -102,7 +102,7 @@ importers:
 
   internal/dumi:
     specifiers:
-      '@akrc/seaweed': workspace:^0.0.3
+      '@akrc/seaweed': workspace:*
       dumi: ^2.0.13
       lit: 2.5.0
       react: 18.2.0
@@ -154,6 +154,16 @@ importers:
       clsx: 1.2.1
       lit: 2.5.0
       loading: link:../loading
+      shared: link:../shared
+
+  packages/card:
+    specifiers:
+      clsx: ^1.2.1
+      lit: 2.5.0
+      shared: workspace:*
+    dependencies:
+      clsx: 1.2.1
+      lit: 2.5.0
       shared: link:../shared
 
   packages/checkbox:

@@ -106,3 +106,27 @@ button.rounded {
         border-radius: 32px;
     }
 }
+
+button.ghost {
+    background: transparent;
+    color: var(--primary);
+    border: none;
+    box-shadow: none;
+
+    &:hover {
+        background-color: rgb(46 51 56 / 3%);
+    }
+}
+
+button.secondary {
+    background-color: rgb(248 248 248);
+    color: var(--primary);
+    border: none;
+
+    &:hover {
+        background-color: rgb(245 245 245);
+        @media (prefers-color-scheme: dark) {
+            background-color: rgb(255 255 255 / 12%);
+        }
+    }
+}

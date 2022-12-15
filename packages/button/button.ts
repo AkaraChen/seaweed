@@ -12,6 +12,12 @@ export class Button extends LitElement {
     @property({type: Boolean})
         primary = false;
 
+    @property({type: Boolean})
+        secondary = false;
+
+    @property({type: Boolean})
+        ghost = false;
+
     @property()
         size: size = 'normal';
 
@@ -49,7 +55,9 @@ export class Button extends LitElement {
             {[`size-${this.size}`]: this.size},
             {[`type-${this.type}`]: this.type},
             {loading: this.loading},
-            {rounded: this.rounded}
+            {rounded: this.rounded},
+            {secondary: this.secondary},
+            {ghost: this.ghost}
         );
 
     override render() {
