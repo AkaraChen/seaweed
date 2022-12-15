@@ -107,6 +107,12 @@ export default () => {
 
 当关闭按钮被点击的时候，元素会触发一个 close 事件。
 
+你可以使用 eventListener 监听 close 事件，就像这样：
+
+```ts
+document.querySelector('sw-badge').addEventListener('close', event => event.target.remove())
+```
+
 ```tsx
 import '@akrc/seaweed/badge'
 
