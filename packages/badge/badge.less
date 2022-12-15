@@ -2,6 +2,13 @@
     display: inline-block;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+}
+
 .badge {
     --bg: #fafafa;
     --bd: #e0e0e6;
@@ -13,9 +20,15 @@
     padding: 4px 8px;
     font-size: 14px;
     color: var(--color);
+    display: flex;
+    align-items: flex-end;
     @media (prefers-color-scheme: dark) {
         background-color: transparent;
     }
+}
+
+.badge.closable {
+    padding-right: 4px;
 }
 
 .badge.type-success {
@@ -54,6 +67,9 @@
     @media (prefers-color-scheme: dark) {
         opacity: 0.9;
     }
+    & svg {
+        color: var(--bg);
+    }
 }
 
 .badge.noborder.type-normal {
@@ -62,6 +78,9 @@
     @media (prefers-color-scheme: dark) {
         background-color: #555;
         color: #ffffffd1;
+    }
+    & svg {
+        color: var(--color);
     }
 }
 
@@ -73,4 +92,10 @@
 
 .badge.rounded {
     border-radius: 16px;
+}
+
+svg {
+    color: var(--color);
+    width: 16px;
+    height: 16px;
 }

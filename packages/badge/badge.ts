@@ -1,8 +1,9 @@
-import {html, LitElement} from 'lit';
+import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
 import {type} from 'shared/type';
 import {styles} from './badge.less';
+import {x} from 'shared/icon';
 
 @customElement('sw-badge')
 export class Badge extends LitElement {
@@ -20,19 +21,29 @@ export class Badge extends LitElement {
     @property({type: Boolean})
         rounded = false;
 
+    @property({type: Boolean})
+        closable = false;
+
+    handler = () =>
+        this.dispatchEvent(new CustomEvent('close'));
+
     classNames = () =>
         clsx(
             'badge',
             {[`type-${this.type}`]: this.type},
             {noborder: this.noborder},
             {disabled: this.disabled},
-            {rounded: this.rounded}
+            {rounded: this.rounded},
+            {closable: this.closable}
         );
 
     override render() {
         return html`
           <div class=${this.classNames()}>
               <slot></slot>
+              ${this.closable
+        ? html`<button @click=${this.handler}>${x}</button>`
+        : nothing}
           </div>
         `;
     }

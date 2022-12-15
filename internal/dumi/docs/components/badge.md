@@ -102,3 +102,32 @@ export default () => {
     </div>
 }
 ```
+
+## 可关闭的
+
+当关闭按钮被点击的时候，元素会触发一个 close 事件。
+
+```tsx
+import '@akrc/seaweed/badge'
+
+const handler = event => event.target.remove()
+
+export default () => {
+    return <div style={{display:'flex', flexDirection: 'column', gap: '1em', flexWrap: 'wrap'}}>
+        <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
+            <sw-badge closable>Normal</sw-badge>
+            <sw-badge type="info" closable>Info</sw-badge>
+            <sw-badge type="warning" closable>Info</sw-badge>
+            <sw-badge type="error" closable>Info</sw-badge>
+            <sw-badge type="success" closable>Info</sw-badge>
+        </div>
+        <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
+            <sw-badge noborder closable>Info</sw-badge>
+            <sw-badge type="info" noborder closable>Info</sw-badge>
+            <sw-badge type="warning" noborder closable>Info</sw-badge>
+            <sw-badge type="error" noborder closable>Info</sw-badge>
+            <sw-badge type="success" noborder closable>Info</sw-badge>
+        </div>
+    </div> 
+}
+```
