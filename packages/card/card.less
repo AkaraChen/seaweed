@@ -1,7 +1,41 @@
 .card {
-    padding: 24px;
+    border: rgb(237 237 237) 1px solid;
+    border-radius: 2px;
 }
 
-.title {
-    font-size: 18px;
+.card.noborder {
+    border: none;
+    background-color: rgb(249 249 249);
+    @media (prefers-color-scheme: dark) {
+        background-color: rgb(32 32 32);
+    }
 }
+
+slot {
+    font-size: 14px;
+}
+
+.size-small {
+    padding: 16px;
+    & .title {
+        font-size: 16px;
+        padding-bottom: 12px;
+    }
+}
+
+.size-normal {
+    padding: 24px;
+    & .title {
+        font-size: 17px;
+        padding-bottom: 18px;
+    }
+}
+
+.size-large {
+    padding: 32px;
+    & .title {
+        font-size: 18px;
+        padding-bottom: 24px;
+    }
+}
+

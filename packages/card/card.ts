@@ -9,23 +9,28 @@ export class Card extends LitElement {
     static override styles = styles;
 
     @property()
-        size: size;
+        size: size = 'normal';
 
     @property()
         title = '';
 
+    @property({type: Boolean})
+        noborder: false;
+
     classNames = () => clsx(
         'card',
-        {[`size-${this.size}`]: sizeArray.includes(this.size)}
+        {[`size-${this.size}`]: sizeArray.includes(this.size)},
+        {noborder: this.noborder}
     );
 
     render() {
         return html`
-          <div class=${this.classNames()}>
-                ${this.title === ''
-        ? html`<div class="title">${this.title}</div>`
-        : nothing}
-              </div>
+            <div class=${this.classNames()}>
+                  ${this.title === ''
+        ? nothing
+        : html`<div class="title">${this.title}</div>`}
+          <slot></slot>
+                </div>
         `;
     }
 }
