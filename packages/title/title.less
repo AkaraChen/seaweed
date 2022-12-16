@@ -1,0 +1,35 @@
+.title {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.decorator::before {
+    position: relative;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 0.25em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    background-color: var(--primary);
+}
+
+.level-1 {
+    font-size: 24px;
+}
+
+.level-2 {
+    font-size: 22px;
+}
+
+.level-3 {
+    font-size: 18px;
+}
+
+.level-4,
+.level-5,
+.level-6 {
+    font-size: 16px;
+}

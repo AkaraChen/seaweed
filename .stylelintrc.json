@@ -12,7 +12,9 @@
         "plugin/declaration-block-no-ignored-properties": true,
         "string-quotes": "single",
         "at-rule-empty-line-before": "never",
-        "rule-empty-line-before": null
+        "rule-empty-line-before": null,
+        "no-empty-source": null,
+        "block-no-empty": null
     },
     "plugins": ["stylelint-declaration-block-no-ignored-properties"]
 }
