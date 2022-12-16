@@ -10,13 +10,13 @@ export class Input extends LitElement {
     static override styles = styles;
 
     @property()
-        type: type | 'normal' = 'normal';
+    type: type | 'normal' = 'normal';
 
     @property()
-        size: size;
+    size: size;
 
     @property()
-        placeholder: string;
+    placeholder: string;
 
     get value() {
         return this.shadowRoot.querySelector('input').value;

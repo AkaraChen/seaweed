@@ -10,16 +10,16 @@ export class CheckBox extends LitElement {
     static override styles = styles;
 
     @property({type: Boolean})
-        checked = false;
+    checked = false;
 
     @property()
-        size: size;
+    size: size;
 
     @property({type: Boolean})
-        disabled: boolean;
+    disabled: boolean;
 
     @property({type: Boolean})
-        rounded = false;
+    rounded = false;
 
     classNames = () =>
         clsx(`size-${this.size || getFormSize(this) || 'normal'}`, {

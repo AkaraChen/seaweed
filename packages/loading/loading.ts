@@ -8,10 +8,10 @@ export class Loading extends LitElement {
     static override styles = styles;
 
     @property()
-        size = '24px';
+    size = '24px';
 
     @property()
-        color = '#bbb';
+    color = '#bbb';
 
     override render() {
         return html`

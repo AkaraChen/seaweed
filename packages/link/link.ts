@@ -9,19 +9,19 @@ export class Link extends LitElement {
     static override styles = [styles];
 
     @property({type: Boolean})
-        disabled = false;
+    disabled = false;
 
     @property({type: Boolean})
-        underline = false;
+    underline = false;
 
     @property()
-        href: string;
+    href: string;
 
     @property()
-        type: type = 'info';
+    type: type = 'info';
 
     @property()
-        target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
+    target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
 
     classNames = () =>
         clsx(

@@ -9,13 +9,13 @@ export class Card extends LitElement {
     static override styles = styles;
 
     @property()
-        size: size = 'normal';
+    size: size = 'normal';
 
     @property()
-        title = '';
+    title = '';
 
     @property({type: Boolean})
-        noborder: false;
+    noborder: false;
 
     classNames = () =>
         clsx(

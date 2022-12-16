@@ -11,19 +11,19 @@ export class Progress extends LitElement {
     static override styles = styles;
 
     @property({type: Number})
-        value = 50;
+    value = 50;
 
     @property({type: Number})
-        max = 100;
+    max = 100;
 
     @property()
-        size: size = 'normal';
+    size: size = 'normal';
 
     @property()
-        type: type = 'info';
+    type: type = 'info';
 
     @property()
-        color: string;
+    color: string;
 
     classNames = () =>
         clsx(

@@ -16,19 +16,19 @@ export class LinkCard extends LitElement {
     static override styles = [styles];
 
     @property()
-        title: string;
+    title: string;
 
     @property()
-        link: string;
+    link: string;
 
     @property()
-        image: string;
+    image: string;
 
     @property()
-        target: target;
+    target: target;
 
     @property()
-        alt: string;
+    alt: string;
 
     formatLink = () => {
         try {

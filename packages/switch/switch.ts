@@ -11,16 +11,16 @@ export class Switch extends LitElement {
     static override styles = styles;
 
     @property({type: Boolean})
-        checked = false;
+    checked = false;
 
     @property({type: Boolean})
-        disabled: boolean;
+    disabled: boolean;
 
     @property()
-        size: size;
+    size: size;
 
     @property({type: Boolean})
-        loading = false;
+    loading = false;
 
     get value() {
         return this.shadowRoot.querySelector('input').checked;

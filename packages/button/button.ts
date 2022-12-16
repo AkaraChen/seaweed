@@ -10,28 +10,28 @@ export class Button extends LitElement {
     static override styles = styles;
 
     @property({type: Boolean})
-        primary = false;
+    primary = false;
 
     @property({type: Boolean})
-        secondary = false;
+    secondary = false;
 
     @property({type: Boolean})
-        ghost = false;
+    ghost = false;
 
     @property()
-        size: size = 'normal';
+    size: size = 'normal';
 
     @property()
-        type: type = 'info';
+    type: type = 'info';
 
     @property({type: Boolean})
-        loading = false;
+    loading = false;
 
     @property({type: Boolean})
-        disabled = false;
+    disabled = false;
 
     @property({type: Boolean})
-        rounded = false;
+    rounded = false;
 
     loadingIcon = () => {
         const sizeString = this.size === 'small' ? '14px' : '18px';

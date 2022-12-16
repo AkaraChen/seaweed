@@ -9,19 +9,19 @@ export class Divider extends LitElement {
     static override styles = styles;
 
     @property()
-        text: string = '';
+    text: string = '';
 
     @property()
-        position: position = 'medium';
+    position: position = 'medium';
 
     @property({type: Boolean})
-        vertical: boolean;
+    vertical: boolean;
 
     @property({type: Boolean})
-        dashed: boolean;
+    dashed: boolean;
 
     @property({type: Boolean})
-        dotted: boolean;
+    dotted: boolean;
 
     classNames = () =>
         clsx(
