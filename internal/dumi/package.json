@@ -6,7 +6,6 @@
   "dependencies": {
     "@akrc/seaweed": "workspace:*",
     "dumi": "^2.0.16",
-    "lit": "2.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

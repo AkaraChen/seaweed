@@ -15,6 +15,7 @@ importers:
       '@typescript-eslint/eslint-plugin': 5.46.1
       '@typescript-eslint/parser': 5.46.1
       '@wordpress/stylelint-config': ^21.6.0
+      clsx: ^1.2.1
       cross-env: ^7.0.3
       esbuild: ^0.16.7
       eslint: 8.29.0
@@ -45,6 +46,7 @@ importers:
       rollup-plugin-minify-html-literals: ^1.2.6
       rollup-plugin-summary: ^2.0.0
       rollup-plugin-ts: ^3.0.2
+      shared: workspace:^*
       stylelint: ^14.16.0
       stylelint-config-recommended-less: ^1.0.4
       stylelint-config-standard: ^29.0.0
@@ -67,6 +69,7 @@ importers:
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
       '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
       '@wordpress/stylelint-config': 21.6.0_l3s4qeu3gkar2knsdy3w5miimm
+      clsx: 1.2.1
       cross-env: 7.0.3
       esbuild: 0.16.7
       eslint: 8.29.0
@@ -97,6 +100,7 @@ importers:
       rollup-plugin-minify-html-literals: 1.2.6_rollup@3.7.4
       rollup-plugin-summary: 2.0.0_rollup@3.7.4
       rollup-plugin-ts: 3.0.2_et7mx6rbybd4ntdt4w42uqa6fm
+      shared: link:packages/shared
       stylelint: 14.16.0
       stylelint-config-recommended-less: 1.0.4
       stylelint-config-standard: 29.0.0_stylelint@14.16.0
@@ -112,187 +116,70 @@ importers:
     specifiers:
       '@akrc/seaweed': workspace:*
       dumi: ^2.0.16
-      lit: 2.5.0
       react: 18.2.0
       react-dom: 18.2.0
     dependencies:
       '@akrc/seaweed': link:../..
       dumi: 2.0.16_biqbaboplfbrettd7655fr4n2y
-      lit: 2.5.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
 
   packages/alert:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/avatar:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/badge:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/button:
     specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
       loading: workspace:*
-      shared: workspace:^1.0.0
     dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
       loading: link:../loading
-      shared: link:../shared
 
   packages/card:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:*
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/checkbox:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/divider:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/form:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/input:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/link:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/linkcard:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/loading:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/progress:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/shared:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
+    specifiers: {}
 
   packages/spoiler:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
   packages/switch:
     specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
       loading: workspace:^1.0.0
-      shared: workspace:^1.0.0
     dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
       loading: link:../loading
-      shared: link:../shared
 
   packages/title:
-    specifiers:
-      clsx: ^1.2.1
-      lit: 2.5.0
-      shared: workspace:^1.0.0
-    dependencies:
-      clsx: 1.2.1
-      lit: 2.5.0
-      shared: link:../shared
+    specifiers: {}
 
 packages:
 
@@ -2209,6 +2096,7 @@ packages:
 
   /@lit/reactive-element/1.5.0:
     resolution: {integrity: sha512-fQh9FDK0LPTwDk+0HhSZEtb8K0LTN1wXerwpGrWA+a8tWulYRDLI4vQDWp4GOIsewn0572KYV/oZ3+492D7osA==}
+    dev: true
 
   /@loadable/component/5.15.2_react@18.1.0:
     resolution: {integrity: sha512-ryFAZOX5P2vFkUdzaAtTG88IGnr9qxSdvLRvJySXcUA4B4xVWurUNADu3AnKPksxOZajljqTrDEDcYjeL4lvLw==}
@@ -3576,6 +3464,7 @@ packages:
 
   /@types/trusted-types/2.0.2:
     resolution: {integrity: sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==}
+    dev: true
 
   /@types/ua-parser-js/0.7.36:
     resolution: {integrity: sha512-N1rW+njavs70y2cApeIw1vLMYXRwfBy+7trgavGuuTfOd7j1Yh7QTRc/yqsPl6ncokt72ZXuxEU0PiCp9bSwNQ==}
@@ -5654,7 +5543,7 @@ packages:
   /clsx/1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
-    dev: false
+    dev: true
 
   /cmd-shim/5.0.0:
     resolution: {integrity: sha512-qkCtZ59BidfEwHltnJwkyVZn+XQojdAySM1D1gSeh11Z4pW1Kpolkyo53L5noc0nrxmIvyFwTmJRo4xs7FFLPw==}
@@ -10462,11 +10351,13 @@ packages:
     dependencies:
       '@lit/reactive-element': 1.5.0
       lit-html: 2.5.0
+    dev: true
 
   /lit-html/2.5.0:
     resolution: {integrity: sha512-bLHosg1XL3JRUcKdSVI0sLCs0y1wWrj2sqqAN3cZ7bDDPNgmDHH29RV48x6Wz3ZmkxIupaE+z7uXSZ/pXWAO1g==}
     dependencies:
       '@types/trusted-types': 2.0.2
+    dev: true
 
   /lit/2.5.0:
     resolution: {integrity: sha512-DtnUP6vR3l4Q8nRPPNBD+UxbAhwJPeky+OVbi3pdgMqm0g57xFSl1Sj64D1rIB+nVNdiVVg8YxB0hqKjvdadZA==}
@@ -10474,6 +10365,7 @@ packages:
       '@lit/reactive-element': 1.5.0
       lit-element: 3.2.2
       lit-html: 2.5.0
+    dev: true
 
   /load-json-file/4.0.0:
     resolution: {integrity: sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw==}

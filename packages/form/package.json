@@ -2,10 +2,5 @@
   "name": "form",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "clsx": "^1.2.1",
-    "lit": "2.5.0",
-    "shared": "workspace:^1.0.0"
-  }
+  "license": "MIT"
 }
