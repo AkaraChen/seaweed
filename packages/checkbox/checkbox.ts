@@ -23,7 +23,7 @@ export class CheckBox extends LitElement {
 
     classNames = () =>
         clsx(`size-${this.size || getFormSize(this) || 'normal'}`, {
-            rounded: this.rounded,
+            rounded: this.rounded
         });
 
     get value() {
