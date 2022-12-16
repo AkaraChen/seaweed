@@ -111,13 +111,13 @@ importers:
   internal/dumi:
     specifiers:
       '@akrc/seaweed': workspace:*
-      dumi: ^2.0.14
+      dumi: ^2.0.16
       lit: 2.5.0
       react: 18.2.0
       react-dom: 18.2.0
     dependencies:
       '@akrc/seaweed': link:../..
-      dumi: 2.0.14_biqbaboplfbrettd7655fr4n2y
+      dumi: 2.0.16_biqbaboplfbrettd7655fr4n2y
       lit: 2.5.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -5224,7 +5224,7 @@ packages:
       mississippi: 2.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 5.3.0
       unique-filename: 1.1.1
@@ -5294,7 +5294,7 @@ packages:
       mississippi: 1.3.1
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 4.1.6
       unique-filename: 1.1.1
@@ -6673,8 +6673,8 @@ packages:
     resolution: {integrity: sha512-a/Y5lf0G6gwsEQ9hop/n03CcjmHsGBk384Cz/AEX6mRYrfSpUx/lQvP9HLoXkCzScl9PL1sSmLPnMkgaXDCZLA==}
     dev: false
 
-  /dumi/2.0.14_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-YPUbPdpTrpFq3oV4pcYxCsGAYRPrh/18zgKrFOSlT2rQwB+IQa3UPXuGRMp6w7OY1cMyLLGimoHHZXE7O0QOaQ==}
+  /dumi/2.0.16_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-GpHtv8bVmiOcrEQHuN5rb4TUuOOZESkC4Jzkb2nP+3T3+lbh1248+K+YxwAzeoFiA5gx0DiYWnKQ0+NOmapIsA==}
     hasBin: true
     peerDependencies:
       react: '>=16.8'
@@ -12492,7 +12492,7 @@ packages:
       npm-package-arg: 5.1.2
       npm-pick-manifest: 1.0.4
       osenv: 0.1.5
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       promise-retry: 1.1.1
       protoduck: 4.0.0
       safe-buffer: 5.2.1
@@ -13668,18 +13668,6 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
-    dev: true
-
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
-    dev: false
 
   /promise-retry/1.1.1:
     resolution: {integrity: sha512-StEy2osPr28o17bIW776GtwO6+Q+M9zPiZkYfosciUUMYqjhU/ffwRAH0zN2+uvGyUsn8/YICIHRzLbPacpZGw==}
