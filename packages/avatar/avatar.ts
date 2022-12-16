@@ -22,7 +22,7 @@ export class Avatar extends LitElement {
         const sizeMap = {
             small: 28,
             normal: 34,
-            large: 40
+            large: 40,
         };
         if (typeof this.size === 'string' && sizeArray.includes(this.size)) {
             return sizeMap[this.size];
@@ -39,12 +39,12 @@ export class Avatar extends LitElement {
     override render() {
         const size = this.getSize();
         return html`
-          <img
-              src=${this.src}
-              height=${size}
-              width=${size}
-              class=${this.classNames()}
-          />
+            <img
+                src=${this.src}
+                height=${size}
+                width=${size}
+                class=${this.classNames()}
+            />
         `;
     }
 }

@@ -40,12 +40,12 @@ export class Badge extends LitElement {
 
     override render() {
         return html`
-          <div class=${this.classNames()}>
-              <slot></slot>
-              ${this.closable
-        ? html`<button @click=${this.handler}>${x}</button>`
-        : nothing}
-          </div>
+            <div class=${this.classNames()}>
+                <slot></slot>
+                ${this.closable
+                    ? html`<button @click=${this.handler}>${x}</button>`
+                    : nothing}
+            </div>
         `;
     }
 }

@@ -284,6 +284,16 @@ importers:
       loading: link:../loading
       shared: link:../shared
 
+  packages/title:
+    specifiers:
+      clsx: ^1.2.1
+      lit: 2.5.0
+      shared: workspace:^1.0.0
+    dependencies:
+      clsx: 1.2.1
+      lit: 2.5.0
+      shared: link:../shared
+
 packages:
 
   /@ampproject/remapping/2.2.0:

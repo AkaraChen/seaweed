@@ -37,15 +37,15 @@ export class Button extends LitElement {
         const sizeString = this.size === 'small' ? '14px' : '18px';
         const color = this.primary ? '#fff' : '#666';
         return html`
-          <style>
-              sw-loading {
-                  margin-right: 0.5em;
-              }
-              button.size-small sw-loading {
-                  margin-right: 0.25em;
-              }
-          </style>
-          <sw-loading size=${sizeString} color=${color}></sw-loading>
+            <style>
+                sw-loading {
+                    margin-right: 0.5em;
+                }
+                button.size-small sw-loading {
+                    margin-right: 0.25em;
+                }
+            </style>
+            <sw-loading size=${sizeString} color=${color}></sw-loading>
         `;
     };
 
@@ -62,10 +62,10 @@ export class Button extends LitElement {
 
     override render() {
         return html`
-          <button class=${this.classNames()} ?disabled=${this.disabled}>
-              ${this.loading ? this.loadingIcon() : nothing}
-              <p><slot></slot></p>
-          </button>
+            <button class=${this.classNames()} ?disabled=${this.disabled}>
+                ${this.loading ? this.loadingIcon() : nothing}
+                <p><slot></slot></p>
+            </button>
         `;
     }
 }

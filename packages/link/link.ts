@@ -41,13 +41,13 @@ export class Link extends LitElement {
 
     override render() {
         return html`
-          <a
-              class=${this.classNames()}
-              href=${this.href}
-              target=${this.target}
-          >
-              <slot></slot>
-          </a>
+            <a
+                class=${this.classNames()}
+                href=${this.href}
+                target=${this.target}
+            >
+                <slot></slot>
+            </a>
         `;
     }
 }

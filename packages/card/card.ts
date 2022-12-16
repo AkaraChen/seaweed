@@ -26,12 +26,12 @@ export class Card extends LitElement {
 
     render() {
         return html`
-          <div class=${this.classNames()}>
-              ${this.title === ''
-                ? nothing
-                : html`<div class="title">${this.title}</div>`}
-              <slot></slot>
-          </div>
+            <div class=${this.classNames()}>
+                ${this.title === ''
+                    ? nothing
+                    : html`<div class="title">${this.title}</div>`}
+                <slot></slot>
+            </div>
         `;
     }
 }

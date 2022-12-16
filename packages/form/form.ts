@@ -39,10 +39,10 @@ export class FormItem extends LitElement {
     override render() {
         const label = this.label ? html`<span>${this.label}:</span>` : nothing;
         return html`
-          <label class=${this.classNames()}>
-              ${label}
-              <slot></slot>
-          </label>
+            <label class=${this.classNames()}>
+                ${label}
+                <slot></slot>
+            </label>
         `;
     }
 }

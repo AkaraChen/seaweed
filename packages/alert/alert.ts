@@ -2,8 +2,7 @@ import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
 import {type} from 'shared/type';
-import {
-ErrorRound, InfoRound, SuccessRound, WarningRound} from 'shared/icon';
+import {ErrorRound, InfoRound, SuccessRound, WarningRound} from 'shared/icon';
 import {styles} from './alert.less';
 
 @customElement('sw-alert')
@@ -27,18 +26,18 @@ export class Alert extends LitElement {
 
     iconHTML() {
         switch (this.type) {
-        case 'info': {
-            return InfoRound;
-        }
-        case 'success': {
-            return SuccessRound;
-        }
-        case 'warning': {
-            return WarningRound;
-        }
-        case 'error': {
-            return ErrorRound;
-        }
+            case 'info': {
+                return InfoRound;
+            }
+            case 'success': {
+                return SuccessRound;
+            }
+            case 'warning': {
+                return WarningRound;
+            }
+            case 'error': {
+                return ErrorRound;
+            }
         }
     }
 
@@ -53,15 +52,15 @@ export class Alert extends LitElement {
 
     override render() {
         return html`
-          <div class=${this.classNames()}>
-              <div class="icon-container">${this.iconHTML()}</div>
-              <div>
-                  ${this.title
-                    ? html`<div class="title">${this.title}</div>`
-                    : nothing}
-                  <slot></slot>
-              </div>
-          </div>
+            <div class=${this.classNames()}>
+                <div class="icon-container">${this.iconHTML()}</div>
+                <div>
+                    ${this.title
+                        ? html`<div class="title">${this.title}</div>`
+                        : nothing}
+                    <slot></slot>
+                </div>
+            </div>
         `;
     }
 }

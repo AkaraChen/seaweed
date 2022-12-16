@@ -27,9 +27,9 @@ export default class Spoiler extends LitElement {
 
     override render() {
         return html`
-          <span class=${this.clear ? '' : 'blur'}>
-              <slot></slot>
-          </span>
+            <span class=${this.clear ? '' : 'blur'}>
+                <slot></slot>
+            </span>
         `;
     }
 }

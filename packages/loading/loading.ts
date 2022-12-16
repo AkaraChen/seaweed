@@ -15,17 +15,17 @@ export class Loading extends LitElement {
 
     override render() {
         return html`
-          <style>
-              :host {
-                  height: ${this.size};
-              }
-              svg {
-                  width: ${this.size};
-                  height: ${this.size};
-                  color: ${this.color};
-              }
-          </style>
-          ${loadingAlt}
+            <style>
+                :host {
+                    height: ${this.size};
+                }
+                svg {
+                    width: ${this.size};
+                    height: ${this.size};
+                    color: ${this.color};
+                }
+            </style>
+            ${loadingAlt}
         `;
     }
 }

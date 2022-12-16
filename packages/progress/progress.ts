@@ -2,8 +2,7 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from './progress.less';
-import {
-typeArray, type, size, sizeArray} from 'shared/type';
+import {typeArray, type, size, sizeArray} from 'shared/type';
 import clsx from 'clsx';
 
 @customElement('sw-progress')
@@ -35,9 +34,9 @@ export class Progress extends LitElement {
         const rate = `${(this.value / this.max) * 100}%`;
         const color = this.color ? `background-color: ${this.color}` : '';
         return html`
-          <div class=${this.classNames()}>
-              <span style="width: ${rate}; ${color}"></span>
-          </div>
+            <div class=${this.classNames()}>
+                <span style="width: ${rate}; ${color}"></span>
+            </div>
         `;
     }
 }
