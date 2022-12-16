@@ -19,7 +19,9 @@ importers:
       esbuild: ^0.16.7
       eslint: 8.29.0
       eslint-config-akrc: 0.0.9
+      eslint-config-prettier: ^8.5.0
       eslint-plugin-lit: ^1.7.1
+      eslint-plugin-prettier: ^4.2.1
       eslint-plugin-unicorn: ^45.0.2
       eslint-plugin-vue: ^9.8.0
       eslint-plugin-wc: ^1.4.0
@@ -33,6 +35,8 @@ importers:
       postcss: ^8.4.20
       postcss-less: ^6.0.0
       postcss-nesting: ^10.2.0
+      prettier: ^2.8.1
+      prettier-plugin-html-template-literals: ^1.0.5
       rimraf: ^3.0.2
       rollup: 3.7.4
       rollup-plugin-esbuild: ^5.0.0
@@ -67,7 +71,9 @@ importers:
       esbuild: 0.16.7
       eslint: 8.29.0
       eslint-config-akrc: 0.0.9
+      eslint-config-prettier: 8.5.0_eslint@8.29.0
       eslint-plugin-lit: 1.7.1_eslint@8.29.0
+      eslint-plugin-prettier: 4.2.1_5dgjrgoi64tgrv3zzn3walur3u
       eslint-plugin-unicorn: 45.0.2_eslint@8.29.0
       eslint-plugin-vue: 9.8.0_eslint@8.29.0
       eslint-plugin-wc: 1.4.0_eslint@8.29.0
@@ -81,6 +87,8 @@ importers:
       postcss: 8.4.20
       postcss-less: 6.0.0_postcss@8.4.20
       postcss-nesting: 10.2.0_postcss@8.4.20
+      prettier: 2.8.1
+      prettier-plugin-html-template-literals: 1.0.5_prettier@2.8.1
       rimraf: 3.0.2
       rollup: 3.7.4
       rollup-plugin-esbuild: 5.0.0_zreq6qg4bbimwgrznl6lkl4yue
@@ -103,13 +111,13 @@ importers:
   internal/dumi:
     specifiers:
       '@akrc/seaweed': workspace:*
-      dumi: ^2.0.13
+      dumi: ^2.0.14
       lit: 2.5.0
       react: 18.2.0
       react-dom: 18.2.0
     dependencies:
       '@akrc/seaweed': link:../..
-      dumi: 2.0.13_biqbaboplfbrettd7655fr4n2y
+      dumi: 2.0.14_biqbaboplfbrettd7655fr4n2y
       lit: 2.5.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -2198,7 +2206,7 @@ packages:
     peerDependencies:
       react: '>=16.3.0'
     dependencies:
-      '@babel/runtime': 7.18.9
+      '@babel/runtime': 7.20.6
       hoist-non-react-statics: 3.3.2
       react: 18.1.0
       react-is: 16.13.1
@@ -2210,7 +2218,7 @@ packages:
     peerDependencies:
       react: '>=16.3.0'
     dependencies:
-      '@babel/runtime': 7.18.9
+      '@babel/runtime': 7.20.6
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
       react-is: 16.13.1
@@ -2339,7 +2347,7 @@ packages:
       lru-cache: 6.0.0
       mkdirp: 1.0.4
       npm-pick-manifest: 6.1.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       promise-retry: 2.0.1
       semver: 7.3.8
       which: 2.0.2
@@ -2926,7 +2934,7 @@ packages:
       postcss: '>=7.0.0'
       postcss-syntax: '>=0.36.2'
     dependencies:
-      '@babel/core': 7.18.9
+      '@babel/core': 7.20.5
       postcss: 8.4.20
       postcss-syntax: 0.36.2_postcss@8.4.20
     transitivePeerDependencies:
@@ -4002,7 +4010,7 @@ packages:
   /@umijs/history/5.3.1:
     resolution: {integrity: sha512-/e0cEGrR2bIWQD7pRl3dl9dcyRGeC9hoW0OCvUTT/hjY0EfUrkd6G8ZanVghPMpDuY5usxq9GVcvrT8KNXLWvA==}
     dependencies:
-      '@babel/runtime': 7.18.9
+      '@babel/runtime': 7.20.6
       query-string: 6.14.1
     dev: false
 
@@ -4944,6 +4952,7 @@ packages:
 
   /bluebird/3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
+    dev: false
 
   /bn.js/4.12.0:
     resolution: {integrity: sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==}
@@ -5229,7 +5238,7 @@ packages:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
       tar: 6.1.13
@@ -6654,8 +6663,8 @@ packages:
     resolution: {integrity: sha512-a/Y5lf0G6gwsEQ9hop/n03CcjmHsGBk384Cz/AEX6mRYrfSpUx/lQvP9HLoXkCzScl9PL1sSmLPnMkgaXDCZLA==}
     dev: false
 
-  /dumi/2.0.13_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-PUYEKEV/SNhKRxjzNlrm2b6p6gwhQh38nmrvWM6Xv4qqR4Jo7ZGALm4R4VzxUkjmMArb5NTWc5ld5nRTAMgoEQ==}
+  /dumi/2.0.14_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-YPUbPdpTrpFq3oV4pcYxCsGAYRPrh/18zgKrFOSlT2rQwB+IQa3UPXuGRMp6w7OY1cMyLLGimoHHZXE7O0QOaQ==}
     hasBin: true
     peerDependencies:
       react: '>=16.8'
@@ -6670,6 +6679,7 @@ packages:
       '@umijs/bundler-utils': 4.0.36
       '@umijs/core': 4.0.36
       animated-scroll-to: 2.3.0
+      classnames: 2.3.2
       codesandbox: 2.2.3
       deepmerge: 4.2.2
       dumi-afx-deps: 1.0.0-alpha.6
@@ -7293,6 +7303,15 @@ packages:
       - supports-color
     dev: true
 
+  /eslint-config-prettier/8.5.0_eslint@8.29.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.29.0
+    dev: true
+
   /eslint-import-resolver-node/0.3.6:
     resolution: {integrity: sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw==}
     dependencies:
@@ -7418,6 +7437,23 @@ packages:
       minimatch: 3.1.2
       resolve: 1.22.1
       semver: 6.3.0
+    dev: true
+
+  /eslint-plugin-prettier/4.2.1_5dgjrgoi64tgrv3zzn3walur3u:
+    resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      eslint: '>=7.28.0'
+      eslint-config-prettier: '*'
+      prettier: '>=2.0.0'
+    peerDependenciesMeta:
+      eslint-config-prettier:
+        optional: true
+    dependencies:
+      eslint: 8.29.0
+      eslint-config-prettier: 8.5.0_eslint@8.29.0
+      prettier: 2.8.1
+      prettier-linter-helpers: 1.0.0
     dev: true
 
   /eslint-plugin-react-hooks/4.5.0:
@@ -7818,6 +7854,10 @@ packages:
 
   /fast-deep-equal/3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+
+  /fast-diff/1.2.0:
+    resolution: {integrity: sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==}
+    dev: true
 
   /fast-glob/2.2.7:
     resolution: {integrity: sha512-g1KuQwHOZAmOZMuBtHdxDtju+T2RT8jgCC9aANsbpdiDDTSnjgfuVsIBNKbUeJI3oKMRExcfNDtJl4OhbffMsw==}
@@ -8887,7 +8927,7 @@ packages:
   /history/5.3.0:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
     dependencies:
-      '@babel/runtime': 7.18.9
+      '@babel/runtime': 7.20.6
     dev: false
 
   /hmac-drbg/1.0.1:
@@ -13517,6 +13557,22 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+  /prettier-linter-helpers/1.0.0:
+    resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      fast-diff: 1.2.0
+    dev: true
+
+  /prettier-plugin-html-template-literals/1.0.5_prettier@2.8.1:
+    resolution: {integrity: sha512-IXoenzPTXUTZXx0e71FwdVI/899kjgSbIMCJiZpspGU6V75nh3O2GXYFhC20W6iCZld42c9vworGoikD6hbPCA==}
+    hasBin: true
+    peerDependencies:
+      prettier: '>= 1.13.0 < 2'
+    dependencies:
+      prettier: 2.8.1
+    dev: true
+
   /prettier-plugin-organize-imports/2.3.4:
     resolution: {integrity: sha512-R8o23sf5iVL/U71h9SFUdhdOEPsi3nm42FD/oDYIZ2PQa4TNWWuWecxln6jlIQzpZTDMUeO1NicJP6lLn2TtRw==}
     peerDependencies:
@@ -13534,6 +13590,12 @@ packages:
     dependencies:
       sort-package-json: 1.57.0
     dev: false
+
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
 
   /pretty-error/4.0.0:
     resolution: {integrity: sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==}
@@ -13607,6 +13669,7 @@ packages:
         optional: true
     dependencies:
       bluebird: 3.7.2
+    dev: false
 
   /promise-retry/1.1.1:
     resolution: {integrity: sha512-StEy2osPr28o17bIW776GtwO6+Q+M9zPiZkYfosciUUMYqjhU/ffwRAH0zN2+uvGyUsn8/YICIHRzLbPacpZGw==}
@@ -14022,7 +14085,7 @@ packages:
       react: ^16.6.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@babel/runtime': 7.18.9
+      '@babel/runtime': 7.20.6
       invariant: 2.2.4
       prop-types: 15.8.1
       react: 18.2.0
@@ -14037,7 +14100,7 @@ packages:
       react: ^16.6.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@babel/runtime': 7.18.9
+      '@babel/runtime': 7.20.6
       invariant: 2.2.4
       prop-types: 15.8.1
       react: 18.1.0

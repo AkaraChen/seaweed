@@ -7,12 +7,12 @@ export default class Spoiler extends LitElement {
     static override styles = styles;
 
     @property()
-        event: 'hover'| 'click' = 'click';
+        event: 'hover' | 'click' = 'click';
 
     @state()
         clear = false;
 
-    handler(event: 'hover'|'click') {
+    handler(event: 'hover' | 'click') {
         if (event === this.event) {
             this.clear = !this.clear;
         }
@@ -27,8 +27,8 @@ export default class Spoiler extends LitElement {
 
     override render() {
         return html`
-            <span class=${this.clear ? '' : 'blur'}>
-            <slot></slot>
+          <span class=${this.clear ? '' : 'blur'}>
+              <slot></slot>
           </span>
         `;
     }
@@ -36,6 +36,6 @@ export default class Spoiler extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-spoiler': Spoiler
+        'sw-spoiler': Spoiler;
     }
 }

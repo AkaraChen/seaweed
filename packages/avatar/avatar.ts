@@ -34,19 +34,23 @@ export class Avatar extends LitElement {
         return 50;
     }
 
-    classNames = () =>
-        clsx({rounded: this.rounded});
+    classNames = () => clsx({rounded: this.rounded});
 
     override render() {
         const size = this.getSize();
         return html`
-          <img src=${this.src} height=${size} width=${size} class=${this.classNames()} />
+          <img
+              src=${this.src}
+              height=${size}
+              width=${size}
+              class=${this.classNames()}
+          />
         `;
     }
 }
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-avatar': Avatar
+        'sw-avatar': Avatar;
     }
 }

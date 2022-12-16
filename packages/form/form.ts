@@ -19,7 +19,7 @@ export class Form extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-form': Form
+        'sw-form': Form;
     }
 }
 
@@ -33,9 +33,8 @@ export class FormItem extends LitElement {
     @property()
         size: size;
 
-    classNames = () => clsx(
-        `size-${this.size || getFormSize(this) || 'normal'}`
-    );
+    classNames = () =>
+        clsx(`size-${this.size || getFormSize(this) || 'normal'}`);
 
     override render() {
         const label = this.label ? html`<span>${this.label}:</span>` : nothing;
@@ -50,6 +49,6 @@ export class FormItem extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-form-item': FormItem
+        'sw-form-item': FormItem;
     }
 }

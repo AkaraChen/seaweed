@@ -45,17 +45,17 @@ export class Switch extends LitElement {
 
     override render() {
         return html`
-            <label class=${this.classNames()}>
-                <input
-                    type="checkbox"
-                    @input=${this.handler}
-                    ?checked=${this.checked}
-                    ?disabled=${this.disabled}
-                    id="switch"
-                />
-                <span class="slider"></span>
-            </label>
-            <label for="switch" class="slot">
+          <label class=${this.classNames()}>
+              <input
+                  type="checkbox"
+                  @input=${this.handler}
+                  ?checked=${this.checked}
+                  ?disabled=${this.disabled}
+                  id="switch"
+              />
+              <span class="slider"></span>
+          </label>
+          <label for="switch" class="slot">
               <slot></slot>
           </label>
         `;
@@ -64,6 +64,6 @@ export class Switch extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-switch': Switch
+        'sw-switch': Switch;
     }
 }

@@ -22,10 +22,9 @@ export class CheckBox extends LitElement {
         rounded = false;
 
     classNames = () =>
-        clsx(
-            `size-${this.size || getFormSize(this) || 'normal'}`,
-            {rounded: this.rounded}
-        );
+        clsx(`size-${this.size || getFormSize(this) || 'normal'}`, {
+            rounded: this.rounded
+        });
 
     get value() {
         return this.shadowRoot.querySelector('input').checked;
@@ -43,15 +42,15 @@ export class CheckBox extends LitElement {
     override render() {
         return html`
           <label for="checkbox" class=${this.classNames()}>
-            <input
-              type="checkbox"
-              @input=${this.handler}
-              ?disabled=${this.disabled}
-              ?checked=${this.checked}
-              id="checkbox"
-              name="checkbox"
-            />
-            <span><slot></slot></span>
+              <input
+                  type="checkbox"
+                  @input=${this.handler}
+                  ?disabled=${this.disabled}
+                  ?checked=${this.checked}
+                  id="checkbox"
+                  name="checkbox"
+              />
+              <span><slot></slot></span>
           </label>
         `;
     }
@@ -59,6 +58,6 @@ export class CheckBox extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-checkbox': CheckBox
+        'sw-checkbox': CheckBox;
     }
 }

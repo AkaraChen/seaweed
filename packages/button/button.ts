@@ -72,6 +72,6 @@ export class Button extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-button': Button
+        'sw-button': Button;
     }
 }

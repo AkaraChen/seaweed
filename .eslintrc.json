@@ -1,16 +1,18 @@
 {
-    "extends": ["akrc", "plugin:lit/recommended", "plugin:wc/recommended"],
-    "rules": {
-        "default-case": "off",
-        "max-classes-per-file": "off",
-        "no-unused-vars": "off"
-    },
+    "extends": ["akrc", "plugin:lit/recommended", "plugin:wc/recommended", "prettier"],
     "overrides": [
         {
-            "files": ["./packages/**/__test__/*.ts"],
+            "files": "./packages/**/__test__/*.ts",
             "rules": {
                 "no-undef": "off"
             }
         }
-    ]
+    ],
+    "rules": {
+        "default-case": "off",
+        "max-classes-per-file": "off",
+        "no-unused-vars": "off",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off"
+    }
 }

@@ -3,8 +3,7 @@ import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
 import {type} from 'shared/type';
 import {
-    ErrorRound, InfoRound, SuccessRound, WarningRound
-} from 'shared/icon';
+ErrorRound, InfoRound, SuccessRound, WarningRound} from 'shared/icon';
 import {styles} from './alert.less';
 
 @customElement('sw-alert')
@@ -57,7 +56,9 @@ export class Alert extends LitElement {
           <div class=${this.classNames()}>
               <div class="icon-container">${this.iconHTML()}</div>
               <div>
-                  ${this.title ? html`<div class="title">${this.title}</div>` : nothing}
+                  ${this.title
+        ? html`<div class="title">${this.title}</div>`
+        : nothing}
                   <slot></slot>
               </div>
           </div>
@@ -67,6 +68,6 @@ export class Alert extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-alert': Alert
+        'sw-alert': Alert;
     }
 }

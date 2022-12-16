@@ -32,6 +32,6 @@ export class Loading extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-loading': Loading
+        'sw-loading': Loading;
     }
 }

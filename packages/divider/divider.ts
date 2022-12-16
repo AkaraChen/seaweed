@@ -23,23 +23,26 @@ export class Divider extends LitElement {
     @property({type: Boolean})
         dotted: boolean;
 
-    classNames = () => clsx(
-        'divider',
-        {[`position-${this.position}`]: postionArray.includes(this.position)},
-        {vertical: this.vertical},
-        {dashed: this.dashed},
-        {dotted: this.dotted},
-        {empty: this.text.length === 0}
-    );
+    classNames = () =>
+        clsx(
+            'divider',
+            {
+                [`position-${this.position}`]: postionArray.includes(
+                    this.position
+                )
+            },
+            {vertical: this.vertical},
+            {dashed: this.dashed},
+            {dotted: this.dotted},
+            {empty: this.text.length === 0}
+        );
 
     override render() {
         return html`
           <div class=${this.classNames()}>
-            <div class='left-box'></div>
-                <div class='center-box'>
-                    ${this.text}
-                </div>
-            <div class='right-box'></div>
+              <div class="left-box"></div>
+              <div class="center-box">${this.text}</div>
+              <div class="right-box"></div>
           </div>
         `;
     }
@@ -47,6 +50,6 @@ export class Divider extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-divider': Divider
+        'sw-divider': Divider;
     }
 }

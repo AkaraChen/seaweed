@@ -32,7 +32,7 @@ export class Link extends LitElement {
 
     override connectedCallback() {
         super.connectedCallback();
-        this.addEventListener('click', (event:Event) => {
+        this.addEventListener('click', (event: Event) => {
             if (this.disabled) {
                 event.preventDefault();
             }
@@ -54,6 +54,6 @@ export class Link extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-link': Link
+        'sw-link': Link;
     }
 }

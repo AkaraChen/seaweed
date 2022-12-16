@@ -45,15 +45,16 @@ export class LinkCard extends LitElement {
                   <h2 class="title">${this.title}</h2>
                   <p class="link">${this.formatLink()}</p>
               </div>
-              ${this.image && html`
-                <img
-                    src=${this.image}
-                    height="55"
-                    width="55"
-                    alt=${this.alt ?? this.formatLink()}
-                    class="image"
-                />
-              `}
+              ${this.image
+                && html`
+                  <img
+                      src=${this.image}
+                      height="55"
+                      width="55"
+                      alt=${this.alt ?? this.formatLink()}
+                      class="image"
+                  />
+                `}
           </a>
         `;
     }
@@ -61,6 +62,6 @@ export class LinkCard extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        'sw-link-card': LinkCard
+        'sw-link-card': LinkCard;
     }
 }

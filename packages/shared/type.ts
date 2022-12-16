@@ -8,4 +8,4 @@ export const postionArray = ['left', 'medium', 'right'] as const;
 export type size = TupleToUnion<typeof sizeArray>;
 export type type = TupleToUnion<typeof typeArray>;
 export type target = TupleToUnion<typeof targetArray>;
-export type position = TupleToUnion<typeof postionArray>
+export type position = TupleToUnion<typeof postionArray>;
