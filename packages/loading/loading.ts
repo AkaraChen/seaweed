@@ -8,24 +8,24 @@ export class Loading extends LitElement {
     static override styles = styles;
 
     @property()
-        size = '24px';
+    size = '24px';
 
     @property()
-        color = '#bbb';
+    color = '#bbb';
 
     override render() {
         return html`
-          <style>
-              :host {
-                  height: ${this.size};
-              }
-              svg {
-                  width: ${this.size};
-                  height: ${this.size};
-                  color: ${this.color};
-              }
-          </style>
-          ${loadingAlt}
+            <style>
+                :host {
+                    height: ${this.size};
+                }
+                svg {
+                    width: ${this.size};
+                    height: ${this.size};
+                    color: ${this.color};
+                }
+            </style>
+            ${loadingAlt}
         `;
     }
 }

@@ -16,19 +16,19 @@ export class LinkCard extends LitElement {
     static override styles = [styles];
 
     @property()
-        title: string;
+    title: string;
 
     @property()
-        link: string;
+    link: string;
 
     @property()
-        image: string;
+    image: string;
 
     @property()
-        target: target;
+    target: target;
 
     @property()
-        alt: string;
+    alt: string;
 
     formatLink = () => {
         try {
@@ -40,22 +40,22 @@ export class LinkCard extends LitElement {
 
     override render() {
         return html`
-          <a href="${this.link}" target="${this.target}">
-              <div class="head">
-                  <h2 class="title">${this.title}</h2>
-                  <p class="link">${this.formatLink()}</p>
-              </div>
-              ${this.image
-                && html`
-                  <img
-                      src=${this.image}
-                      height="55"
-                      width="55"
-                      alt=${this.alt ?? this.formatLink()}
-                      class="image"
-                  />
+            <a href="${this.link}" target="${this.target}">
+                <div class="head">
+                    <h2 class="title">${this.title}</h2>
+                    <p class="link">${this.formatLink()}</p>
+                </div>
+                ${this.image &&
+                html`
+                    <img
+                        src=${this.image}
+                        height="55"
+                        width="55"
+                        alt=${this.alt ?? this.formatLink()}
+                        class="image"
+                    />
                 `}
-          </a>
+            </a>
         `;
     }
 }

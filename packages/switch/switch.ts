@@ -11,16 +11,16 @@ export class Switch extends LitElement {
     static override styles = styles;
 
     @property({type: Boolean})
-        checked = false;
+    checked = false;
 
     @property({type: Boolean})
-        disabled: boolean;
+    disabled: boolean;
 
     @property()
-        size: size;
+    size: size;
 
     @property({type: Boolean})
-        loading = false;
+    loading = false;
 
     get value() {
         return this.shadowRoot.querySelector('input').checked;
@@ -45,19 +45,19 @@ export class Switch extends LitElement {
 
     override render() {
         return html`
-          <label class=${this.classNames()}>
-              <input
-                  type="checkbox"
-                  @input=${this.handler}
-                  ?checked=${this.checked}
-                  ?disabled=${this.disabled}
-                  id="switch"
-              />
-              <span class="slider"></span>
-          </label>
-          <label for="switch" class="slot">
-              <slot></slot>
-          </label>
+            <label class=${this.classNames()}>
+                <input
+                    type="checkbox"
+                    @input=${this.handler}
+                    ?checked=${this.checked}
+                    ?disabled=${this.disabled}
+                    id="switch"
+                />
+                <span class="slider"></span>
+            </label>
+            <label for="switch" class="slot">
+                <slot></slot>
+            </label>
         `;
     }
 }

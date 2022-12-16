@@ -7,10 +7,10 @@ export default class Spoiler extends LitElement {
     static override styles = styles;
 
     @property()
-        event: 'hover' | 'click' = 'click';
+    event: 'hover' | 'click' = 'click';
 
     @state()
-        clear = false;
+    clear = false;
 
     handler(event: 'hover' | 'click') {
         if (event === this.event) {
@@ -27,9 +27,9 @@ export default class Spoiler extends LitElement {
 
     override render() {
         return html`
-          <span class=${this.clear ? '' : 'blur'}>
-              <slot></slot>
-          </span>
+            <span class=${this.clear ? '' : 'blur'}>
+                <slot></slot>
+            </span>
         `;
     }
 }

@@ -9,13 +9,13 @@ export class Card extends LitElement {
     static override styles = styles;
 
     @property()
-        size: size = 'normal';
+    size: size = 'normal';
 
     @property()
-        title = '';
+    title = '';
 
     @property({type: Boolean})
-        noborder: false;
+    noborder: false;
 
     classNames = () =>
         clsx(
@@ -26,12 +26,12 @@ export class Card extends LitElement {
 
     render() {
         return html`
-          <div class=${this.classNames()}>
-              ${this.title === ''
-                ? nothing
-                : html`<div class="title">${this.title}</div>`}
-              <slot></slot>
-          </div>
+            <div class=${this.classNames()}>
+                ${this.title === ''
+                    ? nothing
+                    : html`<div class="title">${this.title}</div>`}
+                <slot></slot>
+            </div>
         `;
     }
 }

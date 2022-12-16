@@ -9,19 +9,19 @@ export class Divider extends LitElement {
     static override styles = styles;
 
     @property()
-        text: string = '';
+    text: string = '';
 
     @property()
-        position: position = 'medium';
+    position: position = 'medium';
 
     @property({type: Boolean})
-        vertical: boolean;
+    vertical: boolean;
 
     @property({type: Boolean})
-        dashed: boolean;
+    dashed: boolean;
 
     @property({type: Boolean})
-        dotted: boolean;
+    dotted: boolean;
 
     classNames = () =>
         clsx(
@@ -29,7 +29,7 @@ export class Divider extends LitElement {
             {
                 [`position-${this.position}`]: postionArray.includes(
                     this.position
-                )
+                ),
             },
             {vertical: this.vertical},
             {dashed: this.dashed},
@@ -39,11 +39,11 @@ export class Divider extends LitElement {
 
     override render() {
         return html`
-          <div class=${this.classNames()}>
-              <div class="left-box"></div>
-              <div class="center-box">${this.text}</div>
-              <div class="right-box"></div>
-          </div>
+            <div class=${this.classNames()}>
+                <div class="left-box"></div>
+                <div class="center-box">${this.text}</div>
+                <div class="right-box"></div>
+            </div>
         `;
     }
 }

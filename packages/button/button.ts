@@ -10,42 +10,42 @@ export class Button extends LitElement {
     static override styles = styles;
 
     @property({type: Boolean})
-        primary = false;
+    primary = false;
 
     @property({type: Boolean})
-        secondary = false;
+    secondary = false;
 
     @property({type: Boolean})
-        ghost = false;
+    ghost = false;
 
     @property()
-        size: size = 'normal';
+    size: size = 'normal';
 
     @property()
-        type: type = 'info';
+    type: type = 'info';
 
     @property({type: Boolean})
-        loading = false;
+    loading = false;
 
     @property({type: Boolean})
-        disabled = false;
+    disabled = false;
 
     @property({type: Boolean})
-        rounded = false;
+    rounded = false;
 
     loadingIcon = () => {
         const sizeString = this.size === 'small' ? '14px' : '18px';
         const color = this.primary ? '#fff' : '#666';
         return html`
-          <style>
-              sw-loading {
-                  margin-right: 0.5em;
-              }
-              button.size-small sw-loading {
-                  margin-right: 0.25em;
-              }
-          </style>
-          <sw-loading size=${sizeString} color=${color}></sw-loading>
+            <style>
+                sw-loading {
+                    margin-right: 0.5em;
+                }
+                button.size-small sw-loading {
+                    margin-right: 0.25em;
+                }
+            </style>
+            <sw-loading size=${sizeString} color=${color}></sw-loading>
         `;
     };
 
@@ -62,10 +62,10 @@ export class Button extends LitElement {
 
     override render() {
         return html`
-          <button class=${this.classNames()} ?disabled=${this.disabled}>
-              ${this.loading ? this.loadingIcon() : nothing}
-              <p><slot></slot></p>
-          </button>
+            <button class=${this.classNames()} ?disabled=${this.disabled}>
+                ${this.loading ? this.loadingIcon() : nothing}
+                <p><slot></slot></p>
+            </button>
         `;
     }
 }

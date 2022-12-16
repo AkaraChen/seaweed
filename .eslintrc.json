@@ -13,6 +13,9 @@
         "max-classes-per-file": "off",
         "no-unused-vars": "off",
         "arrow-body-style": "off",
-        "prefer-arrow-callback": "off"
-    }
+        "prefer-arrow-callback": "off",
+        "prettier/prettier": "error",
+        "unicorn/template-indent": "off"
+    },
+    "plugins": ["prettier"]
 }
