@@ -29,7 +29,7 @@ export class Divider extends LitElement {
             {
                 [`position-${this.position}`]: postionArray.includes(
                     this.position
-                ),
+                )
             },
             {vertical: this.vertical},
             {dashed: this.dashed},

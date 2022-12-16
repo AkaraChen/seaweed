@@ -31,7 +31,7 @@ export class Input extends LitElement {
             {
                 [`type-${this.type}`]: [...typeArray, 'normal'].includes(
                     this.type
-                ),
+                )
             },
             `size-${this.size || getFormSize(this) || 'normal'}`
         );

@@ -22,7 +22,7 @@ export class Avatar extends LitElement {
         const sizeMap = {
             small: 28,
             normal: 34,
-            large: 40,
+            large: 40
         };
         if (typeof this.size === 'string' && sizeArray.includes(this.size)) {
             return sizeMap[this.size];
