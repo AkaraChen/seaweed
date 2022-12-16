@@ -26,12 +26,15 @@ export class Link extends LitElement {
     classNames = () =>
         clsx(
             {disabled: this.disabled},
+
             {underline: this.underline && !this.disabled},
+
             {[`type-${this.type}`]: typeArray.includes(this.type)}
         );
 
     override connectedCallback() {
         super.connectedCallback();
+
         this.addEventListener('click', (event: Event) => {
             if (this.disabled) {
                 event.preventDefault();
