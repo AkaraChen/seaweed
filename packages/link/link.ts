@@ -26,9 +26,7 @@ export class Link extends LitElement {
     classNames = () =>
         clsx(
             {disabled: this.disabled},
-
             {underline: this.underline && !this.disabled},
-
             {[`type-${this.type}`]: typeArray.includes(this.type)}
         );
 

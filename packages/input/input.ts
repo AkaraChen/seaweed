@@ -42,9 +42,11 @@ export class Input extends LitElement {
     };
 
     override render() {
-        return html`<input class=${this.classNames()} placeholder=${
-            this.placeholder
-        } @input=${this.handler}></input>`;
+        return html`<input
+            class=${this.classNames()}
+            placeholder=${this.placeholder}
+            @input=${this.handler}
+        />`;
     }
 }
 

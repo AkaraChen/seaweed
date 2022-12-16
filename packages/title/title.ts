@@ -1,5 +1,6 @@
 import {LitElement, html} from 'lit';
 import {property, customElement} from 'lit/decorators.js';
+import {styleMap} from 'lit/directives/style-map.js';
 import clsx from 'clsx';
 import {styles} from './title.less';
 import {getSize, isValidColor} from 'shared/style';
@@ -34,10 +35,11 @@ export class Title extends LitElement {
 
     render() {
         const color = isValidColor(this.color) ? this.color : '';
-        return html`<p
-            class=${this.classnames()}
-            style="font-size: ${getSize(this.size)};color: ${color}"
-        >
+        const style = {
+            fontSize: getSize(this.size),
+            color: color
+        };
+        return html`<p class=${this.classnames()} style=${styleMap(style)}>
             <slot></slot>
         </p>`;
     }
