@@ -9,7 +9,7 @@ import {getFormSize} from 'shared/form';
 @customElement('sw-form')
 export class Form extends LitElement {
     @property()
-        size: size = 'normal';
+    size: size = 'normal';
 
     // eslint-disable-next-line class-methods-use-this
     override render() {
@@ -28,10 +28,10 @@ export class FormItem extends LitElement {
     static override styles = itemStyles;
 
     @property()
-        label: string;
+    label: string;
 
     @property()
-        size: size;
+    size: size;
 
     classNames = () =>
         clsx(`size-${this.size || getFormSize(this) || 'normal'}`);

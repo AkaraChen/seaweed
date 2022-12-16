@@ -10,19 +10,19 @@ export class Badge extends LitElement {
     static override styles = styles;
 
     @property()
-        type: type | 'normal' = 'normal';
+    type: type | 'normal' = 'normal';
 
     @property({type: Boolean})
-        noborder = false;
+    noborder = false;
 
     @property({type: Boolean})
-        disabled = false;
+    disabled = false;
 
     @property({type: Boolean})
-        rounded = false;
+    rounded = false;
 
     @property({type: Boolean})
-        closable = false;
+    closable = false;
 
     handler = () => {
         if (!this.disabled) this.dispatchEvent(new CustomEvent('close'));

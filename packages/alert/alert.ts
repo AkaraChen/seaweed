@@ -11,19 +11,19 @@ export class Alert extends LitElement {
     static override styles = styles;
 
     @property()
-        title: string;
+    title: string;
 
     @property()
-        type: type = 'info';
+    type: type = 'info';
 
     @property({type: Boolean})
-        fill = false;
+    fill = false;
 
     @property()
-        border: 'none' | 'top' | 'left' = 'none';
+    border: 'none' | 'top' | 'left' = 'none';
 
     @property({type: Boolean})
-        outline = false;
+    outline = false;
 
     iconHTML() {
         switch (this.type) {
@@ -57,8 +57,8 @@ export class Alert extends LitElement {
               <div class="icon-container">${this.iconHTML()}</div>
               <div>
                   ${this.title
-        ? html`<div class="title">${this.title}</div>`
-        : nothing}
+                    ? html`<div class="title">${this.title}</div>`
+                    : nothing}
                   <slot></slot>
               </div>
           </div>

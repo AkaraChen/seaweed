@@ -10,13 +10,13 @@ export class Avatar extends LitElement {
     static override styles = styles;
 
     @property()
-        src: string;
+    src: string;
 
     @property()
-        size: size | number = 'normal';
+    size: size | number = 'normal';
 
     @property({type: Boolean})
-        rounded: boolean;
+    rounded: boolean;
 
     getSize() {
         const sizeMap = {
