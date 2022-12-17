@@ -15,12 +15,15 @@ if (!isDevelopment) rimraf.sync('./dist');
 const packagesNames = fg
     .sync('./packages/*', {onlyDirectories: true})
     .map((item) => item.slice('./packages/'.length))
-    .filter((item) => !['shared', 'index'].includes(item));
+    .filter((item) => !['shared'].includes(item));
 
 fs.writeFileSync(
-    './packages/index/index.ts',
+    './index.ts',
     packagesNames
-        .map((packageName) => `import '../${packageName}/${packageName}';\n`)
+        .map(
+            (packageName) =>
+                `import './packages/${packageName}/${packageName}';\n`
+        )
         .join('')
 );
 
@@ -37,7 +40,7 @@ const plugins = isDevelopment
       ];
 
 export default defineConfig({
-    input: [...packages, './packages/index/index.ts'],
+    input: [...packages, './index.ts'],
     output: {
         dir: 'dist',
         chunkFileNames: 'chunk/[hash].js',

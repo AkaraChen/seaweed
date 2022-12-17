@@ -1,0 +1,17 @@
+import './packages/alert/alert';
+import './packages/avatar/avatar';
+import './packages/badge/badge';
+import './packages/breadcrumb/breadcrumb';
+import './packages/button/button';
+import './packages/card/card';
+import './packages/checkbox/checkbox';
+import './packages/divider/divider';
+import './packages/form/form';
+import './packages/input/input';
+import './packages/link/link';
+import './packages/linkcard/linkcard';
+import './packages/loading/loading';
+import './packages/progress/progress';
+import './packages/spoiler/spoiler';
+import './packages/switch/switch';
+import './packages/title/title';
