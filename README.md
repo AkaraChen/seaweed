@@ -25,7 +25,7 @@ pnpm add @akrc/seaweed
 
 ```ts
 // import manually
-import "@akrc/seaweed/button.js";
+import "@akrc/seaweed/button";
 
 // or you can full import
 import "@akrc/seaweed";
@@ -38,13 +38,12 @@ import "@akrc/seaweed";
 ## Development
 
 ```bash
-yarn
-yarn storybook
+pnpm i
+pnpm start
 ```
 
 ## Build
 
 ```bash
-yarn
-yarn build
+pnpm build
 ```
