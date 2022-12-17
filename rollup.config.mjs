@@ -17,11 +17,12 @@ const packagesNames = fg
     .map((item) => item.slice('./packages/'.length))
     .filter((item) => !['shared', 'index'].includes(item));
 
-let index = '';
-for (const packagesName of packagesNames) {
-    index += `import '../${packagesName}/${packagesName}';\n`;
-}
-fs.writeFileSync('./packages/index/index.ts', index);
+fs.writeFileSync(
+    './packages/index/index.ts',
+    packagesNames
+        .map((packageName) => `import '../${packageName}/${packageName}';\n`)
+        .join('')
+);
 
 const packages = packagesNames.map((item) => `./packages/${item}/${item}.ts`);
 
