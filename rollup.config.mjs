@@ -14,20 +14,20 @@ if (!isDevelopment) rimraf.sync('./dist');
 
 const packagesNames = fg
     .sync('./packages/*', {onlyDirectories: true})
-    .map((item) => item.slice('./packages/'.length))
-    .filter((item) => !['shared'].includes(item));
+    .map(item => item.slice('./packages/'.length))
+    .filter(item => !['shared'].includes(item));
 
 fs.writeFileSync(
     './index.ts',
     packagesNames
         .map(
-            (packageName) =>
+            packageName =>
                 `import './packages/${packageName}/${packageName}';\n`
         )
         .join('')
 );
 
-const packages = packagesNames.map((item) => `./packages/${item}/${item}.ts`);
+const packages = packagesNames.map(item => `./packages/${item}/${item}.ts`);
 
 const plugins = isDevelopment
     ? [litcssPlugin, resolve({extensions: ['.mjs', '.js', '.ts']}), esbuild()]
