@@ -23,6 +23,9 @@ export class Divider extends LitElement {
     @property({type: Boolean})
     dotted: boolean;
 
+    @property({type: Boolean})
+    slash: boolean;
+
     classNames = () =>
         clsx(
             'divider',
@@ -31,10 +34,11 @@ export class Divider extends LitElement {
                     this.position
                 )
             },
-            {vertical: this.vertical},
+            {vertical: this.vertical || this.slash},
             {dashed: this.dashed},
             {dotted: this.dotted},
-            {empty: this.text.length === 0}
+            {empty: this.text.length === 0},
+            {slash: this.slash}
         );
 
     override render() {

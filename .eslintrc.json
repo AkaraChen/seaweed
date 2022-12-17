@@ -15,7 +15,8 @@
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
         "prettier/prettier": "error",
-        "unicorn/template-indent": "off"
+        "unicorn/template-indent": "off",
+        "class-methods-use-this": "warn"
     },
     "plugins": ["prettier"]
 }
