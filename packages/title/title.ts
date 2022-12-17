@@ -44,3 +44,9 @@ export class Title extends LitElement {
         </p>`;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-title': Title;
+    }
+}

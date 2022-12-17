@@ -48,6 +48,12 @@ export class Breadcrumb extends LitElement {
     }
 }
 
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-breadcrumb': Breadcrumb;
+    }
+}
+
 @customElement('sw-breadcrumb-item')
 export class BreadcrumbItem extends LitElement {
     static override styles = styles;
@@ -61,5 +67,11 @@ export class BreadcrumbItem extends LitElement {
         return html`<li class=${this.classNames()}>
             <span><slot></slot></span>
         </li>`;
+    }
+}
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-breadcrumb-item': BreadcrumbItem;
     }
 }
