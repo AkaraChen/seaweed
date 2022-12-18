@@ -34,6 +34,7 @@ export class Breadcrumb extends LitElement {
                     element.nextElementSibling
                 );
             }
+            // eslint-disable-next-line no-use-before-define
             const last = elements.at(-1) as BreadcrumbItem;
             last.active = true;
         });
