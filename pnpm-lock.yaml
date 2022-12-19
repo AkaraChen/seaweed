@@ -21,7 +21,7 @@ importers:
       eslint: 8.30.0
       eslint-config-akrc: 0.0.10
       eslint-config-prettier: ^8.5.0
-      eslint-plugin-lit: ^1.7.1
+      eslint-plugin-lit: ^1.7.2
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-unicorn: ^45.0.2
       eslint-plugin-vue: ^9.8.0
@@ -55,7 +55,7 @@ importers:
       tslib: 2.4.1
       type-fest: 3.4.0
       typescript: 4.9.4
-      vite: ^4.0.1
+      vite: ^4.0.2
       vitest: 0.25.8
     devDependencies:
       '@open-wc/testing': 3.1.7
@@ -75,7 +75,7 @@ importers:
       eslint: 8.30.0
       eslint-config-akrc: 0.0.10
       eslint-config-prettier: 8.5.0_eslint@8.30.0
-      eslint-plugin-lit: 1.7.1_eslint@8.30.0
+      eslint-plugin-lit: 1.7.2_eslint@8.30.0
       eslint-plugin-prettier: 4.2.1_kl4pe43v5b43npmso5hoplpbyi
       eslint-plugin-unicorn: 45.0.2_eslint@8.30.0
       eslint-plugin-vue: 9.8.0_eslint@8.30.0
@@ -109,7 +109,7 @@ importers:
       tslib: 2.4.1
       type-fest: 3.4.0
       typescript: 4.9.4
-      vite: 4.0.1_iunaqkf63tnpunoqppkwbqseiu
+      vite: 4.0.2_iunaqkf63tnpunoqppkwbqseiu
       vitest: 0.25.8_happy-dom@8.1.0+less@4.1.3
 
   internal/dumi:
@@ -2251,7 +2251,7 @@ packages:
       lru-cache: 6.0.0
       mkdirp: 1.0.4
       npm-pick-manifest: 6.1.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       promise-retry: 2.0.1
       semver: 7.3.8
       which: 2.0.2
@@ -4857,6 +4857,7 @@ packages:
 
   /bluebird/3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
+    dev: false
 
   /bn.js/4.12.0:
     resolution: {integrity: sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==}
@@ -5118,7 +5119,7 @@ packages:
       mississippi: 2.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 5.3.0
       unique-filename: 1.1.1
@@ -5142,7 +5143,7 @@ packages:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
       tar: 6.1.13
@@ -5188,7 +5189,7 @@ packages:
       mississippi: 1.3.1
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 4.1.6
       unique-filename: 1.1.1
@@ -7316,8 +7317,8 @@ packages:
       - typescript
     dev: false
 
-  /eslint-plugin-lit/1.7.1_eslint@8.30.0:
-    resolution: {integrity: sha512-25rB2FPesP/b1aadT18tNKV3POkSey4IQmSgKd238Pv163S0RO5J67Nzim8L7xq0KE9jGPjfgyOivyXZ0vN4vQ==}
+  /eslint-plugin-lit/1.7.2_eslint@8.30.0:
+    resolution: {integrity: sha512-vkz9KvwVfHg7yDQCmokLGzUDypg683miswSw5xBiTszv4Qyus5/CgAK7U7dMgbVBa8G5wxHedY2zr9VCMNTaPQ==}
     engines: {node: '>= 12'}
     peerDependencies:
       eslint: '>= 5'
@@ -12389,7 +12390,7 @@ packages:
       npm-package-arg: 5.1.2
       npm-pick-manifest: 1.0.4
       osenv: 0.1.5
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       promise-retry: 1.1.1
       protoduck: 4.0.0
       safe-buffer: 5.2.1
@@ -13565,17 +13566,6 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
-    dev: true
-
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
 
   /promise-retry/1.1.1:
     resolution: {integrity: sha512-StEy2osPr28o17bIW776GtwO6+Q+M9zPiZkYfosciUUMYqjhU/ffwRAH0zN2+uvGyUsn8/YICIHRzLbPacpZGw==}
@@ -16509,8 +16499,8 @@ packages:
       vfile-message: 3.1.3
     dev: false
 
-  /vite/4.0.1_iunaqkf63tnpunoqppkwbqseiu:
-    resolution: {integrity: sha512-kZQPzbDau35iWOhy3CpkrRC7It+HIHtulAzBhMqzGHKRf/4+vmh8rPDDdv98SWQrFWo6//3ozwsRmwQIPZsK9g==}
+  /vite/4.0.2_iunaqkf63tnpunoqppkwbqseiu:
+    resolution: {integrity: sha512-QJaY3R+tFlTagH0exVqbgkkw45B+/bXVBzF2ZD1KB5Z8RiAoiKo60vSUf6/r4c2Vh9jfGBKM4oBI9b4/1ZJYng==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -16580,7 +16570,7 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.0
       tinyspy: 1.0.2
-      vite: 4.0.1_iunaqkf63tnpunoqppkwbqseiu
+      vite: 4.0.2_iunaqkf63tnpunoqppkwbqseiu
     transitivePeerDependencies:
       - less
       - sass
