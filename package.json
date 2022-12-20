@@ -27,8 +27,8 @@
         "@types/node": "^18.11.17",
         "@types/postcss-less": "^4.0.2",
         "@types/rimraf": "^3.0.2",
-        "@typescript-eslint/eslint-plugin": "5.46.1",
-        "@typescript-eslint/parser": "5.46.1",
+        "@typescript-eslint/eslint-plugin": "5.47.0",
+        "@typescript-eslint/parser": "5.47.0",
         "@wordpress/stylelint-config": "^21.6.0",
         "clsx": "^1.2.1",
         "cross-env": "^7.0.3",
@@ -71,7 +71,7 @@
         "type-fest": "3.4.0",
         "typescript": "4.9.4",
         "vite": "^4.0.2",
-        "vitest": "0.25.8"
+        "vitest": "0.26.0"
     },
     "files": [
         "dist"
