@@ -35,3 +35,15 @@ export class Card extends LitElement {
         `;
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'sw-card': Card;
+    }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-card': Card;
+        }
+    }
+}

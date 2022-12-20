@@ -21,6 +21,12 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-form': Form;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-form': Form;
+        }
+    }
 }
 
 @customElement('sw-form-item')
@@ -50,5 +56,11 @@ export class FormItem extends LitElement {
 declare global {
     interface HTMLElementTagNameMap {
         'sw-form-item': FormItem;
+    }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-form-item': FormItem;
+        }
     }
 }

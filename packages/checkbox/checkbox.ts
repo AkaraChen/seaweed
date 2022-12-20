@@ -60,4 +60,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-checkbox': CheckBox;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-checkbox': CheckBox;
+        }
+    }
 }

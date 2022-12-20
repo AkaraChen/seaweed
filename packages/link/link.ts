@@ -57,4 +57,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-link': Link;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-link': Link;
+        }
+    }
 }

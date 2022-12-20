@@ -49,4 +49,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-title': Title;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-title': Title;
+        }
+    }
 }

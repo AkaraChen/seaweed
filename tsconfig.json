@@ -8,7 +8,8 @@
         "esModuleInterop": true,
         "module": "ES6",
         "skipLibCheck": true,
-        "types": ["vitest/globals"]
+        "types": ["vitest/globals"],
+        "declaration": true
     },
     "include": ["./packages/**/*.ts", "environment.d.ts", "index.ts"],
 }

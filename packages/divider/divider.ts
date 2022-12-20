@@ -56,4 +56,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-divider': Divider;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-divider': Divider;
+        }
+    }
 }

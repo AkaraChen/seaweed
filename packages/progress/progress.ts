@@ -48,4 +48,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-progress': Progress;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-progress': Progress;
+        }
+    }
 }

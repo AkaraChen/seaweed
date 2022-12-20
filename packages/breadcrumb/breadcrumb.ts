@@ -53,6 +53,12 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-breadcrumb': Breadcrumb;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-breadcrumb': Breadcrumb;
+        }
+    }
 }
 
 @customElement('sw-breadcrumb-item')
@@ -74,5 +80,11 @@ export class BreadcrumbItem extends LitElement {
 declare global {
     interface HTMLElementTagNameMap {
         'sw-breadcrumb-item': BreadcrumbItem;
+    }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-breadcrumb-item': BreadcrumbItem;
+        }
     }
 }

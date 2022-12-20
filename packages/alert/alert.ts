@@ -69,4 +69,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-alert': Alert;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-alert': Alert;
+        }
+    }
 }

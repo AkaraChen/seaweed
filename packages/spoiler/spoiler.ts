@@ -38,4 +38,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-spoiler': Spoiler;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-spoiler': Spoiler;
+        }
+    }
 }

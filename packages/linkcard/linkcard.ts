@@ -64,4 +64,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-link-card': LinkCard;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-link-card': LinkCard;
+        }
+    }
 }

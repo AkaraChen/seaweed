@@ -66,4 +66,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-switch': Switch;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-switch': Switch;
+        }
+    }
 }

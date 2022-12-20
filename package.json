@@ -4,9 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "npm-run-all build:**",
-        "build:package": "rollup -c rollup.config.mjs",
-        "build:type": "tsc --declaration --emitDeclarationOnly --declarationDir ./dist/chunk",
+        "build": "rollup -c rollup.config.mjs",
         "lint": "npm-run-all lint:**",
         "lint:es": "eslint --ext .js,.ts,.tsx,.jsx,.cjs,.mjs --fix ./packages/",
         "lint:lit": "lit-analyzer packages",

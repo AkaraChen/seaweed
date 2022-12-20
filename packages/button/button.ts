@@ -74,4 +74,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-button': Button;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-button': Button;
+        }
+    }
 }

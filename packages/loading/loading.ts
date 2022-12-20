@@ -34,4 +34,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-loading': Loading;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-loading': Loading;
+        }
+    }
 }

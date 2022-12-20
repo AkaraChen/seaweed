@@ -54,4 +54,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-input': Input;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-input': Input;
+        }
+    }
 }

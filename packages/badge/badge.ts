@@ -54,4 +54,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-badge': Badge;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-badge': Badge;
+        }
+    }
 }

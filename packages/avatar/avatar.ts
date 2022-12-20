@@ -53,4 +53,10 @@ declare global {
     interface HTMLElementTagNameMap {
         'sw-avatar': Avatar;
     }
+
+    namespace JSX {
+        interface IntrinsicElements {
+            'sw-avatar': Avatar;
+        }
+    }
 }
