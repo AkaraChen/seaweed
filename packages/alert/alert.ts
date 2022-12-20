@@ -1,7 +1,7 @@
 import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
-import {type} from 'shared/type';
+import {Reactify, type} from 'shared/type';
 import {ErrorRound, InfoRound, SuccessRound, WarningRound} from 'shared/icon';
 import {styles} from './alert.less';
 
@@ -72,7 +72,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-alert': Alert;
+            'sw-alert': Reactify<Alert>;
         }
     }
 }

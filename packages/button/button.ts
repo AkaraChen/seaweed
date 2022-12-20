@@ -1,7 +1,7 @@
 import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
-import {size, type} from 'shared/type';
+import {Reactify, size, type} from 'shared/type';
 import 'loading/loading';
 import {styles} from './button.less';
 
@@ -71,13 +71,13 @@ export class Button extends LitElement {
 }
 
 declare global {
-    interface HTMLElementTagNameMap {
+    export interface HTMLElementTagNameMap {
         'sw-button': Button;
     }
 
-    namespace JSX {
+    export namespace JSX {
         interface IntrinsicElements {
-            'sw-button': Button;
+            'sw-button': Reactify<Button>;
         }
     }
 }

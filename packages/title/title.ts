@@ -4,7 +4,7 @@ import {styleMap} from 'lit/directives/style-map.js';
 import clsx from 'clsx';
 import {styles} from './title.less';
 import {getSize, isValidColor} from 'shared/style';
-import {type, typeArray} from 'shared/type';
+import {Reactify, type, typeArray} from 'shared/type';
 
 @customElement('sw-title')
 export class Title extends LitElement {
@@ -52,7 +52,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-title': Title;
+            'sw-title': Reactify<Title>;
         }
     }
 }

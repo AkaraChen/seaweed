@@ -2,7 +2,7 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from './avatar.less';
-import {size, sizeArray} from 'shared/type';
+import {Reactify, size, sizeArray} from 'shared/type';
 import clsx from 'clsx';
 
 @customElement('sw-avatar')
@@ -56,7 +56,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-avatar': Avatar;
+            'sw-avatar': Reactify<Avatar>;
         }
     }
 }

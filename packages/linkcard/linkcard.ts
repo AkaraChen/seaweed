@@ -1,7 +1,7 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from './linkcard.less';
-import {target} from 'shared/type';
+import {Reactify, target} from 'shared/type';
 
 export interface LinkCardProperty {
     title: string;
@@ -67,7 +67,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-link-card': LinkCard;
+            'sw-link-card': Reactify<LinkCard>;
         }
     }
 }

@@ -24,7 +24,7 @@ fs.writeFileSync(
     packagesNames
         .map(
             packageName =>
-                `import './packages/${packageName}/${packageName}';\n`
+                `export * from './packages/${packageName}/${packageName}';\n`
         )
         .join('')
 );

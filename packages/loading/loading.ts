@@ -1,6 +1,7 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {loadingAlt} from 'shared/icon';
+import {Reactify} from 'shared/type';
 import {styles} from './loading.less';
 
 @customElement('sw-loading')
@@ -37,7 +38,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-loading': Loading;
+            'sw-loading': Reactify<Loading>;
         }
     }
 }

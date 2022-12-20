@@ -2,7 +2,7 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
 import {styles} from './switch.less';
-import {size} from 'shared/type';
+import {Reactify, size} from 'shared/type';
 import 'loading/loading';
 import {getFormSize} from 'shared/form';
 
@@ -69,7 +69,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-switch': Switch;
+            'sw-switch': Reactify<Switch>;
         }
     }
 }

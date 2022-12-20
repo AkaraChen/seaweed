@@ -2,7 +2,7 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from './link.less';
 import clsx from 'clsx';
-import {type, typeArray} from 'shared/type';
+import {Reactify, type, typeArray} from 'shared/type';
 
 @customElement('sw-link')
 export class Link extends LitElement {
@@ -60,7 +60,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-link': Link;
+            'sw-link': Reactify<Link>;
         }
     }
 }

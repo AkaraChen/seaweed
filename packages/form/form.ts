@@ -2,7 +2,7 @@
 import {LitElement, html, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles as itemStyles} from './form_item.less';
-import {size} from 'shared/type';
+import {Reactify, size} from 'shared/type';
 import clsx from 'clsx';
 import {getFormSize} from 'shared/form';
 
@@ -24,7 +24,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-form': Form;
+            'sw-form': Reactify<Form>;
         }
     }
 }
@@ -60,7 +60,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-form-item': FormItem;
+            'sw-form-item': Reactify<FormItem>;
         }
     }
 }

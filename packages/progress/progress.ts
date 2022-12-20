@@ -3,7 +3,7 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styleMap} from 'lit/directives/style-map.js';
 import {styles} from './progress.less';
-import {typeArray, type, size, sizeArray} from 'shared/type';
+import {typeArray, type, size, sizeArray, Reactify} from 'shared/type';
 import clsx from 'clsx';
 
 @customElement('sw-progress')
@@ -51,7 +51,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-progress': Progress;
+            'sw-progress': Reactify<Progress>;
         }
     }
 }

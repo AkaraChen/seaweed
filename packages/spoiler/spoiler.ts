@@ -1,5 +1,6 @@
 import {html, LitElement} from 'lit';
 import {customElement, property, state} from 'lit/decorators.js';
+import {Reactify} from 'shared/type';
 import {styles} from './spoiler.less';
 
 @customElement('sw-spoiler')
@@ -41,7 +42,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-spoiler': Spoiler;
+            'sw-spoiler': Reactify<Spoiler>;
         }
     }
 }

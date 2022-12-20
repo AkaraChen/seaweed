@@ -2,7 +2,7 @@ import {LitElement, html, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from './card.less';
 import clsx from 'clsx';
-import {size, sizeArray} from 'shared/type';
+import {Reactify, size, sizeArray} from 'shared/type';
 
 @customElement('sw-card')
 export class Card extends LitElement {
@@ -43,7 +43,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-card': Card;
+            'sw-card': Reactify<Card>;
         }
     }
 }

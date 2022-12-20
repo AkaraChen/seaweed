@@ -1,9 +1,10 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
-import {size} from 'shared/type';
+import {Reactify, size} from 'shared/type';
 import {styles} from './checkbox.less';
 import {getFormSize} from 'shared/form';
+import {Card} from '../card/card';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {
@@ -63,7 +64,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-checkbox': CheckBox;
+            'sw-checkbox': Reactify<Card>;
         }
     }
 }

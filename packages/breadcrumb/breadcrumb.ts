@@ -4,6 +4,7 @@ import {customElement, property} from 'lit/decorators.js';
 import {styles} from './breadcrumb.less';
 import clsx from 'clsx';
 import 'divider/divider';
+import {Reactify} from 'shared/type';
 
 @customElement('sw-breadcrumb')
 export class Breadcrumb extends LitElement {
@@ -56,7 +57,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-breadcrumb': Breadcrumb;
+            'sw-breadcrumb': Reactify<Breadcrumb>;
         }
     }
 }
@@ -84,7 +85,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-breadcrumb-item': BreadcrumbItem;
+            'sw-breadcrumb-item': Reactify<BreadcrumbItem>;
         }
     }
 }

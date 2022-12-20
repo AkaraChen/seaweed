@@ -1,7 +1,7 @@
 import {html, LitElement, nothing} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import clsx from 'clsx';
-import {type} from 'shared/type';
+import {Reactify, type} from 'shared/type';
 import {styles} from './badge.less';
 import {x} from 'shared/icon';
 
@@ -57,7 +57,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-badge': Badge;
+            'sw-badge': Reactify<Badge>;
         }
     }
 }

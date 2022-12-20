@@ -2,7 +2,7 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styles} from './divider.less';
 import clsx from 'clsx';
-import {postionArray, position} from 'shared/type';
+import {postionArray, position, Reactify} from 'shared/type';
 
 @customElement('sw-divider')
 export class Divider extends LitElement {
@@ -59,7 +59,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-divider': Divider;
+            'sw-divider': Reactify<Divider>;
         }
     }
 }

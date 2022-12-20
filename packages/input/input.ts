@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {getFormSize} from 'shared/form';
-import {size, type, typeArray} from 'shared/type';
+import {Reactify, size, type, typeArray} from 'shared/type';
 import {styles} from './input.less';
 
 @customElement('sw-input')
@@ -57,7 +57,7 @@ declare global {
 
     namespace JSX {
         interface IntrinsicElements {
-            'sw-input': Input;
+            'sw-input': Reactify<Input>;
         }
     }
 }
