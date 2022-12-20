@@ -16,6 +16,6 @@
     "dev:dumi": "dumi dev",
     "prepare": "dumi setup",
     "build": "lerna run prebuild && dumi build",
-    "build:ci": "pnpm run -w build:package && dumi build"
+    "build:ci": "pnpm run -w build && dumi build"
   }
 }
