@@ -8,6 +8,7 @@ import rimraf from 'rimraf';
 import summary from 'rollup-plugin-summary';
 import {litcssPlugin} from './scripts/lit.mjs';
 import typescript from 'rollup-plugin-ts';
+import {minify} from 'rollup-plugin-esbuild';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -37,7 +38,8 @@ const plugins = isDevelopment
           MinifyHTML.default(),
           resolve({extensions: ['.mjs', '.js', '.ts']}),
           typescript({tsconfig: './tsconfig.json'}),
-          summary()
+          summary(),
+          minify()
       ];
 
 export default defineConfig({
