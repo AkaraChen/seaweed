@@ -57,7 +57,7 @@
         "prettier-plugin-html-template-literals": "^1.0.5",
         "react": "18.2.0",
         "rimraf": "^3.0.2",
-        "rollup": "3.7.5",
+        "rollup": "3.8.0",
         "rollup-plugin-esbuild": "^5.0.0",
         "rollup-plugin-filesize": "^9.1.2",
         "rollup-plugin-lit-css": "4.0.0",
