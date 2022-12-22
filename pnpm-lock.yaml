@@ -20,7 +20,7 @@ importers:
       cross-env: ^7.0.3
       esbuild: ^0.16.10
       eslint: 8.30.0
-      eslint-config-akrc: 0.0.10
+      eslint-config-akrc: 0.0.11
       eslint-config-prettier: ^8.5.0
       eslint-plugin-lit: ^1.7.2
       eslint-plugin-prettier: ^4.2.1
@@ -76,7 +76,7 @@ importers:
       cross-env: 7.0.3
       esbuild: 0.16.10
       eslint: 8.30.0
-      eslint-config-akrc: 0.0.10
+      eslint-config-akrc: 0.0.11
       eslint-config-prettier: 8.5.0_eslint@8.30.0
       eslint-plugin-lit: 1.7.2_eslint@8.30.0
       eslint-plugin-prettier: 4.2.1_kl4pe43v5b43npmso5hoplpbyi
@@ -7187,8 +7187,8 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-config-akrc/0.0.10:
-    resolution: {integrity: sha512-G/Gc+YchTG+IGCWRny6aabH9+5xTijTDNLYj460rPGPRDA0bGvoRc9x6IZPjAgLZojrQCiIwkHCp4rQ0binBWg==}
+  /eslint-config-akrc/0.0.11:
+    resolution: {integrity: sha512-Yt3D9nG8A3EFiAufCEsPUet/fGvWEko777C0Ra6WyShXGf/DdP3icjXj2Btr3UCvn8Gnfeyw3OYo1sLR9K0SUw==}
     requiresBuild: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.47.0_ncmi6noazr3nzas7jxykisekym
