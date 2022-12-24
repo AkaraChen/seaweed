@@ -13,7 +13,8 @@
         "test:package": "vitest run",
         "taze": "taze major -r -w",
         "test:type": "tsc --noEmit",
-        "start": "pnpm run -r --filter dumi dev"
+        "start": "pnpm run -r --filter dumi dev",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
     },
     "keywords": [],
     "author": "",
