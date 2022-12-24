@@ -1,25 +1,25 @@
-import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import clsx from 'clsx';
-import {Reactify, size} from 'shared/type';
-import {styles} from './checkbox.less';
-import {getFormSize} from 'shared/form';
-import {Card} from '../card/card';
+import { Reactify, size } from 'shared/type';
+import { styles } from './checkbox.less';
+import { getFormSize } from 'shared/form';
+import { Card } from '../card/card';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {
     static override styles = styles;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     checked = false;
 
     @property()
     size: size;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     disabled: boolean;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     rounded = false;
 
     classNames = () =>

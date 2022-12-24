@@ -1,9 +1,9 @@
-import {html, LitElement, nothing} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import { html, LitElement, nothing } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import clsx from 'clsx';
-import {Reactify, type} from 'shared/type';
-import {ErrorRound, InfoRound, SuccessRound, WarningRound} from 'shared/icon';
-import {styles} from './alert.less';
+import { Reactify, type } from 'shared/type';
+import { ErrorRound, InfoRound, SuccessRound, WarningRound } from 'shared/icon';
+import { styles } from './alert.less';
 
 @customElement('sw-alert')
 export class Alert extends LitElement {
@@ -15,13 +15,13 @@ export class Alert extends LitElement {
     @property()
     type: type = 'info';
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     fill = false;
 
     @property()
     border: 'none' | 'top' | 'left' = 'none';
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     outline = false;
 
     iconHTML() {
@@ -44,10 +44,10 @@ export class Alert extends LitElement {
     classNames = () =>
         clsx(
             'alert',
-            {[`type-${this.type}`]: this.type},
-            {fill: this.fill},
-            {[`border-${this.border}`]: !this.fill && this.border !== 'none'},
-            {outline: this.outline}
+            { [`type-${this.type}`]: this.type },
+            { fill: this.fill },
+            { [`border-${this.border}`]: !this.fill && this.border !== 'none' },
+            { outline: this.outline }
         );
 
     override render() {

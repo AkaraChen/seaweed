@@ -1,7 +1,7 @@
-import {html, LitElement} from 'lit';
-import {customElement, property, state} from 'lit/decorators.js';
-import {Reactify} from 'shared/type';
-import {styles} from './spoiler.less';
+import { html, LitElement } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
+import { Reactify } from 'shared/type';
+import { styles } from './spoiler.less';
 
 @customElement('sw-spoiler')
 export default class Spoiler extends LitElement {

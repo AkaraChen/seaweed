@@ -1,8 +1,8 @@
-import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {styles} from './divider.less';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { styles } from './divider.less';
 import clsx from 'clsx';
-import {postionArray, position, Reactify} from 'shared/type';
+import { postionArray, position, Reactify } from 'shared/type';
 
 @customElement('sw-divider')
 export class Divider extends LitElement {
@@ -14,16 +14,16 @@ export class Divider extends LitElement {
     @property()
     position: position = 'medium';
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     vertical: boolean;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     dashed: boolean;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     dotted: boolean;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     slash: boolean;
 
     classNames = () =>
@@ -34,11 +34,11 @@ export class Divider extends LitElement {
                     this.position
                 )
             },
-            {vertical: this.vertical || this.slash},
-            {dashed: this.dashed},
-            {dotted: this.dotted},
-            {empty: this.text.length === 0},
-            {slash: this.slash}
+            { vertical: this.vertical || this.slash },
+            { dashed: this.dashed },
+            { dotted: this.dotted },
+            { empty: this.text.length === 0 },
+            { slash: this.slash }
         );
 
     override render() {

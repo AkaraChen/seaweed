@@ -1,5 +1,5 @@
-import {fixture} from '@open-wc/testing';
-import {expect} from 'vitest';
+import { fixture } from '@open-wc/testing';
+import { expect } from 'vitest';
 
 export const render = async (tagName: string, constructor: any) => {
     const element = (await fixture(

@@ -1,6 +1,6 @@
-import {Alert} from '../alert';
-import {fixture} from '@open-wc/testing';
-import {render} from 'shared/test';
+import { Alert } from '../alert';
+import { fixture } from '@open-wc/testing';
+import { render } from 'shared/test';
 
 test('should render success', async () => {
     render('sw-alert', Alert);

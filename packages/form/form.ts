@@ -1,10 +1,10 @@
 /* eslint-disable no-shadow */
-import {LitElement, html, nothing} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {styles as itemStyles} from './form_item.less';
-import {Reactify, size} from 'shared/type';
+import { LitElement, html, nothing } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { styles as itemStyles } from './form_item.less';
+import { Reactify, size } from 'shared/type';
 import clsx from 'clsx';
-import {getFormSize} from 'shared/form';
+import { getFormSize } from 'shared/form';
 
 @customElement('sw-form')
 export class Form extends LitElement {

@@ -1,8 +1,8 @@
-import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {loadingAlt} from 'shared/icon';
-import {Reactify} from 'shared/type';
-import {styles} from './loading.less';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { loadingAlt } from 'shared/icon';
+import { Reactify } from 'shared/type';
+import { styles } from './loading.less';
 
 @customElement('sw-loading')
 export class Loading extends LitElement {

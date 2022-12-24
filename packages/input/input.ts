@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {getFormSize} from 'shared/form';
-import {Reactify, size, type, typeArray} from 'shared/type';
-import {styles} from './input.less';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { getFormSize } from 'shared/form';
+import { Reactify, size, type, typeArray } from 'shared/type';
+import { styles } from './input.less';
 
 @customElement('sw-input')
 export class Input extends LitElement {

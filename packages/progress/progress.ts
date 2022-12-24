@@ -1,19 +1,19 @@
 /* eslint-disable no-mixed-operators */
-import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {styleMap} from 'lit/directives/style-map.js';
-import {styles} from './progress.less';
-import {typeArray, type, size, sizeArray, Reactify} from 'shared/type';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { styleMap } from 'lit/directives/style-map.js';
+import { styles } from './progress.less';
+import { typeArray, type, size, sizeArray, Reactify } from 'shared/type';
 import clsx from 'clsx';
 
 @customElement('sw-progress')
 export class Progress extends LitElement {
     static override styles = styles;
 
-    @property({type: Number})
+    @property({ type: Number })
     value = 50;
 
-    @property({type: Number})
+    @property({ type: Number })
     max = 100;
 
     @property()
@@ -27,8 +27,8 @@ export class Progress extends LitElement {
 
     classNames = () =>
         clsx(
-            {[`${this.type}`]: typeArray.includes(this.type)},
-            {[`${this.size}`]: sizeArray.includes(this.size)}
+            { [`${this.type}`]: typeArray.includes(this.type) },
+            { [`${this.size}`]: sizeArray.includes(this.size) }
         );
 
     override render() {

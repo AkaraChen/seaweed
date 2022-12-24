@@ -1,10 +1,10 @@
-import {LitElement, html} from 'lit';
-import {property, customElement} from 'lit/decorators.js';
-import {styleMap} from 'lit/directives/style-map.js';
+import { LitElement, html } from 'lit';
+import { property, customElement } from 'lit/decorators.js';
+import { styleMap } from 'lit/directives/style-map.js';
 import clsx from 'clsx';
-import {styles} from './title.less';
-import {getSize, isValidColor} from 'shared/style';
-import {Reactify, type, typeArray} from 'shared/type';
+import { styles } from './title.less';
+import { getSize, isValidColor } from 'shared/style';
+import { Reactify, type, typeArray } from 'shared/type';
 
 @customElement('sw-title')
 export class Title extends LitElement {
@@ -28,9 +28,9 @@ export class Title extends LitElement {
     classnames = () =>
         clsx(
             'title',
-            {[`level-${this.level}`]: this.level},
-            {decorator: this.decorator},
-            {[`type-${this.type}`]: typeArray.includes(this.type)}
+            { [`level-${this.level}`]: this.level },
+            { decorator: this.decorator },
+            { [`type-${this.type}`]: typeArray.includes(this.type) }
         );
 
     render() {

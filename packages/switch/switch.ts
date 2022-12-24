@@ -1,25 +1,25 @@
-import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import clsx from 'clsx';
-import {styles} from './switch.less';
-import {Reactify, size} from 'shared/type';
+import { styles } from './switch.less';
+import { Reactify, size } from 'shared/type';
 import 'loading/loading';
-import {getFormSize} from 'shared/form';
+import { getFormSize } from 'shared/form';
 
 @customElement('sw-switch')
 export class Switch extends LitElement {
     static override styles = styles;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     checked = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     disabled: boolean;
 
     @property()
     size: size;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     loading = false;
 
     get value() {
@@ -39,8 +39,8 @@ export class Switch extends LitElement {
         clsx(
             'switch',
             `size-${this.size || getFormSize(this) || 'normal'}`,
-            {disabled: this.disabled},
-            {loading: this.loading}
+            { disabled: this.disabled },
+            { loading: this.loading }
         );
 
     override render() {

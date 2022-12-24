@@ -1,10 +1,10 @@
 /* eslint-disable class-methods-use-this */
-import {LitElement, html, css} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {styles} from './breadcrumb.less';
+import { LitElement, html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { styles } from './breadcrumb.less';
 import clsx from 'clsx';
 import 'divider/divider';
-import {Reactify} from 'shared/type';
+import { Reactify } from 'shared/type';
 
 @customElement('sw-breadcrumb')
 export class Breadcrumb extends LitElement {
@@ -69,7 +69,7 @@ export class BreadcrumbItem extends LitElement {
     @property()
     active = false;
 
-    classNames = () => clsx({active: this.active});
+    classNames = () => clsx({ active: this.active });
 
     override render() {
         return html`<li class=${this.classNames()}>

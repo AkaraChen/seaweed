@@ -1,8 +1,8 @@
-import {LitElement, html, nothing} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {styles} from './card.less';
+import { LitElement, html, nothing } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { styles } from './card.less';
 import clsx from 'clsx';
-import {Reactify, size, sizeArray} from 'shared/type';
+import { Reactify, size, sizeArray } from 'shared/type';
 
 @customElement('sw-card')
 export class Card extends LitElement {
@@ -14,14 +14,14 @@ export class Card extends LitElement {
     @property()
     title = '';
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     noborder: false;
 
     classNames = () =>
         clsx(
             'card',
-            {[`size-${this.size}`]: sizeArray.includes(this.size)},
-            {noborder: this.noborder}
+            { [`size-${this.size}`]: sizeArray.includes(this.size) },
+            { noborder: this.noborder }
         );
 
     render() {

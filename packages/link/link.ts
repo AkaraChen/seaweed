@@ -1,17 +1,17 @@
-import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {styles} from './link.less';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { styles } from './link.less';
 import clsx from 'clsx';
-import {Reactify, type, typeArray} from 'shared/type';
+import { Reactify, type, typeArray } from 'shared/type';
 
 @customElement('sw-link')
 export class Link extends LitElement {
     static override styles = [styles];
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     disabled = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     underline = false;
 
     @property()
@@ -25,9 +25,9 @@ export class Link extends LitElement {
 
     classNames = () =>
         clsx(
-            {disabled: this.disabled},
-            {underline: this.underline && !this.disabled},
-            {[`type-${this.type}`]: typeArray.includes(this.type)}
+            { disabled: this.disabled },
+            { underline: this.underline && !this.disabled },
+            { [`type-${this.type}`]: typeArray.includes(this.type) }
         );
 
     override connectedCallback() {

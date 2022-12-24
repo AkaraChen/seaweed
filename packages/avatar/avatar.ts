@@ -1,8 +1,8 @@
 /* eslint-disable no-shadow */
-import {html, LitElement} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import {styles} from './avatar.less';
-import {Reactify, size, sizeArray} from 'shared/type';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { styles } from './avatar.less';
+import { Reactify, size, sizeArray } from 'shared/type';
 import clsx from 'clsx';
 
 @customElement('sw-avatar')
@@ -15,7 +15,7 @@ export class Avatar extends LitElement {
     @property()
     size: size | number = 'normal';
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     rounded: boolean;
 
     getSize() {
@@ -34,7 +34,7 @@ export class Avatar extends LitElement {
         return 50;
     }
 
-    classNames = () => clsx({rounded: this.rounded});
+    classNames = () => clsx({ rounded: this.rounded });
 
     override render() {
         const size = this.getSize();

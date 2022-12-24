@@ -1,21 +1,21 @@
-import {html, LitElement, nothing} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import { html, LitElement, nothing } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import clsx from 'clsx';
-import {Reactify, size, type} from 'shared/type';
+import { Reactify, size, type } from 'shared/type';
 import 'loading/loading';
-import {styles} from './button.less';
+import { styles } from './button.less';
 
 @customElement('sw-button')
 export class Button extends LitElement {
     static override styles = styles;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     primary = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     secondary = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     ghost = false;
 
     @property()
@@ -24,13 +24,13 @@ export class Button extends LitElement {
     @property()
     type: type = 'info';
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     loading = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     disabled = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     rounded = false;
 
     loadingIcon = () => {
@@ -51,13 +51,13 @@ export class Button extends LitElement {
 
     classNames = () =>
         clsx(
-            {primary: this.primary},
-            {[`size-${this.size}`]: this.size},
-            {[`type-${this.type}`]: this.type},
-            {loading: this.loading},
-            {rounded: this.rounded},
-            {secondary: this.secondary},
-            {ghost: this.ghost}
+            { primary: this.primary },
+            { [`size-${this.size}`]: this.size },
+            { [`type-${this.type}`]: this.type },
+            { loading: this.loading },
+            { rounded: this.rounded },
+            { secondary: this.secondary },
+            { ghost: this.ghost }
         );
 
     override render() {

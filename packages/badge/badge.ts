@@ -1,9 +1,9 @@
-import {html, LitElement, nothing} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import { html, LitElement, nothing } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import clsx from 'clsx';
-import {Reactify, type} from 'shared/type';
-import {styles} from './badge.less';
-import {x} from 'shared/icon';
+import { Reactify, type } from 'shared/type';
+import { styles } from './badge.less';
+import { x } from 'shared/icon';
 
 @customElement('sw-badge')
 export class Badge extends LitElement {
@@ -12,16 +12,16 @@ export class Badge extends LitElement {
     @property()
     type: type | 'normal' = 'normal';
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     noborder = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     disabled = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     rounded = false;
 
-    @property({type: Boolean})
+    @property({ type: Boolean })
     closable = false;
 
     handler = () => {
@@ -31,11 +31,11 @@ export class Badge extends LitElement {
     classNames = () =>
         clsx(
             'badge',
-            {[`type-${this.type}`]: this.type},
-            {noborder: this.noborder},
-            {disabled: this.disabled},
-            {rounded: this.rounded},
-            {closable: this.closable}
+            { [`type-${this.type}`]: this.type },
+            { noborder: this.noborder },
+            { disabled: this.disabled },
+            { rounded: this.rounded },
+            { closable: this.closable }
         );
 
     override render() {

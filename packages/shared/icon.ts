@@ -1,4 +1,4 @@
-import {html} from 'lit';
+import { html } from 'lit';
 
 export const InfoRound = html`
     <svg viewBox="0 0 24 24" focusable="false" class="icon">

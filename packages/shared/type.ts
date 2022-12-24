@@ -1,4 +1,4 @@
-import type {TupleToUnion} from 'type-fest';
+import type { TupleToUnion } from 'type-fest';
 import type React from 'react';
 
 export const sizeArray = ['small', 'normal', 'large'] as const;
