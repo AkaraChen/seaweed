@@ -1,6 +1,7 @@
 export * from './packages/alert/alert';
 export * from './packages/avatar/avatar';
 export * from './packages/badge/badge';
+export * from './packages/balancer/balancer';
 export * from './packages/breadcrumb/breadcrumb';
 export * from './packages/button/button';
 export * from './packages/card/card';
