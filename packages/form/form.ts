@@ -39,8 +39,7 @@ export class FormItem extends LitElement {
     @property()
     size: size;
 
-    clsx = () =>
-        clsx(`size-${this.size || getFormSize(this) || 'normal'}`);
+    clsx = () => clsx(`size-${this.size || getFormSize(this) || 'normal'}`);
 
     override render() {
         const label = this.label ? html`<span>${this.label}:</span>` : nothing;

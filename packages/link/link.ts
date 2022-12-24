@@ -42,11 +42,7 @@ export class Link extends LitElement {
 
     override render() {
         return html`
-            <a
-                class=${this.clsx()}
-                href=${this.href}
-                target=${this.target}
-            >
+            <a class=${this.clsx()} href=${this.href} target=${this.target}>
                 <slot></slot>
             </a>
         `;
