@@ -184,7 +184,7 @@ importers:
 
   packages/switch:
     specifiers:
-      loading: workspace:^1.0.0
+      loading: workspace:^*
     dependencies:
       loading: link:../loading
 
