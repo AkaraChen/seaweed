@@ -49,7 +49,7 @@ export class Button extends LitElement {
         `;
     };
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             { primary: this.primary },
             { [`size-${this.size}`]: this.size },
@@ -62,7 +62,7 @@ export class Button extends LitElement {
 
     override render() {
         return html`
-            <button class=${this.classNames()} ?disabled=${this.disabled}>
+            <button class=${this.clsx()} ?disabled=${this.disabled}>
                 ${this.loading ? this.loadingIcon() : nothing}
                 <p><slot></slot></p>
             </button>

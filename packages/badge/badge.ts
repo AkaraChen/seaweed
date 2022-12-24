@@ -28,7 +28,7 @@ export class Badge extends LitElement {
         if (!this.disabled) this.dispatchEvent(new CustomEvent('close'));
     };
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             'badge',
             { [`type-${this.type}`]: this.type },
@@ -40,7 +40,7 @@ export class Badge extends LitElement {
 
     override render() {
         return html`
-            <div class=${this.classNames()}>
+            <div class=${this.clsx()}>
                 <slot></slot>
                 ${this.closable
                     ? html`<button @click=${this.handler}>${x}</button>`

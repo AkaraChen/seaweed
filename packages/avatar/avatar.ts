@@ -34,7 +34,7 @@ export class Avatar extends LitElement {
         return 50;
     }
 
-    classNames = () => clsx({ rounded: this.rounded });
+    clsx = () => clsx({ rounded: this.rounded });
 
     override render() {
         const size = this.getSize();
@@ -43,7 +43,7 @@ export class Avatar extends LitElement {
                 src=${this.src}
                 height=${size}
                 width=${size}
-                class=${this.classNames()}
+                class=${this.clsx()}
             />
         `;
     }

@@ -25,7 +25,7 @@ export class Progress extends LitElement {
     @property()
     color: string;
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             { [`${this.type}`]: typeArray.includes(this.type) },
             { [`${this.size}`]: sizeArray.includes(this.size) }
@@ -37,7 +37,7 @@ export class Progress extends LitElement {
             'background-color': this.color
         };
         return html`
-            <div class=${this.classNames()}>
+            <div class=${this.clsx()}>
                 <span style=${styleMap(style)}></span>
             </div>
         `;

@@ -14,7 +14,7 @@
         "no-unused-vars": "off",
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
-        "prettier/prettier": "error",
+        "prettier/prettier": "warn",
         "unicorn/template-indent": "off",
         "class-methods-use-this": "warn"
     },

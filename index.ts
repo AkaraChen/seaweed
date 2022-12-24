@@ -6,6 +6,7 @@ export * from './packages/breadcrumb/breadcrumb';
 export * from './packages/button/button';
 export * from './packages/card/card';
 export * from './packages/checkbox/checkbox';
+export * from './packages/collapse/collapse';
 export * from './packages/divider/divider';
 export * from './packages/form/form';
 export * from './packages/input/input';

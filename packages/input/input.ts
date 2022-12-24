@@ -26,7 +26,7 @@ export class Input extends LitElement {
         this.shadowRoot.querySelector('input').value = value;
     }
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             {
                 [`type-${this.type}`]: [...typeArray, 'normal'].includes(
@@ -43,7 +43,7 @@ export class Input extends LitElement {
 
     override render() {
         return html`<input
-            class=${this.classNames()}
+            class=${this.clsx()}
             placeholder=${this.placeholder}
             @input=${this.handler}
         />`;

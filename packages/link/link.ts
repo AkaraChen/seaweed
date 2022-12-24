@@ -23,7 +23,7 @@ export class Link extends LitElement {
     @property()
     target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             { disabled: this.disabled },
             { underline: this.underline && !this.disabled },
@@ -43,7 +43,7 @@ export class Link extends LitElement {
     override render() {
         return html`
             <a
-                class=${this.classNames()}
+                class=${this.clsx()}
                 href=${this.href}
                 target=${this.target}
             >

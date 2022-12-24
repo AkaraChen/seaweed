@@ -26,7 +26,7 @@ export class Divider extends LitElement {
     @property({ type: Boolean })
     slash: boolean;
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             'divider',
             {
@@ -43,7 +43,7 @@ export class Divider extends LitElement {
 
     override render() {
         return html`
-            <div class=${this.classNames()}>
+            <div class=${this.clsx()}>
                 <div class="left-box"></div>
                 <div class="center-box">${this.text}</div>
                 <div class="right-box"></div>

@@ -69,10 +69,10 @@ export class BreadcrumbItem extends LitElement {
     @property()
     active = false;
 
-    classNames = () => clsx({ active: this.active });
+    clsx = () => clsx({ active: this.active });
 
     override render() {
-        return html`<li class=${this.classNames()}>
+        return html`<li class=${this.clsx()}>
             <span><slot></slot></span>
         </li>`;
     }

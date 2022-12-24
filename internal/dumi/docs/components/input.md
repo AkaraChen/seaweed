@@ -7,7 +7,7 @@ group:
 
 # 输入框
 
-## 输入框类型
+## 输入框状态
 
 ```tsx
 import '@akrc/seaweed/input'

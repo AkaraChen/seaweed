@@ -22,7 +22,7 @@ export class CheckBox extends LitElement {
     @property({ type: Boolean })
     rounded = false;
 
-    classNames = () =>
+    clsx = () =>
         clsx(`size-${this.size || getFormSize(this) || 'normal'}`, {
             rounded: this.rounded
         });
@@ -42,7 +42,7 @@ export class CheckBox extends LitElement {
 
     override render() {
         return html`
-            <label for="checkbox" class=${this.classNames()}>
+            <label for="checkbox" class=${this.clsx()}>
                 <input
                     type="checkbox"
                     @input=${this.handler}

@@ -39,13 +39,13 @@ export class FormItem extends LitElement {
     @property()
     size: size;
 
-    classNames = () =>
+    clsx = () =>
         clsx(`size-${this.size || getFormSize(this) || 'normal'}`);
 
     override render() {
         const label = this.label ? html`<span>${this.label}:</span>` : nothing;
         return html`
-            <label class=${this.classNames()}>
+            <label class=${this.clsx()}>
                 ${label}
                 <slot></slot>
             </label>

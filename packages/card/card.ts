@@ -17,7 +17,7 @@ export class Card extends LitElement {
     @property({ type: Boolean })
     noborder: false;
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             'card',
             { [`size-${this.size}`]: sizeArray.includes(this.size) },
@@ -26,7 +26,7 @@ export class Card extends LitElement {
 
     render() {
         return html`
-            <div class=${this.classNames()}>
+            <div class=${this.clsx()}>
                 ${this.title === ''
                     ? nothing
                     : html`<div class="title">${this.title}</div>`}

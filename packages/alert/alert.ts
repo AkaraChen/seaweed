@@ -41,7 +41,7 @@ export class Alert extends LitElement {
         }
     }
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             'alert',
             { [`type-${this.type}`]: this.type },
@@ -52,7 +52,7 @@ export class Alert extends LitElement {
 
     override render() {
         return html`
-            <div class=${this.classNames()}>
+            <div class=${this.clsx()}>
                 <div class="icon-container">${this.iconHTML()}</div>
                 <div>
                     ${this.title

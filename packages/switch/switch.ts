@@ -35,7 +35,7 @@ export class Switch extends LitElement {
         this.value = input.checked;
     };
 
-    classNames = () =>
+    clsx = () =>
         clsx(
             'switch',
             `size-${this.size || getFormSize(this) || 'normal'}`,
@@ -45,7 +45,7 @@ export class Switch extends LitElement {
 
     override render() {
         return html`
-            <label class=${this.classNames()}>
+            <label class=${this.clsx()}>
                 <input
                     type="checkbox"
                     @input=${this.handler}

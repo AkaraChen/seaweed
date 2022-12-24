@@ -1,4 +1,4 @@
-import {defineConfig} from 'rollup';
+import { defineConfig } from 'rollup';
 import fg from 'fast-glob';
 import fs from 'node:fs';
 import resolve from '@rollup/plugin-node-resolve';
@@ -6,16 +6,16 @@ import MinifyHTML from 'rollup-plugin-minify-html-literals';
 import esbuild from 'rollup-plugin-esbuild';
 import rimraf from 'rimraf';
 import summary from 'rollup-plugin-summary';
-import {litcssPlugin} from './scripts/lit.mjs';
+import { litcssPlugin } from './scripts/lit.mjs';
 import typescript from 'rollup-plugin-ts';
-import {minify} from 'rollup-plugin-esbuild';
+import { minify } from 'rollup-plugin-esbuild';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 if (!isDevelopment) rimraf.sync('./dist');
 
 const packagesNames = fg
-    .sync('./packages/*', {onlyDirectories: true})
+    .sync('./packages/*', { onlyDirectories: true })
     .map(item => item.slice('./packages/'.length))
     .filter(item => !['shared'].includes(item));
 
@@ -32,12 +32,12 @@ fs.writeFileSync(
 const packages = packagesNames.map(item => `./packages/${item}/${item}.ts`);
 
 const plugins = isDevelopment
-    ? [litcssPlugin, resolve({extensions: ['.mjs', '.js', '.ts']}), esbuild()]
+    ? [litcssPlugin, resolve({ extensions: ['.mjs', '.js', '.ts'] }), esbuild()]
     : [
           litcssPlugin,
           MinifyHTML.default(),
-          resolve({extensions: ['.mjs', '.js', '.ts']}),
-          typescript({tsconfig: './tsconfig.json'}),
+          resolve({ extensions: ['.mjs', '.js', '.ts'] }),
+          typescript({ tsconfig: './tsconfig.json' }),
           summary(),
           minify()
       ];

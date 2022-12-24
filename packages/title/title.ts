@@ -25,7 +25,7 @@ export class Title extends LitElement {
     @property()
     type: type = 'info';
 
-    classnames = () =>
+    clsx = () =>
         clsx(
             'title',
             { [`level-${this.level}`]: this.level },
@@ -39,7 +39,7 @@ export class Title extends LitElement {
             fontSize: getSize(this.size),
             color: color
         };
-        return html`<p class=${this.classnames()} style=${styleMap(style)}>
+        return html`<p class=${this.clsx()} style=${styleMap(style)}>
             <slot></slot>
         </p>`;
     }
