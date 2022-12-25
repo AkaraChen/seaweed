@@ -25,6 +25,9 @@ export class Loading extends LitElement {
                     height: ${this.size};
                     color: ${this.color};
                 }
+                svg * {
+                    color: ${this.color};
+                }
             </style>
             ${loadingAlt}
         `;

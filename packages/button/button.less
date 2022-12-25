@@ -41,8 +41,11 @@ button:focus {
 
 button.primary {
     background-color: var(--primary);
-    color: #fff;
     border-color: var(--primary);
+
+    & * {
+        color: #fff;
+    }
 }
 
 button.primary:hover,
