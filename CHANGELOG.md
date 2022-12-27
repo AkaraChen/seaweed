@@ -1,3 +1,25 @@
+## [0.0.13](https://github.com/AkaraChen/seaweed/compare/0.0.8...0.0.13) (2022-12-27)
+
+
+### Bug Fixes
+
+* button color ([ca0ee9d](https://github.com/AkaraChen/seaweed/commit/ca0ee9d6e1c01cf5dbdde47b8975747c101b55b3))
+
+
+### Features
+
+* balance component ([3b00934](https://github.com/AkaraChen/seaweed/commit/3b00934ba8f5249922762f28585aec181a055b38))
+* collapse component ([9fd2907](https://github.com/AkaraChen/seaweed/commit/9fd29075f1744c092e659374681ab29b7fbe5b13))
+* dark mode for collapse ([40f1434](https://github.com/AkaraChen/seaweed/commit/40f1434705609152aad18529b29fb1c6453eee96))
+
+
+### Reverts
+
+* base style text color ([44ccad0](https://github.com/AkaraChen/seaweed/commit/44ccad03cba9cc198252415be2a07f8d9608c236))
+* remove balancer ([9b5f83e](https://github.com/AkaraChen/seaweed/commit/9b5f83e4bcdcac6cb5f40e7195a48209ccb6f344))
+
+
+
 ## [0.0.11](https://github.com/AkaraChen/seaweed/compare/0.0.10...0.0.11) (2022-12-25)
 
 
