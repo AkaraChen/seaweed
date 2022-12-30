@@ -36,7 +36,7 @@
         "cross-env": "^7.0.3",
         "esbuild": "^0.16.10",
         "eslint": "8.30.0",
-        "eslint-config-akrc": "0.0.12",
+        "eslint-config-akrc": "1.0.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-lit": "^1.7.2",
         "eslint-plugin-prettier": "^4.2.1",
