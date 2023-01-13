@@ -40,7 +40,7 @@ importers:
       prettier: ^2.8.1
       prettier-plugin-html-template-literals: ^1.0.5
       react: 18.2.0
-      rimraf: ^3.0.2
+      rimraf: ^4.0.0
       rollup: 3.9.1
       rollup-plugin-esbuild: ^5.0.0
       rollup-plugin-filesize: ^9.1.2
@@ -96,7 +96,7 @@ importers:
       prettier: 2.8.1
       prettier-plugin-html-template-literals: 1.0.5_prettier@2.8.1
       react: 18.2.0
-      rimraf: 3.0.2
+      rimraf: 4.0.4
       rollup: 3.9.1
       rollup-plugin-esbuild: 5.0.0_2vjwqbpsiyn2rhyqtglozznbn4
       rollup-plugin-filesize: 9.1.2
@@ -14649,6 +14649,12 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rimraf/4.0.4:
+    resolution: {integrity: sha512-R0hoVr9xTwemarQjoWlNt/nb5dEGVTBhVdkRmEX2zEkT8T6onH0XKiGjuaC7rNNj/gYzY2p4NVRJ3sjO1ascHQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /ripemd160/2.0.2:
