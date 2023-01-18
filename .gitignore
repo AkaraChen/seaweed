@@ -135,3 +135,6 @@ internal/dumi/.dumi/tmp-production
 
 # storybook
 internal/storybook/storybook-static/**
+/test-results/
+/playwright-report/
+/playwright/.cache/

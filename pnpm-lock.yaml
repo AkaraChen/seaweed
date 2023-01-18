@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@open-wc/testing': ^3.1.7
+      '@playwright/test': 1.29.2
       '@rollup/plugin-node-resolve': 15.0.1
       '@rollup/plugin-typescript': ^11.0.0
       '@swc/core': ^1.3.27
@@ -61,6 +62,7 @@ importers:
       vitest: 0.27.2
     devDependencies:
       '@open-wc/testing': 3.1.7
+      '@playwright/test': 1.29.2
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.10.0
       '@rollup/plugin-typescript': 11.0.0_6xbyoujvh6bzbrau3o3neoxpya
       '@swc/core': 1.3.27
@@ -2932,6 +2934,15 @@ packages:
     dependencies:
       esquery: 1.4.0
       typescript: 4.9.4
+    dev: true
+
+  /@playwright/test/1.29.2:
+    resolution: {integrity: sha512-+3/GPwOgcoF0xLz/opTnahel1/y42PdcgZ4hs+BZGIUjtmEFSXGg+nFoaH3NSmuc7a6GSFwXDJ5L7VXpqzigNg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.11.18
+      playwright-core: 1.29.2
     dev: true
 
   /@pmmmwh/react-refresh-webpack-plugin/0.5.7_react-refresh@0.14.0:
@@ -13059,6 +13070,12 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.1.0
       pathe: 1.0.0
+    dev: true
+
+  /playwright-core/1.29.2:
+    resolution: {integrity: sha512-94QXm4PMgFoHAhlCuoWyaBYKb92yOcGVHdQLoxQ7Wjlc7Flg4aC/jbFW7xMR52OfXMVkWicue4WXE7QEegbIRA==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /plur/4.0.0:
