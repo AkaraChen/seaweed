@@ -1,4 +1,4 @@
-import { getSize, isValidColor } from '../style';
+import { getSize, isValidColor } from './style';
 
 test('getSize', () => {
     expect(getSize(20)).toBe('20px');

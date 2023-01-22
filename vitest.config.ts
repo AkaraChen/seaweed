@@ -4,7 +4,7 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
     test: {
         environment: 'happy-dom',
-        include: ['./packages/**/__test__/*.ts'],
+        include: ['./packages/**/*.test.ts'],
         globals: true
     },
     plugins: [litcssPlugin]

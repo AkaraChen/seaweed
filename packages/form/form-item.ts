@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { html, LitElement, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { getFormSize } from 'shared/form';
+import { getFormSize } from 'form/util';
 import { Reactify, size } from 'shared/type';
 import { styles } from './form_item.less';
 

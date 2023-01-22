@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "loading": "workspace:^*"
+    "loading": "workspace:*",
+    "form": "workspace:*"
   }
 }
