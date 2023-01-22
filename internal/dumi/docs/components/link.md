@@ -39,7 +39,6 @@ export default () => {
 
 ## hover下划线
 
-
 ```tsx
 import '@akrc/seaweed/button'
 
@@ -63,5 +62,17 @@ export default () => {
         <sw-link href="//bing.com" target="_self">self</sw-link>
         <sw-link href="//bing.com" target="_top">top</sw-link>
     </div>
+}
+```
+
+## 过渡动画
+
+可以通过加一个 `transition` 属性让 link 被 hover 时箭头右移一点。
+
+```tsx
+import '@akrc/seaweed/link'
+
+export default () => {
+    return <sw-link href="//bing.com" transition>箭头可以动</sw-link>
 }
 ```

@@ -3,6 +3,7 @@ import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { Reactify, type, typeArray } from 'shared/type';
 import { styles } from './link.less';
+import { arrowRight, arrowRightUp } from 'shared/icon';
 
 @customElement('sw-link')
 export class Link extends LitElement {
@@ -23,12 +24,21 @@ export class Link extends LitElement {
     @property()
     target: '_blank' | '_parent' | '_self' | '_top' = '_blank';
 
+    @property()
+    transition: boolean = false;
+
     clsx = () =>
         clsx(
             { disabled: this.disabled },
             { underline: this.underline && !this.disabled },
-            { [`type-${this.type}`]: typeArray.includes(this.type) }
+            { [`type-${this.type}`]: typeArray.includes(this.type) },
+            { transition: this.transition }
         );
+
+    getIcon() {
+        if (this.target === '_blank') return arrowRightUp;
+        return arrowRight;
+    }
 
     override connectedCallback() {
         super.connectedCallback();
@@ -44,6 +54,7 @@ export class Link extends LitElement {
         return html`
             <a class=${this.clsx()} href=${this.href} target=${this.target}>
                 <slot></slot>
+                ${this.getIcon()}
             </a>
         `;
     }

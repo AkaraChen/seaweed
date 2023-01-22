@@ -25,18 +25,42 @@
 }
 
 *,
-.type-info {
+.type-info,
+.type-info * {
+    &::before,
+    &::after {
+        --primary: var(--info);
+    }
+
     --primary: var(--info);
 }
 
-.type-success {
+.type-success,
+.type-success * {
+    &::before,
+    &::after {
+        --primary: var(--success);
+    }
+
     --primary: var(--success);
 }
 
-.type-warning {
+.type-warning,
+.type-warning * {
+    &::before,
+    &::after {
+        --primary: var(--warning);
+    }
+
     --primary: var(--warning);
 }
 
-.type-error {
+.type-error,
+.type-error * {
+    &::before,
+    &::after {
+        --primary: var(--error);
+    }
+
     --primary: var(--error);
 }

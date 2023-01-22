@@ -2,17 +2,34 @@ a {
     color: var(--primary);
     cursor: pointer;
     text-decoration: none;
-}
+    display: inline-flex;
+    align-items: center;
+    vertical-align: baseline;
 
-a::after {
-    content: '↗';
-}
+    & svg {
+        height: 18px;
+        width: 18px;
+        transition: all 0.125s;
+    }
 
-a.disabled {
-    opacity: 0.5;
-    cursor: no-drop;
-}
+    &:hover {
+        filter: brightness(0.9);
 
-a.underline:hover {
-    text-decoration: underline 1px var(--primary) !important;
+        &.transition svg {
+            margin-left: 4px;
+        }
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        cursor: no-drop;
+        filter: none;
+        & svg {
+            display: none;
+        }
+    }
+
+    &.underline:hover {
+        text-decoration: underline 1px var(--primary);
+    }
 }
