@@ -10,11 +10,12 @@
     "react-dom": "18.2.0"
   },
   "scripts": {
-    "watch": "pnpm run -w build --watch",
+    "prebuild": "pnpm run -w build",
+    "watch": "pnpm run prebuild --watch",
     "dev": "cross-env NODE_ENV=development npm-run-all -p watch dev:dumi",
     "dev:dumi": "dumi dev",
     "prepare": "dumi setup",
-    "build": "pnpm -w run build && dumi build",
+    "build": "lerna run prebuild && dumi build",
     "build:ci": "pnpm run -w build && dumi build"
   }
 }
