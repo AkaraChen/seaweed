@@ -11,7 +11,7 @@ import { devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
-    testDir: './e2e',
+    testDir: './test',
     /* Maximum time one test can run for. */
     timeout: 30 * 1000,
     expect: {
@@ -99,7 +99,7 @@ const config: PlaywrightTestConfig = {
 
     /* Run your local dev server before starting the tests */
     webServer: {
-        command: 'pnpm -r --filter e2e run dev ',
+        command: 'pnpm run serve',
         port: 8131
     }
 };

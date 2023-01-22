@@ -1,20 +1,22 @@
 {
-  "name": "e2e",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "dev": "vite --port 8131",
-    "codegen": "playwright codegen localhost:5173"
-  },
-  "dependencies": {
-    "@akrc/seaweed": "workspace:*",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
-  },
-  "devDependencies": {
-    "vite": "^4.0.4",
-    "vite-plugin-pages": "^0.28.0"
-  }
+    "name": "e2e",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "serve": "vite --port 8131",
+        "codegen": "playwright codegen localhost:5173",
+        "test": "playwright test"
+    },
+    "dependencies": {
+        "@akrc/seaweed": "workspace:*",
+        "vue": "^3.2.45",
+        "vue-router": "^4.1.6"
+    },
+    "devDependencies": {
+        "@playwright/test": "1.29.2",
+        "@vitejs/plugin-vue": "^4.0.0",
+        "vite": "^4.0.4",
+        "vite-plugin-pages": "^0.28.0"
+    }
 }

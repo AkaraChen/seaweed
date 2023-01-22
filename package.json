@@ -11,7 +11,7 @@
         "lint:style": "stylelint \"./packages/**/*.less\" --fix",
         "test": "npm-run-all -p test:**",
         "test:package": "vitest run",
-        "test:e2e": "playwright test",
+        "test:e2e": "pnpm run -r --filter e2e test",
         "taze": "taze major -r -w",
         "tsc:check": "tsc --noEmit",
         "start": "pnpm run -r --filter dumi dev",
