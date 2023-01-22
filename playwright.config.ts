@@ -92,16 +92,16 @@ const config: PlaywrightTestConfig = {
         //     channel: 'chrome',
         //   },
         // },
-    ]
+    ],
 
     /* Folder for test artifacts such as screenshots, videos, traces, etc. */
     // outputDir: 'test-results/',
 
     /* Run your local dev server before starting the tests */
-    // webServer: {
-    //     command: 'pnpm run dev',
-    //     port: 8131
-    // }
+    webServer: {
+        command: 'pnpm -r --filter e2e run dev ',
+        port: 8131
+    }
 };
 
 export default config;

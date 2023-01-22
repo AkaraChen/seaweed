@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 8131",
     "codegen": "playwright codegen localhost:5173"
   },
   "dependencies": {
