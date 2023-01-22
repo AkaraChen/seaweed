@@ -1,9 +1,9 @@
 name: E2E
 on:
     push:
-        branches: [main, master]
+        branches: [main]
     pull_request:
-        branches: [main, master]
+        branches: [main]
 jobs:
     test:
         timeout-minutes: 60
@@ -13,6 +13,7 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 16
+                  cache: 'pnpm'
             - name: Install dependencies
               run: |
                   npm install pnpm -g
