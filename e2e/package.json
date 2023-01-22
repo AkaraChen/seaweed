@@ -5,9 +5,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --port 8131",
-    "codegen": "playwright codegen localhost:5173"
+    "codegen": "playwright codegen localhost:5173",
+    "test": "playwright test"
   },
   "dependencies": {
+    "@playwright/test": "1.29.2",
     "@akrc/seaweed": "workspace:*",
     "@vitejs/plugin-vue": "^4.0.0",
     "vue": "^3.2.45",

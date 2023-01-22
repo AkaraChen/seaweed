@@ -2,8 +2,5 @@
   "name": "form",
   "version": "0.0.13",
   "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "form": "workspace:*"
-  }
+  "license": "MIT"
 }
