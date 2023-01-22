@@ -26,7 +26,7 @@ jobs:
               id: playwright-version
               run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package.json').devDependencies['@playwright/test'])")" >> $GITHUB_ENV
             - name: Caching browsers
-              uses: actions/cache
+              uses: actions/cache@v3
               with:
                 path: |
                     ~/.cache/ms-playwright
