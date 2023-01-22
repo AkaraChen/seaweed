@@ -10,6 +10,5 @@
         "skipLibCheck": true,
         "types": ["vitest/globals"],
         "declaration": true
-    },
-    "include": ["./packages/**/*.ts", "environment.d.ts", "index.ts"],
+    }
 }
