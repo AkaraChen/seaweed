@@ -25,7 +25,7 @@ jobs:
             - name: Get installed Playwright version
               id: playwright-version
               run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package.json').devDependencies['@playwright/test'])")" >> $GITHUB_ENV
-            - name: Caching browsers
+            - name: Install browsers
               uses: actions/cache@v3
               with:
                 path: |
