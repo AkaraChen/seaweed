@@ -1,10 +1,10 @@
+import clsx from 'clsx';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import clsx from 'clsx';
-import { Reactify, size } from 'shared/type';
-import { styles } from './checkbox.less';
 import { getFormSize } from 'shared/form';
+import { Reactify, size } from 'shared/type';
 import { Card } from '../card/card';
+import { styles } from './checkbox.less';
 
 @customElement('sw-checkbox')
 export class CheckBox extends LitElement {

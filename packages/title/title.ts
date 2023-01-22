@@ -1,10 +1,10 @@
-import { LitElement, html } from 'lit';
-import { property, customElement } from 'lit/decorators.js';
-import { styleMap } from 'lit/directives/style-map.js';
 import clsx from 'clsx';
-import { styles } from './title.less';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { styleMap } from 'lit/directives/style-map.js';
 import { getSize, isValidColor } from 'shared/style';
 import { Reactify, type, typeArray } from 'shared/type';
+import { styles } from './title.less';
 
 @customElement('sw-title')
 export class Title extends LitElement {

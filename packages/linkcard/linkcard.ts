@@ -1,7 +1,7 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { styles } from './linkcard.less';
 import { Reactify, target } from 'shared/type';
+import { styles } from './linkcard.less';
 
 export interface LinkCardProperty {
     title: string;

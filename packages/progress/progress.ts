@@ -1,10 +1,10 @@
 /* eslint-disable no-mixed-operators */
+import clsx from 'clsx';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styleMap } from 'lit/directives/style-map.js';
+import { Reactify, size, sizeArray, type, typeArray } from 'shared/type';
 import { styles } from './progress.less';
-import { typeArray, type, size, sizeArray, Reactify } from 'shared/type';
-import clsx from 'clsx';
 
 @customElement('sw-progress')
 export class Progress extends LitElement {

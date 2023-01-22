@@ -11,8 +11,5 @@ export type type = TupleToUnion<typeof typeArray>;
 export type target = TupleToUnion<typeof targetArray>;
 export type position = TupleToUnion<typeof postionArray>;
 
-export type Reactify<T> = Partial<T> &
-    React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLDivElement>,
-        HTMLDivElement
-    >;
+export type Reactify<T, K = HTMLDivElement> = Partial<T> &
+    React.DetailedHTMLProps<React.HTMLAttributes<K>, K>;

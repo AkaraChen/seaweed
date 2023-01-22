@@ -1,3 +1,4 @@
+// @ts-check
 import { litCss } from 'rollup-plugin-lit-css';
 import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';

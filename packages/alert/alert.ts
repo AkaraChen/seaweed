@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import { html, LitElement, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import clsx from 'clsx';
-import { Reactify, type } from 'shared/type';
 import { ErrorRound, InfoRound, SuccessRound, WarningRound } from 'shared/icon';
+import { Reactify, type } from 'shared/type';
 import { styles } from './alert.less';
 
 @customElement('sw-alert')

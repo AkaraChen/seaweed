@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { styles } from './link.less';
-import clsx from 'clsx';
 import { Reactify, type, typeArray } from 'shared/type';
+import { styles } from './link.less';
 
 @customElement('sw-link')
 export class Link extends LitElement {

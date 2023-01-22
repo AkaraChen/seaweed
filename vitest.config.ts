@@ -1,5 +1,5 @@
-import {litcssPlugin} from './scripts/lit.mjs';
-import {defineConfig} from 'vitest/config';
+import { litcssPlugin } from './scripts/lit.mjs';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
     test: {

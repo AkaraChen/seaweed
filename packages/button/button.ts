@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import { html, LitElement, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import clsx from 'clsx';
-import { Reactify, size, type } from 'shared/type';
 import 'loading/loading';
+import { Reactify, size, type } from 'shared/type';
 import { styles } from './button.less';
 
 @customElement('sw-button')

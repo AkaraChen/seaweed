@@ -1,10 +1,10 @@
+import clsx from 'clsx';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import clsx from 'clsx';
-import { styles } from './switch.less';
-import { Reactify, size } from 'shared/type';
 import 'loading/loading';
 import { getFormSize } from 'shared/form';
+import { Reactify, size } from 'shared/type';
+import { styles } from './switch.less';
 
 @customElement('sw-switch')
 export class Switch extends LitElement {

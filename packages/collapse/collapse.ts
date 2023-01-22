@@ -1,6 +1,6 @@
-import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
 import clsx from 'clsx';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import { styles } from './collapse.less';
 
 @customElement('sw-collapse')
@@ -23,7 +23,6 @@ export class Collapse extends LitElement {
         this.open = !this.open;
     }
 
-    // eslint-disable-next-line class-methods-use-this
     icon() {
         return html`<svg
             xmlns="http://www.w3.org/2000/svg"

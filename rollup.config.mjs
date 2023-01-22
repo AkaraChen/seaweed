@@ -1,46 +1,38 @@
-import { defineConfig } from 'rollup';
-import fg from 'fast-glob';
-import fs from 'node:fs';
 import resolve from '@rollup/plugin-node-resolve';
-import MinifyHTML from 'rollup-plugin-minify-html-literals';
-import esbuild from 'rollup-plugin-esbuild';
+import fs from 'node:fs';
 import rimraf from 'rimraf';
+import { defineConfig } from 'rollup';
+import esbuild, { minify } from 'rollup-plugin-esbuild';
+import MinifyHTML from 'rollup-plugin-minify-html-literals';
+import progress from 'rollup-plugin-progress';
 import summary from 'rollup-plugin-summary';
-import { litcssPlugin } from './scripts/lit.mjs';
 import typescript from 'rollup-plugin-ts';
-import { minify } from 'rollup-plugin-esbuild';
+import { isDev } from './scripts/env.mjs';
+import { litcssPlugin } from './scripts/lit.mjs';
+import { generatedIndex, packages } from './scripts/package.mjs';
 
-const isDevelopment = process.env.NODE_ENV === 'development';
+if (!isDev) rimraf.sync('./dist');
 
-if (!isDevelopment) rimraf.sync('./dist');
+fs.writeFileSync('./index.ts', generatedIndex);
 
-const packagesNames = fg
-    .sync('./packages/*', { onlyDirectories: true })
-    .map(item => item.slice('./packages/'.length))
-    .filter(item => !['shared'].includes(item));
-
-fs.writeFileSync(
-    './index.ts',
-    packagesNames
-        .map(
-            packageName =>
-                `export * from './packages/${packageName}/${packageName}';\n`
-        )
-        .join('')
-);
-
-const packages = packagesNames.map(item => `./packages/${item}/${item}.ts`);
-
-const plugins = isDevelopment
-    ? [litcssPlugin, resolve({ extensions: ['.mjs', '.js', '.ts'] }), esbuild()]
-    : [
-          litcssPlugin,
-          MinifyHTML.default(),
-          resolve({ extensions: ['.mjs', '.js', '.ts'] }),
-          typescript({ tsconfig: './tsconfig.json' }),
-          summary(),
-          minify()
-      ];
+const getPlugins = () => {
+    const base = [
+        litcssPlugin,
+        resolve({ extensions: ['.mjs', '.js', '.ts'] })
+    ];
+    if (isDev) {
+        base.push(esbuild());
+    } else {
+        base.push(
+            MinifyHTML.default(),
+            typescript({ tsconfig: './tsconfig.json' }),
+            summary(),
+            minify(),
+            progress()
+        );
+    }
+    return base;
+};
 
 export default defineConfig({
     input: [...packages, './index.ts'],
@@ -49,5 +41,5 @@ export default defineConfig({
         chunkFileNames: 'chunk/[hash].js',
         compact: true
     },
-    plugins
+    plugins: getPlugins()
 });

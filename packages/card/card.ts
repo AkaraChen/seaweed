@@ -1,8 +1,8 @@
-import { LitElement, html, nothing } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { styles } from './card.less';
 import clsx from 'clsx';
+import { html, LitElement, nothing } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import { Reactify, size, sizeArray } from 'shared/type';
+import { styles } from './card.less';
 
 @customElement('sw-card')
 export class Card extends LitElement {

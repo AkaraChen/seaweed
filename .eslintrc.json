@@ -10,13 +10,12 @@
     ],
     "rules": {
         "default-case": "off",
-        "max-classes-per-file": "off",
         "no-unused-vars": "off",
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
         "prettier/prettier": "warn",
         "unicorn/template-indent": "off",
-        "class-methods-use-this": "warn"
+        "class-methods-use-this": "off"
     },
     "plugins": ["prettier"]
 }

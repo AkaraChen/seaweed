@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { position, postionArray, Reactify } from 'shared/type';
 import { styles } from './divider.less';
-import clsx from 'clsx';
-import { postionArray, position, Reactify } from 'shared/type';
 
 @customElement('sw-divider')
 export class Divider extends LitElement {

@@ -1,9 +1,9 @@
 /* eslint-disable no-shadow */
+import clsx from 'clsx';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { styles } from './avatar.less';
 import { Reactify, size, sizeArray } from 'shared/type';
-import clsx from 'clsx';
+import { styles } from './avatar.less';
 
 @customElement('sw-avatar')
 export class Avatar extends LitElement {
