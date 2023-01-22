@@ -1,10 +1,8 @@
-<h1 align="center">Seaweed</h1>
-
-<pre align="center">
-🚧 Working in Progress
-</pre>
+# Seaweed
 
 The next generation component library based on web components.
+
+[![E2E](https://github.com/AkaraChen/seaweed/actions/workflows/playwright.yml/badge.svg)](https://github.com/AkaraChen/seaweed/actions/workflows/playwright.yml) [![Test](https://github.com/AkaraChen/seaweed/actions/workflows/test.yml/badge.svg)](https://github.com/AkaraChen/seaweed/actions/workflows/test.yml) [![Lint](https://github.com/AkaraChen/seaweed/actions/workflows/lint.yml/badge.svg)](https://github.com/AkaraChen/seaweed/actions/workflows/lint.yml)
 
 ## Features
 
