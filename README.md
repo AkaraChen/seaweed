@@ -1,4 +1,4 @@
-<h1 align="center">Seaweed</h1>
+# Seaweed
 
 The next generation component library based on web components.
 
