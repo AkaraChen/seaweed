@@ -1,6 +1,1 @@
-{
-    "singleQuote": true,
-    "endOfLine": "auto",
-    "trailingComma": "none",
-    "arrowParens": "avoid"
-}
+"prettier-config-akrc"

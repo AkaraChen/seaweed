@@ -13,7 +13,6 @@ importers:
       '@types/rimraf': ^3.0.2
       '@typescript-eslint/eslint-plugin': 5.48.2
       '@typescript-eslint/parser': 5.48.2
-      '@wordpress/stylelint-config': ^21.8.0
       clsx: ^1.2.1
       cross-env: ^7.0.3
       esbuild: ^0.17.4
@@ -34,6 +33,7 @@ importers:
       postcss-less: ^6.0.0
       postcss-nesting: ^10.2.0
       prettier: ^2.8.3
+      prettier-config-akrc: ^0.0.0
       prettier-plugin-html-template-literals: ^1.0.5
       react: 18.2.0
       rimraf: ^4.1.1
@@ -47,9 +47,7 @@ importers:
       rollup-plugin-ts: ^3.1.1
       shared: workspace:^0.0.13
       stylelint: ^14.16.1
-      stylelint-config-recommended-less: ^1.0.4
-      stylelint-config-standard: ^29.0.0
-      stylelint-declaration-block-no-ignored-properties: ^2.6.0
+      stylelint-config-akrc: ^0.0.2
       taze: ^0.8.5
       tslib: 2.4.1
       type-fest: 3.5.3
@@ -66,7 +64,6 @@ importers:
       '@types/rimraf': 3.0.2
       '@typescript-eslint/eslint-plugin': 5.48.2_caon6io6stgpr7lz2rtbhekxqy
       '@typescript-eslint/parser': 5.48.2_7uibuqfxkfaozanbtbziikiqje
-      '@wordpress/stylelint-config': 21.8.0_w5gtdy6oq4ictd5o4eu6befejy
       clsx: 1.2.1
       cross-env: 7.0.3
       esbuild: 0.17.4
@@ -87,6 +84,7 @@ importers:
       postcss-less: 6.0.0_postcss@8.4.21
       postcss-nesting: 10.2.0_postcss@8.4.21
       prettier: 2.8.3
+      prettier-config-akrc: 0.0.0
       prettier-plugin-html-template-literals: 1.0.5_prettier@2.8.3
       react: 18.2.0
       rimraf: 4.1.1
@@ -100,9 +98,7 @@ importers:
       rollup-plugin-ts: 3.1.1_p3yyytxbmytz5gvmi4zzszibjy
       shared: link:packages/shared
       stylelint: 14.16.1
-      stylelint-config-recommended-less: 1.0.4
-      stylelint-config-standard: 29.0.0_stylelint@14.16.1
-      stylelint-declaration-block-no-ignored-properties: 2.6.0_stylelint@14.16.1
+      stylelint-config-akrc: 0.0.2_w5gtdy6oq4ictd5o4eu6befejy
       taze: 0.8.5
       tslib: 2.4.1
       type-fest: 3.5.3
@@ -6472,6 +6468,14 @@ packages:
       entities: 2.2.0
     dev: false
 
+  /dom-serializer/2.0.0:
+    resolution: {integrity: sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      entities: 4.4.0
+    dev: true
+
   /domain-browser/1.2.0:
     resolution: {integrity: sha512-jnjyiM6eRyZl2H+W8Q/zLMA481hzi0eszAaBUzIVnmYVDBbnLxVNnfu1HgEBvCbL+71FrxMl3E6lpKH7Ge3OXA==}
     engines: {node: '>=0.4', npm: '>=1.2'}
@@ -6479,7 +6483,6 @@ packages:
 
   /domelementtype/2.3.0:
     resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
-    dev: false
 
   /domhandler/4.3.1:
     resolution: {integrity: sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==}
@@ -6488,6 +6491,13 @@ packages:
       domelementtype: 2.3.0
     dev: false
 
+  /domhandler/5.0.3:
+    resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
+    engines: {node: '>= 4'}
+    dependencies:
+      domelementtype: 2.3.0
+    dev: true
+
   /domutils/2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
     dependencies:
@@ -6495,6 +6505,14 @@ packages:
       domelementtype: 2.3.0
       domhandler: 4.3.1
     dev: false
+
+  /domutils/3.0.1:
+    resolution: {integrity: sha512-z08c1l761iKhDFtfXO04C7kTdPBLi41zwOZl00WS8b5eiaebNpY00HKbztwBq+e3vyqWNwWF3mP9YLUeqIrF+Q==}
+    dependencies:
+      dom-serializer: 2.0.0
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+    dev: true
 
   /dot-case/3.0.4:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
@@ -6746,7 +6764,6 @@ packages:
   /entities/4.4.0:
     resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==}
     engines: {node: '>=0.12'}
-    dev: false
 
   /env-paths/2.2.1:
     resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
@@ -9004,6 +9021,15 @@ packages:
       entities: 2.2.0
     dev: false
 
+  /htmlparser2/8.0.1:
+    resolution: {integrity: sha512-4lVbmc1diZC7GUJQtRQ5yBAeUCL1exyMwmForWkRLnwyzWBFxN633SALPMGYaWZvKe9j1pRZJpauvmxENSp/EA==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.0.1
+      entities: 4.4.0
+    dev: true
+
   /http-cache-semantics/3.8.1:
     resolution: {integrity: sha512-5ai2iksyV8ZXmnZhHH4rWPoxxistEexSi5936zIQ1bnNTW5VnA85B6P/VpXiRM017IgRvb2kKo1a//y+0wSp3w==}
     dev: false
@@ -9954,6 +9980,10 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+
+  /js-tokens/8.0.1:
+    resolution: {integrity: sha512-3AGrZT6tuMm1ZWWn9mLXh7XMfi2YtiLNPALCVxBCiUVq0LD1OQMxV/AdS/s7rLJU5o9i/jBZw/N4vXXL5dm29A==}
+    dev: true
 
   /js-yaml/3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
@@ -12936,6 +12966,16 @@ packages:
       postcss: 8.4.21
     dev: false
 
+  /postcss-html/1.5.0:
+    resolution: {integrity: sha512-kCMRWJRHKicpA166kc2lAVUGxDZL324bkj/pVOb6RhjB0Z5Krl7mN0AsVkBhVIRZZirY0lyQXG38HCVaoKVNoA==}
+    engines: {node: ^12 || >=14}
+    dependencies:
+      htmlparser2: 8.0.1
+      js-tokens: 8.0.1
+      postcss: 8.4.21
+      postcss-safe-parser: 6.0.0_postcss@8.4.21
+    dev: true
+
   /postcss-image-set-function/4.0.7:
     resolution: {integrity: sha512-9T2r9rsvYzm5ndsBE8WgtrMlIT7VbtTfE7b3BQnudUqnBcBo7L758oc+o+pdj/dUV0l5wjwSdjeOH2DZtfv8qw==}
     engines: {node: ^12 || ^14 || >=16}
@@ -13389,6 +13429,10 @@ packages:
     resolution: {integrity: sha512-PhmXi5XmoyKw1Un4E+opM2KcsJInDvKyuOumcjjw3waw86ZNjHwVUOOWLc4bCzLdcKNaWBH9e99sbWzDQsVaYg==}
     engines: {node: '>=0.10.0'}
     dev: false
+
+  /prettier-config-akrc/0.0.0:
+    resolution: {integrity: sha512-HFo0Wi3dKLIUuIdEGgVvcVrL4vAJCP7dbY7Ra+X323LV45mRdfvJw795b879Qr3BYKTUYrJ41KyhWLHCxlB4eQ==}
+    dev: true
 
   /prettier-linter-helpers/1.0.0:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
@@ -15427,6 +15471,33 @@ packages:
     dependencies:
       inline-style-parser: 0.1.1
     dev: false
+
+  /stylelint-config-akrc/0.0.2_w5gtdy6oq4ictd5o4eu6befejy:
+    resolution: {integrity: sha512-SgApUqOQpxkba+3DyppJAs7fwscKpJYrYxW9tI+cit65f3BlBCtn9qShp+ueZTa83B+8z5lcyUNUBuzO8mlbbg==}
+    dependencies:
+      '@wordpress/stylelint-config': 21.8.0_w5gtdy6oq4ictd5o4eu6befejy
+      postcss-html: 1.5.0
+      postcss-less: 6.0.0_postcss@8.4.21
+      stylelint-config-html: 1.1.0_kbto3rg3njmczth2rrsgfnlsqa
+      stylelint-config-recommended-less: 1.0.4
+      stylelint-config-standard: 29.0.0_stylelint@14.16.1
+      stylelint-declaration-block-no-ignored-properties: 2.6.0_stylelint@14.16.1
+    transitivePeerDependencies:
+      - postcss
+      - stylelint
+      - supports-color
+    dev: true
+
+  /stylelint-config-html/1.1.0_kbto3rg3njmczth2rrsgfnlsqa:
+    resolution: {integrity: sha512-IZv4IVESjKLumUGi+HWeb7skgO6/g4VMuAYrJdlqQFndgbj6WJAXPhaysvBiXefX79upBdQVumgYcdd17gCpjQ==}
+    engines: {node: ^12 || >=14}
+    peerDependencies:
+      postcss-html: ^1.0.0
+      stylelint: '>=14.0.0'
+    dependencies:
+      postcss-html: 1.5.0
+      stylelint: 14.16.1
+    dev: true
 
   /stylelint-config-recommended-less/1.0.4:
     resolution: {integrity: sha512-8tzP0h2hGjfWhDPSMmgxAeWQUK8/+BWA1Qc4nsvxbJnQkOiexPXpZwdjnYjeoT1uIh77XHfz5gnh0rYbHu/Tgg==}
