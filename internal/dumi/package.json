@@ -15,7 +15,7 @@
     "dev": "cross-env NODE_ENV=development npm-run-all -p watch dev:dumi",
     "dev:dumi": "dumi dev",
     "prepare": "dumi setup",
-    "build": "lerna run prebuild && dumi build",
+    "build": "pnpm run prebuild && dumi build",
     "build:ci": "pnpm run -w build && dumi build"
   }
 }
