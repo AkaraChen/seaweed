@@ -30,7 +30,7 @@ importers:
       npm-run-all: ^4.1.5
       postcss: ^8.4.21
       postcss-less: ^6.0.0
-      postcss-nesting: ^10.2.0
+      postcss-nesting: ^11.0.0
       prettier: ^2.8.3
       prettier-config-akrc: ^0.0.0
       prettier-plugin-html-template-literals: ^1.0.5
@@ -80,7 +80,7 @@ importers:
       npm-run-all: 4.1.5
       postcss: 8.4.21
       postcss-less: 6.0.0_postcss@8.4.21
-      postcss-nesting: 10.2.0_postcss@8.4.21
+      postcss-nesting: 11.0.0_postcss@8.4.21
       prettier: 2.8.3
       prettier-config-akrc: 0.0.0
       prettier-plugin-html-template-literals: 1.0.5_prettier@2.8.3
@@ -11229,6 +11229,18 @@ packages:
       '@csstools/selector-specificity': 2.0.2_wajs5nedgkikc5pcuwett7legi
       postcss: 8.4.21
       postcss-selector-parser: 6.0.11
+    dev: false
+
+  /postcss-nesting/11.0.0_postcss@8.4.21:
+    resolution: {integrity: sha512-Y+jmDpQuSSoM/Qq+rqDc4D3E8Cn84qUmJLFS/M5u0YgM+5adLi9qFApbz5XzjzXjGAzItTUCP7RikLGy06ebiA==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/selector-specificity': 2.0.2_wajs5nedgkikc5pcuwett7legi
+      postcss: 8.4.21
+      postcss-selector-parser: 6.0.11
+    dev: true
 
   /postcss-opacity-percentage/1.1.2:
     resolution: {integrity: sha512-lyUfF7miG+yewZ8EAk9XUBIlrHyUE6fijnesuz+Mj5zrIHIEw6KcIZSOk/elVMqzLvREmXB83Zi/5QpNRYd47w==}
