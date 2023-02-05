@@ -1,8 +1,9 @@
 import 'divider/divider';
 import { css, html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import { Reactify } from 'shared/type';
 import { BreadcrumbItem } from './breadcrumb-item';
+export * from './breadcrumb-item';
 
 @customElement('sw-breadcrumb')
 export class Breadcrumb extends LitElement {

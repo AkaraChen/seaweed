@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { Reactify, size } from 'shared/type';
+export * from './form-item'
 
 @customElement('sw-form')
 export class Form extends LitElement {
