@@ -49,7 +49,7 @@ importers:
       stylelint-config-akrc: ^0.0.2
       taze: ^0.8.5
       tslib: 2.5.0
-      type-fest: 3.6.0
+      type-fest: 3.6.1
       typescript: 4.9.5
       vite: ^4.0.4
       vitest: 0.29.1
@@ -99,7 +99,7 @@ importers:
       stylelint-config-akrc: 0.0.2_hac66ft3vssu6gvlxlo7d2bjma
       taze: 0.8.5
       tslib: 2.5.0
-      type-fest: 3.6.0
+      type-fest: 3.6.1
       typescript: 4.9.5
       vite: 4.0.4_dprl76twtlijnqpm3fdjsbkzqm
       vitest: 0.29.1_happy-dom@8.1.5+less@4.1.3
@@ -14161,8 +14161,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /type-fest/3.6.0:
-    resolution: {integrity: sha512-RqTRtKTzvPpNdDUp1dVkKQRunlPITk4mXeqFlAZoJsS+fLRn8AdPK0TcQDumGayhU7fjlBfiBjsq3pe3rIfXZQ==}
+  /type-fest/3.6.1:
+    resolution: {integrity: sha512-htXWckxlT6U4+ilVgweNliPqlsVSSucbxVexRYllyMVJDtf5rTjv6kF/s+qAd4QSL1BZcnJPEJavYBPQiWuZDA==}
     engines: {node: '>=14.16'}
     dev: true
 
