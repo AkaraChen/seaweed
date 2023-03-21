@@ -1,6 +1,6 @@
 {
   "name": "card",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "ISC"
 }
