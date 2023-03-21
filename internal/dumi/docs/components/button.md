@@ -23,37 +23,6 @@ export default () => {
 }
 ```
 
-## 次要按钮
-
-```tsx
-import '@akrc/seaweed/button'
-
-export default () => {
-    return <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
-        <sw-button secondary>Normal</sw-button>
-        <sw-button type="info" secondary>Info</sw-button>
-        <sw-button type="success" secondary>Success</sw-button>
-        <sw-button type="warning" secondary>Warning</sw-button>
-        <sw-button type="error" secondary>Error</sw-button>
-    </div>
-}
-```
-
-## 幽灵按钮
-
-```tsx
-import '@akrc/seaweed/button'
-
-export default () => {
-    return <div style={{display:'flex', gap: '0.25em', flexWrap: 'wrap'}}>
-        <sw-button type="info" ghost>Info</sw-button>
-        <sw-button type="success" ghost>Success</sw-button>
-        <sw-button type="warning" ghost>Warning</sw-button>
-        <sw-button type="error" ghost>Error</sw-button>
-    </div>
-}
-```
-
 ## 按钮尺寸
 
 ```tsx

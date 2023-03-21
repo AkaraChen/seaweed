@@ -11,10 +11,10 @@ button {
     border-radius: 2px;
     outline: none;
     border: 1px solid var(--border-color);
-    background-color: transparent;
+    background-color: #EDF2F7;
     box-shadow: 0 2px #00000004;
     transition: 0.25s all;
-    color: #000;
+    color: #2d3748;
     font-size: 15px;
     cursor: pointer;
     user-select: none;
@@ -24,18 +24,17 @@ button {
         --font-color: #fff;
         --border-color: #434343;
 
-        color: #fff;
         box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+        background-color: rgba(255, 255, 255, 0.08);
+        color: white;
     }
 }
 
 button:hover,
 button:focus {
-    border-color: var(--primary-hover);
-    color: var(--primary-hover);
+    background-color: #e2e8f0;
     @media (prefers-color-scheme: dark) {
-        border-color: var(--primary-hover);
-        color: var(--primary-hover);
+        background-color: rgba(255, 255, 255, 0.16);
     }
 }
 
